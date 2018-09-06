@@ -1,0 +1,479 @@
+
+.view{
+    width:100%;
+    /*height:4070px;*/
+    background-image: url("../images/di - 副本.jpg");
+    background-size:100% 100%;
+    overflow-x: hidden;
+    position: absolute;
+    z-index: -999;
+
+}
+
+.view .warp{
+    width: 100%;
+    height:auto;
+}
+/*nav*/
+.warp .head{
+    width: 100%;
+    height: 105px;
+    background: #242b33;
+    position: fixed;
+}
+.warp .head .top{
+    width:80%;
+    height: 105px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.warp .head .top h2{
+    margin-left: 5px;
+    margin-right: 10px;
+}
+.warp .head .top .img{
+    width: 32px;
+    height: 32px;
+}
+.warp .head .top span{
+    width:20%;
+    margin-left: 5px;
+}
+.warp .head .top .nav{
+    width: 60%;
+    height:105px;
+    margin-left: 10%;
+    margin-top:2%;
+}
+.warp .head .top .nav .navbar{
+    width:100%;
+    height:55px;
+
+
+}
+.warp .head .top .nav .navbar li {
+    width:15%;
+    height:55px;
+    line-height:55px;
+    text-align: center;
+    float: left;
+}
+.warp .head .top .nav .navbar .li{
+    width:25%;
+    background: #0fd6f3;
+    border-radius:5px;
+}
+.warp .head img{
+    width: 49px;
+    height: 49px;
+
+}
+
+#Down{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    display: none;
+}
+#Down .load{
+    width:400px;
+    height: 300px;
+    background: #fff;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 250px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*banner*/
+.warp .container{
+    width:100%;
+    height:680px;
+
+}
+.container .left{
+    width:60%;
+    height:680px;
+    text-align: center;
+    padding:10% 5% 5% 8%;
+    box-sizing: border-box;
+}
+.container .left h1{
+    font-size: 70px;
+    font-weight: bold;
+}
+.container .left h2{
+    text-align: left;
+    margin:5%;
+    line-height: 60px;
+}
+.container .left span{
+    display: inline-block;
+    width: 25%;
+    height: 15%;
+    background: #0fd6f3;
+    border-radius: 5px;
+    margin: 0 20px;
+    padding-top:20px;
+    box-sizing: border-box;
+}
+.container .right  {
+    width: 40%;
+    padding-top:10%;
+    box-sizing: border-box;
+}
+/*main*/
+ .main{
+    width: 100%;
+    height:1017px;
+    position: relative;
+
+}
+.main .sk{
+    position :absolute;
+    top:260px;bottom:0;left:600px;right: 0px;
+
+}
+.main .primecion{
+    position :absolute;
+    top:620px;bottom:0;left:600px;right: 0px;
+}
+.main .found{
+    position :absolute;
+    top:660px;bottom:0;left:200px;right: 0px;
+
+}
+.main .news{
+    position :absolute;
+    top:660px;bottom:0;left:1000px;right: 395px;
+}
+.main  img{
+    margin-left:96px;
+}
+
+.main .txt{
+    width: 340px;
+    height: 120px;
+    text-align: center;
+
+}
+.main .txt h1{
+    font-size: 30px;
+
+}
+.main .txt p{
+    width:340px;
+    height:113px;
+    font-size:18px;
+    color:rgba(255,255,255,1);
+    text-align: left;
+
+}
+
+/*wallet*/
+.wallet{
+    width: 100%;
+    height:1017px;
+    padding:336px 0px 0px 0px;
+    box-sizing: border-box;
+
+
+}
+.wallet .left{
+    width:50%;
+    height:auto;
+    padding:67px 17px 141px 100px ;
+    box-sizing: border-box;
+}
+.wallet .right{
+    width:50%;
+    height:auto;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+.wallet .right .rtxt{
+    position: absolute;
+    width:40%;
+    height: auto;
+}
+.wallet .right .rtxt  h1{
+    font-size: 40px;
+    margin-bottom:15px;
+
+}
+.wallet .right .rtxt p{
+    width:577px;
+    height: 320px;
+    font-size: 22px;
+
+}
+.wallet .right .dict{
+    width:20px;
+    height:400px;
+    margin-top:120px;
+    margin-right:70px;
+
+}
+.wallet .right .dict li{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ffffff;
+    margin-bottom:100px;
+
+}
+
+/*footer*/
+.footer{
+    width: 100%;
+    height: 1017px;
+   padding-top:300px;
+    box-sizing: border-box;
+}
+.footer p{
+    width:60%;
+    height: 83px;
+    font-size: 20px;
+    line-height:43px;
+    margin:0 auto;
+    text-align: left;
+    padding-top: 63px;
+    box-sizing: border-box;
+
+}
+.footer .search{
+    width:60%;
+    margin: 150px auto 100px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.footer .search  span{
+    font-size: 24px;
+}
+.footer .search  .SearchOn{
+    width: 40%;
+    height: 48px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    margin: 0 15px;
+    background-color: #fff;
+}
+.footer .search .sub {
+    font-size: 16px;
+    background: #0dc8e2;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.footer .bottom{
+    width: 80%;
+    margin:auto 302px auto 200px;
+}
+.footer .bottom li{
+    width:25%;
+    font-size:24px;
+    float:left;
+    margin-top:30px;
+
+}
+.footer .bottom .list{
+    width:100%;
+    height:200px;
+    padding: 0px;
+}
+.footer .bottom .list li{
+    width: 100%;
+    clear: both;
+    font-size:16px;
+    color: #bbbbbb;
+
+
+}
+
+.footer  .web ul{
+    width:80%;
+    margin: 80px auto 80px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer  .web ul li{
+    margin:60px 20px;
+    position: relative;
+}
+.footer  .web ul li span{
+    width:80px;
+    height:20px;
+    text-align: center;
+    border-radius: 3px;
+    color:rgba(255,255,255,0.6);
+    position: absolute;
+    top:-30px;
+    left:0px;
+    background:rgba(0,160,196,0.7);
+    display: none;
+
+}
+.footer  .web ul li:hover span{
+    display: block;
+}
+.footer  .web ul li:hover .arrow-down{
+    display: block;
+}
+.footer  .web ul li .arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid rgba(0,160,196,0.77);
+    position: absolute;
+    left:26px;
+    top:-10px;
+    display: none;
+}
+.footer .CopyRight{
+    width:400px;
+    height: 25px;
+    color: #555555;
+
+}
+.footer .CopyRight img{
+    width: 15px;
+    height: 15px;
+
+}
+.footer .CopyRight{
+    width:800px;
+    height: 25px;
+   color: #555555;
+    text-align: center;
+
+}
+.footer .CopyRight img{
+    width: 15px;
+    height: 15px;
+
+}
+/*modal*/
+#Sub{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    display: none;
+}
+#Sub .scr{
+    width:400px;
+    height: 300px;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 250px;
+}
+
+/*ipad*/
+@media(max-width:1024px){
+    .warp .head .top .nav{
+        width: 70%;
+       margin-left: 5%;
+    }
+    .warp .head .top .nav .navbar li{
+        width: 10%;
+        margin: 0 15px;
+    }
+    .warp .head .top .nav .navbar .li{
+        width: 40%;
+    }
+    .container .left span{
+        width:35%;
+        margin: 0 20px;
+    }
+    .container .right  {
+        width: 40%;
+        padding-top:20%;
+        box-sizing: border-box;
+    }
+    .container .right img{
+        width: 340px;
+        height: 340px;
+    }
+
+    .main .sk{
+            top:200px;bottom:0;left:345px;right: 0px;
+        }
+    .main .primecion{
+            top:600px;bottom:0;left:350px;right: 0px;
+        }
+    .main .found{
+
+            top:690px;bottom:0;left:5px;right: 0px;
+
+        }
+    .main .news{
+
+            top:690px;bottom:0;left:680px;right:0px;
+        }
+
+
+    .wallet video{
+            width:450px;
+            height: 300px;
+        }
+    .wallet .left {
+            padding:100px 17px 141px 20px ;
+        }
+    .wallet .right .rtxt p{
+            width:400px;
+            font-size: 16px;
+        }
+    .wallet .right .dict{
+            margin-right:60px;
+        }
+
+    .footer p{
+        height:53px;
+        font-size: 12px;
+        line-height: 22px;
+        padding-top:30px;
+    }
+    .footer .search{
+        margin: 50px auto 10px auto;
+    }
+    .footer .bottom{
+        margin:auto 202px auto 100px;
+    }
+    .footer .bottom li{
+        font-size:20px;
+    }
+}
