@@ -10,6 +10,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 9999;
 }
 .navbar-brand img{
     width: 50px;
@@ -76,6 +77,158 @@
 .navbar-brand{
     padding-bottom: 0;
 }
+.footer{
+    width: 100%;
+    padding: 0 120px;
+    padding-top: 60px;
+    box-sizing: border-box;
+    background-color: #242b33 !important;
+    color: #fff;
+}
+#subscribe-input{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.getNews{
+    line-height: 38px;
+    font-size: 14px;
+    margin: 0 auto;
+    font-weight: 600;
+}
+#subscribe-input-wraper{
+    max-width: 700px;
+    margin: 30px auto;
+}
+.subscribe-input-container{
+    margin: 0 auto;
+}
+.input-group-append{
+    position: relative;
+    z-index: 9;
+}
+.input-group-append img{
+    height: 20px;
+    position: absolute;
+    top: 9px;
+    left: -30px;
+}
+
+#list-wraper ul li{
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 600;
+}
+#list-wraper ul li a{
+    color: #c6c8ca;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration-line: none;
+}
+#list-wraper ul li a:hover{
+    color: #fff;
+}
+#footer-link{
+    max-width: 500px;
+    margin: 0 auto;
+}
+#footer-link div{
+    padding: 18px;
+ }
+#footer-link div a{
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+#footer-link div .footer-link-one{
+    background: url("../images/1.png") no-repeat;
+    background-size: 100% 100%;
+}
+#footer-link div .footer-link-one:hover{
+    background: url("../images/7.png") no-repeat;
+    background-size: 100% 100%;
+}
+#footer-link div .footer-link-two{
+    background: url("../images/2.png") no-repeat;
+    background-size: 100% 100%;
+}
+#footer-link div .footer-link-two:hover{
+    background: url("../images/8.png") no-repeat;
+    background-size: 100% 100%;
+}
+#footer-link div .footer-link-three{
+    background: url("../images/3.png") no-repeat;
+    background-size: 100% 100%;
+}
+#footer-link div .footer-link-three:hover{
+    background: url("../images/9.png") no-repeat;
+    background-size: 100% 100%;
+}
+#footer-link div .footer-link-four{
+    background: url("../images/4.png") no-repeat;
+    background-size: 100% 100%;
+}
+#footer-link div .footer-link-four:hover{
+    background: url("../images/10.png") no-repeat;
+    background-size: 100% 100%;
+}
+#footer-link div .footer-link-five{
+    background: url("../images/5.png") no-repeat;
+    background-size: 100% 100%;
+}
+#footer-link div .footer-link-five:hover{
+    background: url("../images/11.png") no-repeat;
+    background-size: 100% 100%;
+}
+#footer-link div .footer-link-six{
+    background: url("../images/6.png") no-repeat;
+    background-size: 100% 100%;
+}
+#footer-link div .footer-link-six:hover{
+    background: url("../images/12.png") no-repeat;
+    background-size: 100% 100%;
+}
+.footer-bottom{
+    width: 100%;
+    text-align: center;
+    font-weight: normal;
+    font-size: 10px;
+    color: #ccc;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+}
+.btn-primary{
+    background-color: #0fd6f3;
+    border-color: #0fd6f3;
+}
+.btn-primary:hover{
+    color:#fff;
+    background-color:#09DEF3;
+    border-color:#09DEF3;
+}
+.btn-primary.focus,.btn-primary:focus{
+     box-shadow:0 0 0 .2rem rgba(13,220,235,.5);
+}
+.btn-primary.disabled,.btn-primary:disabled{
+    color:#fff;
+    background-color:#09DEF3;
+    border-color:#09DEF3;
+}
+.btn-primary:not(:disabled):not(.disabled).active,.btn-primary:not(:disabled):not(.disabled):active,.show>.btn-primary.dropdown-toggle{
+    color:#fff;
+    background-color:#09DEF3;
+    border-color:#09DEF3;
+}
+.btn-primary:not(:disabled):not(.disabled).active:focus,.btn-primary:not(:disabled):not(.disabled):active:focus,.show>.btn-primary.dropdown-toggle:focus{
+    box-shadow:0 0 0 .2rem rgba(13,220,235,.5);
+}
+.form-control:focus{
+    box-shadow:0 0 0 .2rem rgba(13,220,235,.5);
+}
+.new-news{
+    position: relative;
+    top: -6px;
+}
 
 @media screen and (max-width: 992px){
     .navbar-expand-lg .navbar-collapse{
@@ -126,6 +279,22 @@
     }
     .posi-wallet img{
         height: 14px;
+    }
+    .footer{
+        padding: 0 20px;
+        padding-top: 30px;
+    }
+    #list-wraper{
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    #footer-link{
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    #footer-link div a{
+        width: 63px;
+        height: 63px;
     }
 }
 

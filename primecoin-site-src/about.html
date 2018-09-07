@@ -12,13 +12,13 @@
     <style>
         .about-container{
             width: 100%;
-            height: 300px;
             padding: 0 120px;
             padding-top: 104px;
             box-sizing: border-box;
         }
         .about-container .content-container{
             margin: 100px auto;
+            margin-bottom: 0px;
         }
         .about-container .content-container div{
             overflow: hidden;
@@ -171,9 +171,129 @@
                 </div>
             </div>
         </div>
+        <div class="footer">
+            <p>
+                Through many of its unique properties, Bitcoin allows exciting uses that could not be covered by any previous
+                and everyone can take part. Through many of its unique properties
+            </p>
+            <div id="subscribe-input-wraper">
+                <span class="new-news">Get the latest primecoin news to receive the latest updates</span>
+                <div class="createsend-button "  data-listid="j/03/77D/341/D67FD91990F19504">Subscribe</div>
+            </div>
+
+            <!--<div class="row justify-content-md-center" id="subscribe-input-wraper">-->
+                <!--<span class="getNews">Get the letest news</span>-->
+                <!--<div class="input-group subscribe-input-container mb-3 col-10 col-md-8">-->
+                    <!--<input type="text" id="subscribe-input" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon2">-->
+
+                    <!--<div class="input-group-append">-->
+                        <!--<img src="images/search.png" alt="">-->
+                        <!--<button type="button" class="btn btn-primary btn-sm">subscribe</button>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <div class="row" id="list-wraper">
+                <ul class="col-6 col-md-3">
+                    <li>
+                        Revource
+                    </li>
+                    <li>
+                        <a href="http://primecoin.io/bin/primecoin-paper.pdf">Whitepaper</a>
+                    </li>
+                    <li>
+                        <a href="http://forum.primecoin.org/c/technical-support">Tech Support</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">Software</a>
+                    </li>
+                </ul>
+                <ul class="col-6 col-md-3">
+                    <li>
+                        Releted Looks
+                    </li>
+                    <li>
+                        <a href="https://www.vee.tech/">VEE</a>
+                    </li>
+                    <li>
+                        <a href="https://peercoin.net/">Peercoin</a>
+                    </li>
+                    <li>
+                        <a href="http://www.Primecoin.org">Foundation</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/primecoin/primecoin/wiki">Wiki</a>
+                    </li>
+                </ul>
+                <ul class="col-6 col-md-3">
+                    <li>
+                        Developer
+                    </li>
+                    <li>
+                        <a href="https://github.com/primecoin/primecoin">Github</a>
+                    </li>
+                    <li>
+                        <a href="http://forum.primecoin.org/c/developer-discussion">Tech Discussion</a>
+                    </li>
+                    <li>
+                        <a href="http://www.Primecoin.org">Get sponsorship</a>
+                    </li>
+                    <li>
+                        <a href="http://www.Primes.zone">Latest stats</a>
+                    </li>
+                    <li>
+                        <a href="http://t.me/primecoinproject">Telegram Discussion</a>
+                    </li>
+                </ul>
+                <ul class="col-6 col-md-3">
+                    <li>
+                        Cond  US
+                    </li>
+                    <li>
+                        <a href="http://forum.primecoin.org/t/how-to-contact-us/56">Forum</a>
+                    </li>
+                    <li>
+                        <a href="news.html">Press</a>
+                    </li>
+                    <li>
+                        <a href="http://forum.primecoin.org/t/how-to-contact-us/56">Message us</a>
+                    </li>
+                    <li>
+                        <a href="http://www.Primecoin.org/donate">Donate</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="row justify-content-md-center" id="footer-link">
+                <div><a class="footer-link-one" href="###"></a></div>
+                <div><a class="footer-link-two" href="###"></a></div>
+                <div><a class="footer-link-three" href="###"></a></div>
+                <div><a class="footer-link-four" href="###"></a></div>
+                <div><a class="footer-link-five" href="###"></a></div>
+                <div><a class="footer-link-six" href="###"></a></div>
+            </div>
+            <p class="footer-bottom">
+                Copyright © 2018 Apple Inc. All rights reserved.
+            </p>
+        </div>
     </body>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/public.js"></script>
+    <script>
+        var hideHeight = $('.navbar').height() + 60;
+        console.log(hideHeight);
+        function handleScroll(){
+            if ($(document).scrollTop() >= hideHeight){
+                $('.posi-wallet').hide();
+            }else{
+                $('.posi-wallet').show();
+            }
+        }
+        $(document).scroll(function () {
+            handleScroll();
+        });
+    </script>
+    <script type="text/javascript">(function () { var e = document.createElement('script'); e.type = 'text/javascript';
+        e.async = true; e.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://btn.createsend1.com/js/sb.min.js?v=3';
+        e.className = 'createsend-script'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s); })();</script>
 </html>
