@@ -255,9 +255,6 @@
         font-size: 12px;
     }
     .navbar-expand-lg{
-        padding: 0px 20px;
-    }
-    .navbar-expand-lg{
         padding: 10px 15px;
     }
     .navbar-brand span{
@@ -287,6 +284,10 @@
     #list-wraper{
         max-width: 400px;
         margin: 0 auto;
+    }
+    #list-wraper li a{
+        outline: none;
+        border: none;
     }
     #footer-link{
         max-width: 300px;
