@@ -125,14 +125,14 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="about.html">About <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="guide.html">Guide</a>
+                <a class="nav-link" href="#guide" id="toGuide">Guide</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="connect.html">Connect</a>
+                <a class="nav-link" href="#connect" id="toConnect">Connect</a>
             </li>
             <li class="nav-item nav-download">
                 <a class="nav-link" href="javascript:void(0);">Download Wallet!</a>
@@ -359,9 +359,6 @@
                     <button class="js-cm-submit-button btn" type="submit">Submit</button>
                 </p>
             </form>
-
-
-
         </div><!-- /.modal-content -->
     </div><!-- /.modal -->
 
@@ -411,18 +408,54 @@
         }
 
     });
-    var hideHeight = $('.navbar').height() + 60;
+
+    function handleScrollConnect(){
+        var bodyHeight = $('body').height();
+        var footerHeight = $('.footer').height();
+        var documentHeight = $(document).height();
+
+        if ($(document).scrollTop() >= (documentHeight-footerHeight-bodyHeight)){
+            $('.navbar-light .navbar-nav .active>.nav-link').css('color','#fff');
+            $('#toConnect').css('color','#0fd6f3');
+            $('#toGuide').css('color','#fff');
+        }else{
+            $('.navbar-light .navbar-nav .active>.nav-link').css('color','#fff');
+            $('#toConnect').css('color','#fff');
+        }
+    }
+    function handleScrollGuide(){
+        var bodyHeight = $('body').height();
+        var footerHeight = $('.index-content').height();
+        var documentHeight = $(document).height();
+
+        if ($(document).scrollTop() >= (bodyHeight)){
+            $('.navbar-light .navbar-nav .active>.nav-link').css('color','#fff');
+            $('#toGuide').css('color','#0fd6f3');
+        }else{
+            $('.navbar-light .navbar-nav .active>.nav-link').css('color','#fff');
+            $('#toGuide').css('color','#fff');
+        }
+    }
+
     function handleScroll(){
-        if ($(document).scrollTop() >= hideHeight){
+        var bodyHeight = $('body').height();
+        var navHeight = $('.navbar').height();
+        var documentHeight = $(document).height();
+        if ($(document).scrollTop() >= (navHeight+60)){
             $('.posi-wallet').hide();
         }else{
             $('.posi-wallet').show();
         }
     }
+    handleScroll();
+    handleScrollGuide();
+    handleScrollConnect();
+    $(document).scroll(function () {
+        handleScroll();
+        handleScrollGuide();
+        handleScrollConnect();
+    });
 
 
 </script>
-
-
-
 </html>
