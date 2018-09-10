@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta content=" width=device-width,initial-scale=1.0",name="viewport"id=" viewport"/>-->
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/initialize.css">
+    <link rel="stylesheet" href="css/public.css">
+    <title>primecion</title>
+    <style>
+        body,html{
+            width: 100%;
+            background-color: rgb(28,32,38);
+        }
+        .news-container{
+            padding: 0 100px;
+            padding-top: 160px;
+            padding-bottom: 20px;
+            width: 100%;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        #page{
+            width: -moz-fit-content;
+            width: -webkit-fit-content;
+            width: fit-content;
+            margin: 0 auto;
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Chrome/Safari/Opera */
+            -khtml-user-select: none; /* Konqueror */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currentlynot supported by any browser */
+        }
+        .paging button{
+            margin: 5px;
+            background: transparent;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+        .paging span{
+            color: #fff;
+        }
+
+        .paging button:active{
+            background: rgb(71,90,109) !important;
+        }
+        .paging .activity{
+            color:#ffffff;
+            background: rgb(71,90,109) !important;
+        }
+        .news-top,.news-bottom{
+            width: 100%;
+        }
+        .news-top-title,.news-bottom-title{
+            width: 100%;
+            text-align: center;
+            font-size: 23px;
+            font-weight: 600;
+            color: #fff;
+        }
+        .news-top-container,.news-bottom-container{
+            width: 100%;
+        }
+        .news-top-container a,.news-bottom-container a{
+            display: block;
+            padding: 15px 0;
+        }
+        .news-top-container a img,.news-bottom-container a img{
+            width: 100%;
+        }
+        .justify-content-around{
+            margin: 25px 0;
+        }
+        .justify-content-between{
+            margin: 0;
+        }
+        .news-bottom-container .col-md-3{
+            padding: 30px;
+        }
+        @media screen and (max-width: 768px) {
+            .news-container{
+                padding: 80px 15px 20px;
+            }
+            .news-bottom-container .col-6{
+                padding: 15px;
+                box-sizing: border-box;
+            }
+            #page{
+                font-size: 12px;
+            }
+            .paging button{
+                padding: 5px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="">
+            <span>Primecoin</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#guide">Guide</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#connect" id="toConnect">Connect</a>
+                </li>
+                <li class="nav-item nav-download">
+                    <a class="nav-link" href="javascript:void(0);">Download Wallet!</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="news-container">
+        <div class="news-content-main">
+            <div class="news-top">
+                <p class="news-top-title">Announcements</p>
+                <div class="row news-top-container justify-content-around">
+                    <a href="https://medium.com/eosio/eosio-stack-exchange-proposal-dcc37acbc2bb" class="col-5 col-md-4">
+                        <img src="images/resource_stackexchange-blue.jpg" alt="">
+                    </a>
+                    <a href="https://block.one/news/richard-jung-former-ceo-of-bithumb-joins-block-one-as-head-of-korea/" class="col-5 col-md-4">
+                        <img src="images/richard_jung-blue.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="news-bottom">
+                <p class="news-bottom-title">Latest News</p>
+                <div class="row news-bottom-container justify-content-between">
+                    <a href="###" class="col-6 col-md-3">
+                        <img src="images/daxiao2.jpg" alt="">
+                    </a>
+                    <a href="###" class="col-6 col-md-3">
+                        <img src="images/daxiao2.jpg" alt="">
+                    </a>
+                    <a href="###" class="col-6 col-md-3">
+                        <img src="images/daxiao2.jpg" alt="">
+                    </a>
+                    <a href="###" class="col-6 col-md-3">
+                        <img src="images/daxiao2.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="page" class="paging"></div>
+    </div>
+
+
+    <div class="footer">
+        <p>
+            Through many of its unique properties, Bitcoin allows exciting uses that could not be covered by any previous
+            and everyone can take part. Through many of its unique properties
+        </p>
+        <div id="subscribe-input-wraper">
+            <span class="new-news">Get the latest primecoin news to receive the latest updates</span>
+            <div class="createsend-button "  data-listid="j/03/77D/341/D67FD91990F19504">Subscribe</div>
+        </div>
+
+        <!--<div class="row justify-content-md-center" id="subscribe-input-wraper">-->
+        <!--<span class="getNews">Get the letest news</span>-->
+        <!--<div class="input-group subscribe-input-container mb-3 col-10 col-md-8">-->
+        <!--<input type="text" id="subscribe-input" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon2">-->
+
+        <!--<div class="input-group-append">-->
+        <!--<img src="images/search.png" alt="">-->
+        <!--<button type="button" class="btn btn-primary btn-sm">subscribe</button>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <div class="row" id="list-wraper">
+            <ul class="col-6 col-md-3">
+                <li>
+                    Revource
+                </li>
+                <li>
+                    <a name="connect" href="http://primecoin.io/bin/primecoin-paper.pdf">Whitepaper</a>
+                </li>
+                <li>
+                    <a href="http://forum.primecoin.org/c/technical-support">Tech Support</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">Software</a>
+                </li>
+            </ul>
+            <ul class="col-6 col-md-3">
+                <li>
+                    Releted Looks
+                </li>
+                <li>
+                    <a href="https://www.vee.tech/">VEE</a>
+                </li>
+                <li>
+                    <a href="https://peercoin.net/">Peercoin</a>
+                </li>
+                <li>
+                    <a href="http://www.Primecoin.org">Foundation</a>
+                </li>
+                <li>
+                    <a href="https://github.com/primecoin/primecoin/wiki">Wiki</a>
+                </li>
+            </ul>
+            <ul class="col-6 col-md-3">
+                <li>
+                    Developer
+                </li>
+                <li>
+                    <a href="https://github.com/primecoin/primecoin">Github</a>
+                </li>
+                <li>
+                    <a href="http://forum.primecoin.org/c/developer-discussion">Tech Discussion</a>
+                </li>
+                <li>
+                    <a href="http://www.Primecoin.org">Get sponsorship</a>
+                </li>
+                <li>
+                    <a href="http://www.Primes.zone">Latest stats</a>
+                </li>
+                <li>
+                    <a href="http://t.me/primecoinproject">Telegram Discussion</a>
+                </li>
+            </ul>
+            <ul class="col-6 col-md-3">
+                <li>
+                    Cond  US
+                </li>
+                <li>
+                    <a href="http://forum.primecoin.org/t/how-to-contact-us/56">Forum</a>
+                </li>
+                <li>
+                    <a href="news.html">Press</a>
+                </li>
+                <li>
+                    <a href="http://forum.primecoin.org/t/how-to-contact-us/56">Message us</a>
+                </li>
+                <li>
+                    <a href="http://www.Primecoin.org/donate">Donate</a>
+                </li>
+            </ul>
+        </div>
+        <div class="row justify-content-md-center" id="footer-link">
+            <div><a class="footer-link-one" href="https://t.me/PrimecoinFoundation"></a></div>
+            <div><a class="footer-link-two" href="https://discord.gg/UTQz4Zq"></a></div>
+            <div><a class="footer-link-three" href="http://forum.primecoin.org"></a></div>
+            <div><a class="footer-link-four" href="https://www.youtube.com/channel/UCQZpBc1864PakvidBOHFqPw?"></a></div>
+            <div><a class="footer-link-five" href=" https://twitter.com/Primecoin_org"></a></div>
+            <div><a class="footer-link-six" href="https://www.reddit.com/r/primecoin/"></a></div>
+        </div>
+        <p class="footer-bottom">
+            Copyright © 2018 Apple Inc. All rights reserved.
+        </p>
+    </div>
+</body>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/public.js"></script>
+<script src="js/paging.js"></script>
+<script>
+
+    var mockData = {
+        'announcements':[
+            {'imgPath':'images/resource_stackexchange-blue.jpg','jumpLink':'https://medium.com/eosio/eosio-stack-exchange-proposal-dcc37acbc2bb'},
+            {'imgPath':'images/richard_jung-blue.jpg','jumpLink':'https://block.one/news/richard-jung-former-ceo-of-bithumb-joins-block-one-as-head-of-korea/'}
+        ],
+        'latestNews':[
+            {'imgPath':'images/meetup_4_eosio_home-blue.jpg','jumpLink':'https://docs.google.com/forms/d/1vg_L5WhjM_brpLC6OPJ5IXP0sjGgrDKHIHNa_nbVxv0/viewform?edit_requested=true'},
+            {'imgPath':'images/EOSIO_ResourcePage_v1_2_Release_opt.jpg','jumpLink':'https://medium.com/eosio/eosio-version-1-2-0-e1972ddcf367'},
+            {'imgPath':'images/HackathonPressRelease-home_opt.jpg','jumpLink':'https://medium.com/eosio/australians-win-top-awards-at-eos-hackathon-sydney-as-over-200-contestants-from-more-than-50-teams-e0a3cedcc47'},
+            {'imgPath':'images/eosio_hackerone_home_opt.jpg','jumpLink':'https://medium.com/eosio/calling-all-devs-the-eosio-bug-bounty-program-is-live-7219c625a444'},
+            {'imgPath':'images/resources_finlab_ag-blue.jpg','jumpLink':'https://block.one/news/block-one-svk-crypto-joint-launch/'},
+            {'imgPath':'images/DevPortLaunch_Social_Eosio-home_opt.jpg','jumpLink':'https://www.baidu.com/6'},
+            {'imgPath':'images/eos_vc_200m_joint_venture_home-blue_opt.jpg','jumpLink':'https://block.one/news/block-one-signs-200m-joint-venture-partnership-to-accelerate-asia-focused-eosio-ecosystem-development/'},
+            {'imgPath':'images/resource_hackathon_home-blue_2.jpg','jumpLink':'https://www.youtube.com/watch?v=9XP4A4IfuXo'}
+            // {'imgPath':'images/daxiao2.jpg','jumpLink':'https://www.baidu.com/9'},
+            // {'imgPath':'images/daxiao2.jpg','jumpLink':'https://www.baidu.com/10'},
+            // {'imgPath':'images/daxiao2.jpg','jumpLink':'https://www.baidu.com/11'},
+            // {'imgPath':'images/daxiao2.jpg','jumpLink':'https://www.baidu.com/12'},
+            // {'imgPath':'images/daxiao2.jpg','jumpLink':'https://www.baidu.com/13'},
+            // {'imgPath':'images/daxiao2.jpg','jumpLink':'https://www.baidu.com/14'},
+            // {'imgPath':'images/daxiao2.jpg','jumpLink':'https://www.baidu.com/15'},
+            // {'imgPath':'images/daxiao2.jpg','jumpLink':'https://www.baidu.com/16'},
+            // {'imgPath':'images/daxiao2.jpg','jumpLink':'https://www.baidu.com/17'},
+            // {'imgPath':'images/daxiao2.jpg','jumpLink':'https://www.baidu.com/18'},
+            // {'imgPath':'images/daxiao2.jpg','jumpLink':'https://www.baidu.com/19'},
+            // {'imgPath':'images/daxiao2.jpg','jumpLink':'https://www.baidu.com/20'},
+            // {'imgPath':'images/daxiao2.jpg','jumpLink':'https://www.baidu.com/21'}
+        ]
+    };
+
+    var dataLength = mockData.latestNews.length+4;
+
+    var swiper = new Swiper('.swiper-container', {
+        direction: 'vertical',
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+
+    function handleScrollConnect(){
+        var bodyHeight = $('body').height();
+        var footerHeight = $('.footer').height();
+        var documentHeight = $(document).height();
+
+        if ($(document).scrollTop() >= (documentHeight-footerHeight-bodyHeight)){
+            $('.navbar-light .navbar-nav .active>.nav-link').css('color','#fff');
+            $('#toConnect').css('color','#0fd6f3');
+        }else{
+            $('.navbar-light .navbar-nav .active>.nav-link').css('color','#fff');
+            $('#toConnect').css('color','#fff');
+            $('#toAbout').css('color','#0fd6f3');
+        }
+    }
+    handleScrollConnect();
+    $(document).scroll(function () {
+        handleScrollConnect();
+    });
+
+    $(function(){
+        $(".news-top").show();
+        var strTree = '';
+        var arrObj = mockData.latestNews.slice(0,4);
+        console.log(arrObj);
+        for (var i=0;i<arrObj.length;i++){
+            strTree += '<a href='+arrObj[i].jumpLink+' class="col-6 col-md-3"><img src='+arrObj[i].imgPath+' alt=""></a>';
+        }
+
+        $('.news-bottom-container').html(strTree);
+
+        $("#page").paging({
+            total:dataLength,
+            numberPage:8
+        }, function (msg) {//回调
+            console.log(msg);
+            if (msg == 1){
+                $(".news-top").show();
+                var str = '';
+                var arr = mockData.latestNews.slice(0,4);
+                console.log(arr);
+                for (var i=0;i<arr.length;i++){
+                    str += '<a href='+arr[i].jumpLink+' class="col-6 col-md-3"><img src='+arr[i].imgPath+' alt=""></a>';
+                }
+
+                $('.news-bottom-container').html(str);
+            }else{
+                $(".news-top").hide();
+                var str = '';
+                var arr = mockData.latestNews.slice((msg-2)*8+4,(msg-1)*8+4);
+                console.log(arr);
+                for (var i=0;i<arr.length;i++){
+                    str += '<a href='+arr[i].jumpLink+' class="col-6 col-md-3"><img src='+arr[i].imgPath+' alt=""></a>';
+                }
+                $('.news-bottom-container').html(str);
+            }
+        });
+    });
+
+
+</script>
+<script type="text/javascript">(function () { var e = document.createElement('script'); e.type = 'text/javascript';
+    e.async = true; e.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://btn.createsend1.com/js/sb.min.js?v=3';
+    e.className = 'createsend-script'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s); })();</script>
+
+</html>

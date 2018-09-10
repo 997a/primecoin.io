@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>Primecoin</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/initialize.css">
+    <link rel="stylesheet" href="css/public.css">
+    <style type="text/css">
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-container swiper-container-vertical swiper-container-ios{
+          margin-top: 100px;
+        }
+        .swiper-slide {
+            color: #ffffff;
+            padding-top: 50px;
+            box-sizing: border-box;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+
+
+
+        .swiper-container-vertical>.swiper-pagination-bullets{
+
+            right:45px;
+        }
+
+        .swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet{
+            margin: 20px 0;
+
+        }
+
+
+        .swiper-pagination-bullet-active{
+            background: #ffffff;
+        }
+
+        .swiper-pagination-bullet{
+            background:#eeeeee;
+        }
+
+
+         .swiper-button-prev,  .swiper-button-next{
+             position: absolute;
+             width: 24px;
+             height: 24px;
+             top:40%;
+             left:96%;
+             background-size: 24px 24px;
+             background-image: url("images/Arrow up.png");
+             /*transform:rotate(90deg);*/
+            /*-ms-transform:rotate(90deg); 	!* IE 9 *!*/
+            /*-moz-transform:rotate(90deg); 	!* Firefox *!*/
+            /*-webkit-transform:rotate(90deg); !* Safari 和 Chrome *!*/
+            /*-o-transform:rotate(90deg); 	!* Opera *!*/
+            /*color: #eeeeee;*/
+        }
+         .swiper-button-next{
+            position: absolute;
+            top: 63%;
+            left: 96%;
+             background-image: url("images/Arrow Down.png");
+        }
+        @media screen and (max-width:768px){
+         .index-center{
+             padding-top: 84%;
+             height:80vh;
+             box-sizing: border-box;
+         }
+            .swiper-slide{
+
+               overflow: hidden;
+                padding:15px;
+                box-sizing: border-box;
+            }
+            .swiper-container-vertical>.swiper-pagination-bullets{
+                right:15px;
+            }
+            .swiper-button-prev,  .swiper-button-next{
+                top: 30%;
+                left:91.6%;
+            }
+            .swiper-button-next{
+                top:76%;
+                left:91.6%;
+            }
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" alt="">
+        <span>Primecoin</span>
+    </a>
+    <span class="posi-wallet">
+                <img src="images/tubiao_qianbao.png" alt="">
+                Current Price
+            </span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#guide" id="toGuide">Guide</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#connect" id="toConnect">Connect</a>
+            </li>
+            <li class="nav-item nav-download">
+                <a class="nav-link" href="javascript:void(0);">Download Wallet!</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div id="warp">
+
+
+<div id="mydiv">
+    <div class="left fl">
+            <h1 class="f">Primecoin</h1>
+            <h2 class="b">A new type cryptocurrency which is proof-of-work based on searching for prime numbers.</h2>
+            <a href="#"> <span class="f ">Buy Primecoin</span></a>
+            <a href="#"><span class="f ">Download Wallet</span></a>
+        </div>
+        <div class="right fr">
+            <img src="images/logo.png">
+        </div>
+
+</div>
+<div class="index-content">
+
+       <a href="about.html"><div class="sk pointer">
+           <img src="images/tubiao_sk.png">
+           <div class="f">
+               <b> Sunny King</b>
+               <p>who invented Peercoin(PPC) and Primecoin(XPM) that have made significant contributions to cryptocurrency technology.
+                   Besides, he created Proof-of-Stake(PoS) to make the blockchain more energy efficient. And in 2018, Sunny King release VEE blockchain database cloud.</p>
+           </div>
+       </div>
+       </a>
+    <a href="about.html"> <div class="primecoin pointer">
+        <img src="images/tubiao_Primecoin.png">
+        <div class=" f">
+            <b>Primecion</b>
+            <p>A new type of PoW based on searching for prime numbers is introduced in P2P cryptocurrency designs.
+                Primecoin is the first cryptocurrency on the market with non-hashcash PoW, generating additional scientific value from the mining work.
+            </p>
+        </div>
+    </div></a>
+    <a href="about.html"> <div class="found pointer">
+        <img src="images/tubiao_Foundation.png">
+        <div class=" f">
+            <b>Primecion Foundation</b>
+            <p>The Primecoin Foundation is led by the creator of Primecoin, Sunny King. It supports and promotes the evolving Primecoin protocol and its community,
+                engages in cutting-edge base layer research to preserve the legacy of Useful PoW that Primecoin introduced, and establishes an easily accessible ecosystem that realizes the future of decentralization.
+            </p>
+        </div>
+    </div></a>
+    <a href="news.html"><div class="news pointer">
+        <img src="images/tubiao_News.png">
+        <div class=" f">
+            <b>News</b>
+            <p>The Primecoin Foundation is led by the creator of Primecoin, Sunny King. It supports and promotes the evolving Primecoin protocol and its community,
+                engages in cutting-edge base layer research to preserve the legacy of Useful PoW that Primecoin introduced, and establishes an easily accessible ecosystem that realizes the future of decentralization.
+            </p>
+        </div>
+    </div></a>
+
+</div>
+    <div class="index-center">
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide row">
+
+                        <video src="video/yh.mp4"  controls="controls" class="col-10 col-md-5 ">
+                    </video>
+
+
+                    <div class="col-10 col-md-5 ">
+                       <h1>wallet</h1>
+                        <p>Bitcoin uses peer-to-peer technology to operate with no central authority or banks; managing transactions and the issuing of bitcoins is carried out collectively by the network. Bitcoin is open-source; its design is public, nobody owns or controls Bitcoin and everyone can take part. Through many of its unique properties, Bitcoin allows exciting uses that could not be covered by any previous payment system.
+                            and everyone can take part. Through many of its unique properties, Bitcoin allows exciting uses that could not be covered by any previous payment system.</p>
+                        <p>Bitcoin uses peer-to-peer technology to operate with no central authority or banks; managing transactions and the issuing of bitcoins is carried out collectively by the network. Bitcoin is open-source; its design is public, nobody owns or controls Bitcoin and everyone can take part. Through many of its unique properties, Bitcoin allows exciting uses that could not be covered by any previous payment system.
+                            and everyone can take part. Through many of its unique properties, Bitcoin allows exciting uses that could not be covered by any previous payment system.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+
+            </div>
+            <!-- Add Pagination -->
+            <div class="navigation">
+                <div  class="swiper-button-prev"></div>
+                <div  class="swiper-button-next"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+        <p>
+            Through many of its unique properties, Bitcoin allows exciting uses that could not be covered by any previous
+            and everyone can take part. Through many of its unique properties
+        </p>
+        <div id="subscribe-input-wraper">
+            <span class="new-news">Get the latest primecoin news to receive the latest updates</span>
+            <div class="createsend-button "  data-listid="j/03/77D/341/D67FD91990F19504">Subscribe</div>
+        </div>
+
+        <!--<div class="row justify-content-md-center" id="subscribe-input-wraper">-->
+        <!--<span class="getNews">Get the letest news</span>-->
+        <!--<div class="input-group subscribe-input-container mb-3 col-10 col-md-8">-->
+        <!--<input type="text" id="subscribe-input" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon2">-->
+
+        <!--<div class="input-group-append">-->
+        <!--<img src="images/search.png" alt="">-->
+        <!--<button type="button" class="btn btn-primary btn-sm">subscribe</button>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <div class="row" id="list-wraper">
+            <ul class="col-6 col-md-3">
+                <li>
+                    Revource
+                </li>
+                <li>
+                    <a name="connect" href="http://primecoin.io/bin/primecoin-paper.pdf">Whitepaper</a>
+                </li>
+                <li>
+                    <a href="http://forum.primecoin.org/c/technical-support">Tech Support</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">Software</a>
+                </li>
+            </ul>
+            <ul class="col-6 col-md-3">
+                <li>
+                    Releted Looks
+                </li>
+                <li>
+                    <a href="https://www.vee.tech/">VEE</a>
+                </li>
+                <li>
+                    <a href="https://peercoin.net/">Peercoin</a>
+                </li>
+                <li>
+                    <a href="http://www.Primecoin.org">Foundation</a>
+                </li>
+                <li>
+                    <a href="https://github.com/primecoin/primecoin/wiki">Wiki</a>
+                </li>
+            </ul>
+            <ul class="col-6 col-md-3">
+                <li>
+                    Developer
+                </li>
+                <li>
+                    <a href="https://github.com/primecoin/primecoin">Github</a>
+                </li>
+                <li>
+                    <a href="http://forum.primecoin.org/c/developer-discussion">Tech Discussion</a>
+                </li>
+                <li>
+                    <a href="http://www.Primecoin.org">Get sponsorship</a>
+                </li>
+                <li>
+                    <a href="http://www.Primes.zone">Latest stats</a>
+                </li>
+                <li>
+                    <a href="http://t.me/primecoinproject">Telegram Discussion</a>
+                </li>
+            </ul>
+            <ul class="col-6 col-md-3">
+                <li>
+                    Cond  US
+                </li>
+                <li>
+                    <a href="http://forum.primecoin.org/t/how-to-contact-us/56">Forum</a>
+                </li>
+                <li>
+                    <a href="news.html">Press</a>
+                </li>
+                <li>
+                    <a href="http://forum.primecoin.org/t/how-to-contact-us/56">Message us</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" data-toggle="modal" data-target="#myModal">Donate</a>
+                </li>
+
+            </ul>
+
+        </div>
+        <div class="row justify-content-md-center" id="footer-link">
+            <div><a class="footer-link-one" href="###"></a></div>
+            <div><a class="footer-link-two" href="###"></a></div>
+            <div><a class="footer-link-three" href="###"></a></div>
+            <div><a class="footer-link-four" href="###"></a></div>
+            <div><a class="footer-link-five" href="###"></a></div>
+            <div><a class="footer-link-six" href="###"></a></div>
+        </div>
+        <p class="footer-bottom">
+            Copyright © 2018 Apple Inc. All rights reserved.
+        </p>
+    </div>
+
+</div>
+<!--modal-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <p>Your help means a lot for the Primecoin Project. If you wish to help the foundation, please pay to the below address.  </p>
+            <p style="text-align: center;">Primecoin wallet address:</p>
+            <p>APMb1yoFSL8wN4FGSKCJp4EB5BzhfEjwx2 </p>
+            <img src="images/qrcode.png" alt="" class="qrcode" style="width: 60px;margin-left: calc(50% - 30px);">
+            <form id="sub_Form" class="js-cm-form" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="A61C50BEC994754B1D79C5819EC1255C189E7A242C023A36B4EA163EDFD48EEED086B8A1C9AA115FC8987185682F747D77F1B068296A34E192C1EE337F463A56">
+                <p>
+                    <label for="field_Email" >Email:</label>
+                    <input id="field_Email" name="cm-wdukiy-wdukiy" type="email" class="js-cm-email-input" required />
+                </p>
+                <div>
+                    <input id="cm_privacy_consent" name="cm-privacy-consent" required type="checkbox"/>
+                    <label for="cm_privacy_consent">I agree to be emailed</label>
+                    <input id="cm_privacy_consent_hidden" name="cm-privacy-consent-hidden" type="hidden" value="true" />
+                </div>
+                <p style="margin-bottom: 0">
+                    <button class="js-cm-submit-button btn" type="submit">Submit</button>
+                </p>
+            </form>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+
+</div>
+
+</body>
+
+
+<script>window.onload = function(){
+        //配置
+        var config = {
+            vx: 4,//点x轴速度,正为右，负为左
+            vy:  4,//点y轴速度
+            height: 3,//点高宽，其实为正方形，所以不宜太大
+            width: 3,
+            count:150,//点个数
+            color: "121, 162, 185",//点颜色
+            stroke: "130,255,255",//线条颜色
+            dist: 6000,//点吸附距离
+            e_dist: 20000,//鼠标吸附加速距离
+            max_conn: 10//点到点最大连接数
+        }
+        //调用
+        CanvasParticle(config);
+    }</script>
+<script type="text/javascript" src="js/canvas-particle.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/public.js"></script>
+<!-- Swiper JS -->
+<script src="js/swiper.min.js"></script>
+<!--donate-->
+<script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        direction: 'vertical',
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }
+
+    });
+
+    function handleScrollConnect(){
+        var bodyHeight = $('body').height();
+        var footerHeight = $('.footer').height();
+        var documentHeight = $(document).height();
+
+        if ($(document).scrollTop() >= (documentHeight-footerHeight-bodyHeight)){
+            $('.navbar-light .navbar-nav .active>.nav-link').css('color','#fff');
+            $('#toConnect').css('color','#0fd6f3');
+            $('#toGuide').css('color','#fff');
+        }else{
+            $('.navbar-light .navbar-nav .active>.nav-link').css('color','#fff');
+            $('#toConnect').css('color','#fff');
+        }
+    }
+    function handleScrollGuide(){
+        var bodyHeight = $('body').height();
+        var footerHeight = $('.index-content').height();
+        var documentHeight = $(document).height();
+
+        if ($(document).scrollTop() >= (bodyHeight)){
+            $('.navbar-light .navbar-nav .active>.nav-link').css('color','#fff');
+            $('#toGuide').css('color','#0fd6f3');
+        }else{
+            $('.navbar-light .navbar-nav .active>.nav-link').css('color','#fff');
+            $('#toGuide').css('color','#fff');
+        }
+    }
+
+    function handleScroll(){
+        var bodyHeight = $('body').height();
+        var navHeight = $('.navbar').height();
+        var documentHeight = $(document).height();
+        if ($(document).scrollTop() >= (navHeight+60)){
+            $('.posi-wallet').hide();
+        }else{
+            $('.posi-wallet').show();
+        }
+    }
+    handleScroll();
+    handleScrollGuide();
+    handleScrollConnect();
+    $(document).scroll(function () {
+        handleScroll();
+        handleScrollGuide();
+        handleScrollConnect();
+    });
+
+
+</script>
+</html>
