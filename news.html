@@ -252,7 +252,7 @@
                     <a href="http://forum.primecoin.org/t/how-to-contact-us/56">Message us</a>
                 </li>
                 <li>
-                    <a href="http://www.Primecoin.org/donate">Donate</a>
+                    <a href="javascript:void(0);" data-toggle="modal" data-target="#myModal">Donate</a>
                 </li>
             </ul>
         </div>
@@ -267,6 +267,32 @@
         <p class="footer-bottom">
             Copyright © 2018 Apple Inc. All rights reserved.
         </p>
+    </div>
+    <!--modal-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <p>Your help means a lot for the Primecoin Project. If you wish to help the foundation, please pay to the below address.  </p>
+                <p style="text-align: center;">Primecoin wallet address:</p>
+                <p>APMb1yoFSL8wN4FGSKCJp4EB5BzhfEjwx2 </p>
+                <img src="images/qrcode.png" alt="" class="qrcode" style="width: 60px;margin-left: calc(50% - 30px);">
+                <form id="sub_Form" class="js-cm-form" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="A61C50BEC994754B1D79C5819EC1255C189E7A242C023A36B4EA163EDFD48EEED086B8A1C9AA115FC8987185682F747D77F1B068296A34E192C1EE337F463A56">
+                    <p>
+                        <label for="field_Email" >Email:</label>
+                        <input id="field_Email" name="cm-wdukiy-wdukiy" type="email" class="js-cm-email-input" required />
+                    </p>
+                    <div>
+                        <input id="cm_privacy_consent" name="cm-privacy-consent" required type="checkbox"/>
+                        <label for="cm_privacy_consent">I agree to be emailed</label>
+                        <input id="cm_privacy_consent_hidden" name="cm-privacy-consent-hidden" type="hidden" value="true" />
+                    </div>
+                    <p style="margin-bottom: 0">
+                        <button class="js-cm-submit-button btn" type="submit">Submit</button>
+                    </p>
+                </form>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+
     </div>
 </body>
 <script src="js/jquery-3.3.1.min.js"></script>

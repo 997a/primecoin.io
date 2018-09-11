@@ -56,7 +56,7 @@ table { border-collapse:collapse; }
 }
 
 #myModal .modal-content .btn {
-    width: 20%;
+    /*width: 20%;*/
     height:32px;
 
     color: #ffffff;
