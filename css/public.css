@@ -188,6 +188,55 @@
     background: url("../images/12.png") no-repeat;
     background-size: 100% 100%;
 }
+
+#footer-link div{
+    position: relative;
+}
+
+ #footer-link div span{
+    width:60px;
+    height:15px;
+    text-align: center;
+     font-size:10px;
+    border-radius: 3px;
+    color:rgba(255,255,255,0.6);
+    position: absolute;
+    left:10px;
+     top:0px;
+    background:rgba(0,160,196,0.7);
+    display: none;
+
+}
+#footer-link div:hover span{
+    display: block;
+}
+/*#footer-link div:hover .arrow-down{*/
+    /*display: block;*/
+/*}*/
+/*#footer-link div .arrow-down {*/
+    /*width: 0;*/
+    /*height: 0;*/
+    /*border-left:5px solid transparent;*/
+    /*border-right: 5px solid transparent;*/
+    /*border-top: 5px solid rgba(0,160,196,0.77);*/
+    /*position: absolute;*/
+    /*left:26px;*/
+    /*top:5px;*/
+    /*display: none;*/
+/*}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 .footer-bottom{
     width: 100%;
     text-align: center;
@@ -342,6 +391,10 @@
     #footer-link div a{
         width: 30px;
         height: 30px;
+    }
+
+    #footer-link div:hover span{
+        display:none;
     }
 }
 
