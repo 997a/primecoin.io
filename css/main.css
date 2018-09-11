@@ -75,18 +75,18 @@ table { border-collapse:collapse; }
     width: 100%;
     padding: 0 100px;
     box-sizing: border-box;
+    margin-left: 0;
+    margin-right: 0;
 }
 .index-content ul{
-    padding-top:10%;
+    /*padding-top:10%;*/
     box-sizing: border-box;
 }
 .index-content  .found{
     padding-top: 38%;
     box-sizing: border-box;
 }
-.index-content  .sk img{
-    margin-left:38%;
-}
+
 
 .index-content ul img{
     width: 30%;
@@ -96,7 +96,7 @@ table { border-collapse:collapse; }
     display: block;
     color: #ffffff;
     margin: 40px auto;
-
+    outline: none;
 }
 .index-content ul li .p{
     width: 100%;

@@ -124,6 +124,7 @@
     font-size: 12px;
     font-weight: normal;
     text-decoration-line: none;
+    outline: none;
 }
 #list-wraper ul li a:hover{
     color: #fff;
