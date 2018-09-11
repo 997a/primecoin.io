@@ -4,23 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
     <title>Primecoin</title>
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/initialize.css">
     <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/main.css">
     <style type="text/css">
         .swiper-container {
             width: 100%;
-            height: 100%;
+            height: 800px;
+
         }
-        .swiper-container swiper-container-vertical swiper-container-ios{
-          margin-top: 100px;
-        }
+
         .swiper-slide {
             color: #ffffff;
-            padding-top: 50px;
-            box-sizing: border-box;
+
             /* Center slide text vertically */
             display: -webkit-box;
             display: -ms-flexbox;
@@ -59,49 +57,62 @@
         }
 
 
-         .swiper-button-prev,  .swiper-button-next{
+        .swiper-button-prev{
+
+
+        }
+
+       #prev,  #next{
              position: absolute;
              width: 24px;
              height: 24px;
              top:40%;
-             left:96%;
+            left: calc(100% - 60px);
              background-size: 24px 24px;
              background-image: url("images/Arrow up.png");
-             /*transform:rotate(90deg);*/
-            /*-ms-transform:rotate(90deg); 	!* IE 9 *!*/
-            /*-moz-transform:rotate(90deg); 	!* Firefox *!*/
-            /*-webkit-transform:rotate(90deg); !* Safari 和 Chrome *!*/
-            /*-o-transform:rotate(90deg); 	!* Opera *!*/
-            /*color: #eeeeee;*/
+
         }
-         .swiper-button-next{
+        #next{
             position: absolute;
             top: 63%;
-            left: 96%;
+
+
              background-image: url("images/Arrow Down.png");
         }
-        @media screen and (max-width:768px){
-         .index-center{
-             padding-top: 84%;
-             height:80vh;
-             box-sizing: border-box;
-         }
-            .swiper-slide{
 
-               overflow: hidden;
-                padding:15px;
-                box-sizing: border-box;
+
+
+
+        @media screen and (max-width:768px){
+
+            .swiper-slide{
+                margin-left: 0;
+                margin-right: 0;
             }
+            .swiper-slide .text{
+                height:200px;
+                overflow: auto;
+
+            }
+            .swiper-slide .text h1{
+                text-align: center;
+            }
+
+         .swiper-container{
+             height: 500px;
+         }
+
+
             .swiper-container-vertical>.swiper-pagination-bullets{
                 right:15px;
             }
-            .swiper-button-prev,  .swiper-button-next{
-                top: 30%;
-                left:91.6%;
+            #prev,  #next{
+                top:33%;
+                left:calc(100% - 31px)
             }
-            .swiper-button-next{
-                top:76%;
-                left:91.6%;
+           #next{
+                top:70%;
+
             }
         }
 
@@ -141,9 +152,7 @@
     </div>
 </nav>
 <div id="warp">
-
-
-<div id="mydiv">
+    <div id="mydiv">
     <div class="left fl">
             <h1 class="f">Primecoin</h1>
             <h2 class="b">A new type cryptocurrency which is proof-of-work based on searching for prime numbers.</h2>
@@ -155,44 +164,46 @@
         </div>
 
 </div>
-<div class="index-content">
+<div class=" index-content f row">
 
-       <a href="about.html" name="guide"><div class="sk pointer">
-           <img src="images/tubiao_sk.png">
-           <div class="f">
-               <b> Sunny King</b>
-               <p>who invented Peercoin(PPC) and Primecoin(XPM) that have made significant contributions to cryptocurrency technology.
-                   Besides, he created Proof-of-Stake(PoS) to make the blockchain more energy efficient. And in 2018, Sunny King release VEE blockchain database cloud.</p>
-           </div>
-       </div>
-       </a>
-    <a href="about.html"> <div class="primecoin pointer">
+    <ul class=" col-md-4 col-12 found">
+        <a href="about.html">
+            <img src="images/tubiao_Foundation.png">
+        <li>
+            <p class="p">Primecion Foundation</p>
+            <p>The Primecoin Foundation is led by the creator of Primecoin, Sunny King. It supports and promotes the evolving Primecoin protocol and its community,
+                engages in cutting-edge base layer research to preserve the legacy of Useful PoW that Primecoin introduced, and establishes an easily accessible ecosystem that realizes the future of decentralization.
+            </p>
+        </li> </a>
+      </ul>
+
+    <ul class=" col-md-4 col-12 sk">
+        <a href="about.html" name="guide" >
+        <img src="images/tubiao_sk.png">
+        <li>
+            <p class="p"> Sunny King</p>
+            <p>who invented Peercoin(PPC) and Primecoin(XPM) that have made significant contributions to cryptocurrency technology.
+                Besides, he created Proof-of-Stake(PoS) to make the blockchain more energy efficient. And in 2018, Sunny King release VEE blockchain database cloud.</p>
+        </li></a>
+        <a href="about.html">
         <img src="images/tubiao_Primecoin.png">
-        <div class=" f">
-            <b>Primecion</b>
+        <li>
+            <p class="p">Primecion</p>
             <p>A new type of PoW based on searching for prime numbers is introduced in P2P cryptocurrency designs.
-                Primecoin is the first cryptocurrency on the market with non-hashcash PoW, generating additional scientific value from the mining work.
-            </p>
-        </div>
-    </div></a>
-    <a href="about.html"> <div class="found pointer">
-        <img src="images/tubiao_Foundation.png">
-        <div class=" f">
-            <b>Primecion Foundation</b>
-            <p>The Primecoin Foundation is led by the creator of Primecoin, Sunny King. It supports and promotes the evolving Primecoin protocol and its community,
-                engages in cutting-edge base layer research to preserve the legacy of Useful PoW that Primecoin introduced, and establishes an easily accessible ecosystem that realizes the future of decentralization.
-            </p>
-        </div>
-    </div></a>
-    <a href="news.html"><div class="news pointer">
+                Primecoin is the first cryptocurrency on the market with non-hashcash PoW, generating additional scientific value from the mining work.</p>
+        </li></a>
+    </ul>
+    <ul class="col-md-4 col-12 found">
+        <a href="news.html">
         <img src="images/tubiao_News.png">
-        <div class=" f">
-            <b>News</b>
+        <li>
+            <p class="p">News</p>
             <p>The Primecoin Foundation is led by the creator of Primecoin, Sunny King. It supports and promotes the evolving Primecoin protocol and its community,
                 engages in cutting-edge base layer research to preserve the legacy of Useful PoW that Primecoin introduced, and establishes an easily accessible ecosystem that realizes the future of decentralization.
             </p>
-        </div>
-    </div></a>
+        </li></a>
+    </ul>
+
 
 </div>
     <div class="index-center">
@@ -205,7 +216,7 @@
                     </video>
 
 
-                    <div class="col-10 col-md-5 ">
+                    <div class="col-10 col-md-5 text">
                        <h1>wallet</h1>
                         <p>Bitcoin uses peer-to-peer technology to operate with no central authority or banks; managing transactions and the issuing of bitcoins is carried out collectively by the network. Bitcoin is open-source; its design is public, nobody owns or controls Bitcoin and everyone can take part. Through many of its unique properties, Bitcoin allows exciting uses that could not be covered by any previous payment system.
                             and everyone can take part. Through many of its unique properties, Bitcoin allows exciting uses that could not be covered by any previous payment system.</p>
@@ -220,13 +231,12 @@
 
             </div>
             <!-- Add Pagination -->
-            <div class="navigation">
-                <div  class="swiper-button-prev"></div>
-                <div  class="swiper-button-next"></div>
-            </div>
-            <div class="swiper-pagination"></div>
-        </div>
 
+            <div class="swiper-pagination"></div>
+            <div class="navigation">
+                <div  class="swiper-button-prev" id="prev"></div>
+                <div  class="swiper-button-next" id="next"></div>
+            </div>
     </div>
 
 
@@ -364,6 +374,7 @@
 
 </div>
 
+</div>
 </body>
 
 
