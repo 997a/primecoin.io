@@ -94,8 +94,11 @@
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    background-color: #0fd6f3;
+    background-color:#0dcde2;
     margin-top: 5px;
+}
+.navBar .navBar-nav .nav-download .nav-link:hover{
+    background: #0fd6f3;
 }
 
 .navbar-light .navBar-nav .active>.nav-link, .navbar-light .navBar-nav .nav-link.active, .navbar-light .navBar-nav .nav-link.show, .navbar-light .navBar-nav .show>.nav-link{
