@@ -34,5 +34,19 @@ $(function(){
         $('.navbar-light .navbar-nav .active>.nav-link').css('color','#fff');
         $('#toConnect').css('color','#0fd6f3');
     });
+
+
+
+    $("#pull").click(function (){
+        if ($("#pull img").attr('src') == 'images/takeIn.png'){
+            $("#pull img").attr('src','images/pull.png');
+            $("#navBar").animate({right: '0'});
+            $("#navBar").addClass('arrow_box');
+        }else{
+          $("#pull img").attr('src','images/takeIn.png');
+          $("#navBar").animate({right: '-100%'});
+          $("#navBar").removeClass('arrow_box');
+        }
+    });
 });
 

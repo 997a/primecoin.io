@@ -23,42 +23,77 @@
 .navbar-expand-lg .navbar-collapse{
     position: relative;
 }
-.navbar-expand-lg .navbar-nav{
-    position: absolute;
+#pull{
+    position: fixed;
+    top: 115px;
     right: 0;
+    height: 50px;
+    background-color: rgba(0,0,0,0.2);
+    cursor: pointer;
+    z-index: 999999999999999999999999;
+}
+#pull img{
+    width: 30px;
+    margin-top: 10px;
+}
+#navBar{
+    width: 100%;
+    position: fixed;
+    right: -100%;
+    top: 115px;
+    z-index: 999999999999999;
     font-size: 16px;
     font-weight: bold;
+    border: 1px solid #072538;
+    box-sizing: border-box;
 }
-.navbar-light .navbar-nav .nav-link:hover{
+.navBar .navBar-nav{
+    overflow: hidden;
+    background-color: rgba(255,255,255,0.3);
+    padding: 0;
+    margin: 0;
+}
+.navBar .navBar-nav .nav-item{
+    display: inline-block;
+    float: left;
+    box-sizing: border-box;
+}
+.navBar .navBar-nav .nav-link:hover{
     color: #0fd6f3;
 }
-.navbar-light .navbar-nav .nav-link:link{
+.navBar .navBar-nav .nav-link:link{
     color: #fff;
 }
-.navbar-light .navbar-nav .nav-link:visited{
+.navBar .navBar-nav .nav-link:visited{
     color: #fff;
 }
-.navbar-light .navbar-nav .nav-link{
+.navBar .navBar-nav .nav-link{
     color: #fff;
-    padding: 0 20px;
+    padding: 0 10px;
     height: 50px;
     line-height: 50px;
+    text-align: center;
 }
 .nav-download{
     display: inline-block;
+    width: 70px;
     height: 50px;
     line-height: 50px;
     /*padding: 0 15px;*/
+}
+.navBar .navBar-nav .nav-download .nav-link{
+    text-align: center;
+    overflow: hidden;
+    height: 40px;
+    line-height: 40px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
     background-color: #0fd6f3;
-}
-.nav-download .nav-link{
-    text-align: center;
+    margin-top: 5px;
 }
 
-.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link{
+.navbar-light .navBar-nav .active>.nav-link, .navbar-light .navBar-nav .nav-link.active, .navbar-light .navBar-nav .nav-link.show, .navbar-light .navBar-nav .show>.nav-link{
     color: #0fd6f3;
 }
 .navbar-light .navbar-toggler{
@@ -230,7 +265,19 @@
 
 
 
-
+.arrow_box{
+    animation: glow 0.6s ease-out 4;
+}
+@keyframes glow {
+    0% {
+        border-color: #0fd6f3;
+        box-shadow: 0 0 5px rgba(15,214,243,.2), inset 0 0 5px rgba(15,214,243,.1), 0 1px 0 #0fd6f3;
+    }
+    100% {
+        border-color: #0fd6f3;
+        box-shadow: 0 0 20px rgba(15,214,243,.6), inset 0 0 10px rgba(15,214,243,.4), 0 1px 0 #0fd6f3;
+    }
+}
 
 
 
@@ -323,17 +370,21 @@
     border:none;
 }
 
+/*.selectshake{*/
+
+/*}*/
+
 @media screen and (max-width: 992px){
     .navbar-expand-lg .navbar-collapse{
         position: static;
     }
-    .navbar-expand-lg .navbar-nav{
+    .navbar-expand-lg .navBar-nav{
         position: static;
         /*right: 0;*/
         font-size: 16px;
         font-weight: bold;
     }
-    .navbar-light .navbar-nav .nav-link{
+    .navbar-light .navBar-nav .nav-link{
         padding: 10px 10px;
         line-height: 30px;
     }
@@ -356,7 +407,7 @@
     .navbar-brand img{
         width: 34px;
     }
-    .navbar-expand-lg .navbar-nav .nav-item{
+    .navbar-expand-lg .navBar-nav .nav-item{
         font-size: 14px;
     }
 
@@ -396,6 +447,33 @@
 
     #footer-link div:hover span{
         display:none;
+    }
+    #navBar{
+        top: 59px;
+    }
+
+    .navBar .navBar-nav .nav-link{
+        font-size: 10px;
+        padding: 0;
+        height: 30px;
+        line-height: 30px;
+    }
+    .navBar .navBar-nav .nav-item{
+        padding: 0 2px;
+        height: 30px;
+        line-height: 30px;
+    }
+    #pull{
+        height: 30px;
+        top: 59px;
+    }
+    #pull img{
+        width: 20px;
+        margin-top: 5px;
+    }
+    .navBar .navBar-nav .nav-download .nav-link{
+        height: 20px;
+        line-height: 20px;
     }
 }
 
