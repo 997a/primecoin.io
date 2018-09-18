@@ -38,6 +38,10 @@
         .navBar .navBar-nav{
             background-color: rgba(0,0,0,0.5);
         }
+        .text-d{
+            font-size: 24px;
+            text-decoration: underline;
+        }
         @media screen and (max-width: 768px) {
 
             .about-container{
@@ -99,13 +103,13 @@
         <div class="navBar" id="navBar">
             <ul class="navBar-nav row justify-content-center" id="navBar-nav">
                 <li class="nav-item col-2 col-md-2">
-                    <a class="nav-link" href="about.html">About <span class="sr-only">(current)</span></a>
+                    <a class="nav-link text-d " href="about.html">About</a>
                 </li>
                 <li class="nav-item col-2 col-md-2">
-                    <a class="nav-link" href="index.html#guide">Guide</a>
+                    <a class="nav-link td" href="index.html#guide">Guide</a>
                 </li>
                 <li class="nav-item col-2 col-md-2">
-                    <a class="nav-link" href="#connect" id="toConnect">Connect</a>
+                    <a class="nav-link td" href="#connect" id="toConnect">Connect</a>
                 </li>
                 <li class="nav-item nav-download col-4 col-md-2">
                     <a class="nav-link" href="javascript:void(0);">Download Wallet!</a>
@@ -347,7 +351,18 @@
             handleScrollConnect();
         });
     </script>
-    <script type="text/javascript">(function () { var e = document.createElement('script'); e.type = 'text/javascript';
-        e.async = true; e.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://btn.createsend1.com/js/sb.min.js?v=3';
-        e.className = 'createsend-script'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s); })();</script>
+<script type="text/javascript">
+    (function () {
+        setTimeout(function (){
+            var e = document.createElement('script');
+            e.type = 'text/javascript';
+            e.async = true;
+            e.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://btn.createsend1.com/js/sb.min.js?v=3';
+            e.className = 'createsend-script';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(e, s);
+        },1000);
+
+    })();
+</script>
 </html>

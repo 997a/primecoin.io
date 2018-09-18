@@ -208,13 +208,13 @@
 <div class="navBar" id="navBar">
     <ul class="navBar-nav row justify-content-center" id="navBar-nav">
         <li class="nav-item col-2 col-md-2">
-            <a class="nav-link" href="about.html">About <span class="sr-only">(current)</span></a>
+            <a class="nav-link td" href="about.html">About</a>
         </li>
         <li class="nav-item col-2 col-md-2">
-            <a class="nav-link" href="index.html#guide">Guide</a>
+            <a class="nav-link td" href="index.html#guide" id="toGuide">Guide</a>
         </li>
         <li class="nav-item col-2 col-md-2">
-            <a class="nav-link" href="#connect" id="toConnect">Connect</a>
+            <a class="nav-link td" href="#connect" id="toConnect">Connect</a>
         </li>
         <li class="nav-item nav-download col-4 col-md-2">
             <a class="nav-link" href="javascript:void(0);">Download Wallet!</a>
@@ -531,8 +531,8 @@
 
     if ($(document).scrollTop() >= (documentHeight-footerHeight-bodyHeight)){
       $('.navbar-light .navbar-nav .active>.nav-link').css('color','#fff');
-      $('#toConnect').css('color','#0fd6f3');
-      $('#toGuide').css('color','#fff');
+      $('#toConnect').css({"font-size":"24px","text-decoration":"underline"});
+      $('#toGuide').css();
     }else{
       $('.navbar-light .navbar-nav .active>.nav-link').css('color','#fff');
       $('#toConnect').css('color','#fff');
@@ -545,7 +545,8 @@
 
     if ($(document).scrollTop() >= (bodyHeight)){
       $('.navbar-light .navbar-nav .active>.nav-link').css('color','#fff');
-      $('#toGuide').css('color','#0fd6f3');
+      $('#toGuide').css({"font-size":"24px","text-decoration":"underline"});
+      $('#toConnect').css()
     }else{
       $('.navbar-light .navbar-nav .active>.nav-link').css('color','#fff');
       $('#toGuide').css('color','#fff');
@@ -572,9 +573,20 @@
   });
 
 </script>
-<script type="text/javascript">(function () { var e = document.createElement('script'); e.type = 'text/javascript';
-e.async = true; e.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://btn.createsend1.com/js/sb.min.js?v=3';
-e.className = 'createsend-script'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s); })();</script>
+<script type="text/javascript">
+    (function () {
+        setTimeout(function (){
+            var e = document.createElement('script');
+            e.type = 'text/javascript';
+            e.async = true;
+            e.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://btn.createsend1.com/js/sb.min.js?v=3';
+            e.className = 'createsend-script';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(e, s);
+        },1000);
+
+    })();
+</script>
 
 
 

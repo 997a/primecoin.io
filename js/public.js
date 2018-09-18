@@ -32,7 +32,7 @@ $(function(){
     $(".dropdown-toggle").dropdown('toggle');
     $('#toConnect').click(function (){
         $('.navbar-light .navbar-nav .active>.nav-link').css('color','#fff');
-        $('#toConnect').css('color','#0fd6f3');
+        // $('#toConnect').css('color','#0fd6f3');
     });
 
 
