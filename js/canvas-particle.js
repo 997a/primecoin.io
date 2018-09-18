@@ -49,7 +49,7 @@ var CanvasParticle = (function(){
         $("#mydiv").append(canvas.element);
 
         /* 画布绝对定位 */
-        canvas.element.style = "position: absolute; top: 0; left: 0; z-index: -1;";
+        canvas.element.style = "position: absolute; top: 0; left: 0; ";
 
 
 
