@@ -103,7 +103,7 @@
         <div class="navBar" id="navBar">
             <ul class="navBar-nav row justify-content-center" id="navBar-nav">
                 <li class="nav-item col-2 col-md-2">
-                    <a class="nav-link text-d " href="about.html">About</a>
+                    <a class="nav-link td text-d" id="toAbout" href="about.html">About</a>
                 </li>
                 <li class="nav-item col-2 col-md-2">
                     <a class="nav-link td" href="index.html#guide">Guide</a>
@@ -332,19 +332,37 @@
     <script src="js/public.js"></script>
     <script>
         var hideHeight = $('.navbar').height() + 60;
+        // function handleScrollConnect(){
+        //     var bodyHeight = $('body').height();
+        //     var footerHeight = $('.footer').height();
+        //     var documentHeight = $(document).height();
+        //
+        //     if ($(document).scrollTop() >= (documentHeight-footerHeight-bodyHeight)){
+        //         $('.navbar-light .navbar-nav .active>.nav-link').css('color','#fff');
+        //         $('#toConnect').css('color','#0fd6f3');
+        //     }else{
+        //         $('.navbar-light .navbar-nav .active>.nav-link').css('color','#fff');
+        //         $('#toConnect').css('color','#fff');
+        //         $('#toAbout').css('color','#0fd6f3');
+        //     }
+        // }
         function handleScrollConnect(){
-            var bodyHeight = $('body').height();
-            var footerHeight = $('.footer').height();
-            var documentHeight = $(document).height();
+          var bodyHeight = $('body').height();
+          var footerHeight = $('.footer').height();
+          var documentHeight = $(document).height();
 
-            if ($(document).scrollTop() >= (documentHeight-footerHeight-bodyHeight)){
-                $('.navbar-light .navbar-nav .active>.nav-link').css('color','#fff');
-                $('#toConnect').css('color','#0fd6f3');
-            }else{
-                $('.navbar-light .navbar-nav .active>.nav-link').css('color','#fff');
-                $('#toConnect').css('color','#fff');
-                $('#toAbout').css('color','#0fd6f3');
-            }
+          if ($(document).scrollTop() >= (documentHeight-footerHeight-bodyHeight)){
+            $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
+            $('#toConnect').css({"font-size":"24px","text-decoration":"underline"});
+            $('#toConnect').addClass('disable-change');
+            $('#toGuide').css({"font-size":"16px","text-decoration":"none"});
+            $('#toAbout').css({"font-size":"16px","text-decoration":"none"})
+          }else{
+            $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
+            $('#toConnect').css({"font-size":"16px","text-decoration":"none"});
+            $('#toAbout').css({"font-size":"24px","text-decoration":"underline"})
+            $('#toConnect').removeClass('disable-change');
+          }
         }
         handleScrollConnect();
         $(document).scroll(function () {

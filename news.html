@@ -132,13 +132,13 @@
     <div class="navBar" id="navBar">
         <ul class="navBar-nav row justify-content-center" id="navBar-nav">
             <li class="nav-item col-2 col-md-2">
-                <a class="nav-link" href="about.html">About <span class="sr-only">(current)</span></a>
+                <a class="nav-link td" href="about.html">About <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item col-2 col-md-2">
-                <a class="nav-link" href="index.html#guide">Guide</a>
+                <a class="nav-link td" href="index.html#guide">Guide</a>
             </li>
             <li class="nav-item col-2 col-md-2">
-                <a class="nav-link" href="#connect" id="toConnect">Connect</a>
+                <a class="nav-link td" href="#connect" id="toConnect">Connect</a>
             </li>
             <li class="nav-item nav-download col-4 col-md-2">
                 <a class="nav-link" href="javascript:void(0);">Download Wallet!</a>
@@ -362,19 +362,36 @@
         },
     });
 
-    function handleScrollConnect(){
-        var bodyHeight = $('body').height();
-        var footerHeight = $('.footer').height();
-        var documentHeight = $(document).height();
+    // function handleScrollConnect(){
+    //     var bodyHeight = $('body').height();
+    //     var footerHeight = $('.footer').height();
+    //     var documentHeight = $(document).height();
+    //
+    //     if ($(document).scrollTop() >= (documentHeight-footerHeight-bodyHeight)){
+    //         $('.navbar-light .navbar-nav .active>.nav-link').css('color','#fff');
+    //         $('#toConnect').css('color','#0fd6f3');
+    //     }else{
+    //         $('.navbar-light .navbar-nav .active>.nav-link').css('color','#fff');
+    //         $('#toConnect').css('color','#fff');
+    //         $('#toAbout').css('color','#0fd6f3');
+    //     }
+    // }
 
-        if ($(document).scrollTop() >= (documentHeight-footerHeight-bodyHeight)){
-            $('.navbar-light .navbar-nav .active>.nav-link').css('color','#fff');
-            $('#toConnect').css('color','#0fd6f3');
-        }else{
-            $('.navbar-light .navbar-nav .active>.nav-link').css('color','#fff');
-            $('#toConnect').css('color','#fff');
-            $('#toAbout').css('color','#0fd6f3');
-        }
+    function handleScrollConnect(){
+      var bodyHeight = $('body').height();
+      var footerHeight = $('.footer').height();
+      var documentHeight = $(document).height();
+
+      if ($(document).scrollTop() >= (documentHeight-footerHeight-bodyHeight)){
+        $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
+        $('#toConnect').css({"font-size":"24px","text-decoration":"underline"});
+        $('#toConnect').addClass('disable-change');
+        $('#toGuide').css({"font-size":"16px","text-decoration":"none"});
+      }else{
+        $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
+        $('#toConnect').css({"font-size":"16px","text-decoration":"none"});
+        $('#toConnect').removeClass('disable-change');
+      }
     }
     handleScrollConnect();
     $(document).scroll(function () {

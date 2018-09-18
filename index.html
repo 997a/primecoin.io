@@ -530,12 +530,14 @@
     var documentHeight = $(document).height();
 
     if ($(document).scrollTop() >= (documentHeight-footerHeight-bodyHeight)){
-      $('.navbar-light .navbar-nav .active>.nav-link').css('color','#fff');
+      $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
       $('#toConnect').css({"font-size":"24px","text-decoration":"underline"});
-      $('#toGuide').css();
+      $('#toConnect').addClass('disable-change');
+      $('#toGuide').css({"font-size":"16px","text-decoration":"none"});
     }else{
-      $('.navbar-light .navbar-nav .active>.nav-link').css('color','#fff');
-      $('#toConnect').css('color','#fff');
+      $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
+      $('#toConnect').css({"font-size":"16px","text-decoration":"none"});
+      $('#toConnect').removeClass('disable-change');
     }
   }
   function handleScrollGuide(){
@@ -544,12 +546,15 @@
     var documentHeight = $(document).height();
 
     if ($(document).scrollTop() >= (bodyHeight)){
-      $('.navbar-light .navbar-nav .active>.nav-link').css('color','#fff');
+      $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
       $('#toGuide').css({"font-size":"24px","text-decoration":"underline"});
-      $('#toConnect').css()
+      $('#toGuide').addClass('disable-change');
+      $('#toConnect').css({"font-size":"16px","text-decoration":"none"});
     }else{
-      $('.navbar-light .navbar-nav .active>.nav-link').css('color','#fff');
-      $('#toGuide').css('color','#fff');
+      $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
+      $('#toGuide').css({"font-size":"16px","text-decoration":"none"});
+      $('#toConnect').css({"font-size":"16px","text-decoration":"none"});
+      $('#toGuide').removeClass('disable-change');
     }
   }
 

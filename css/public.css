@@ -58,11 +58,11 @@
     float: left;
     box-sizing: border-box;
 }
-.navBar .navBar-nav .nav-item .td:hover{
-    text-decoration:underline;
-    font-size:24px;
-    transition:0.5s;
-}
+/*.navBar .navBar-nav .nav-item .td:hover{*/
+    /*text-decoration:underline;*/
+    /*font-size:24px;*/
+    /*transition:0.5s;*/
+/*}*/
 .navBar .navBar-nav .nav-link:hover{
     color: #0fd6f3;
 }

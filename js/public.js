@@ -48,5 +48,14 @@ $(function(){
           $("#navBar").removeClass('arrow_box');
         }
     });
+
+    $('#navBar-nav .td').mouseenter(function (){
+        $(this).css({"font-size":"24px","text-decoration":"underline"});
+    });
+    $('#navBar-nav .td').mouseleave(function (){
+        if ($(this).attr('class') == 'nav-link td'){
+          $(this).css({"font-size":"16px","text-decoration":"none"});
+        }
+   })
 });
 
