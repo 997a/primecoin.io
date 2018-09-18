@@ -103,7 +103,7 @@
         <div class="navBar" id="navBar">
             <ul class="navBar-nav row justify-content-center" id="navBar-nav">
                 <li class="nav-item col-2 col-md-2">
-                    <a class="nav-link td text-d" id="toAbout" href="about.html">About</a>
+                    <a class="nav-link td" id="toAbout" href="index.html#about">About</a>
                 </li>
                 <li class="nav-item col-2 col-md-2">
                     <a class="nav-link td" href="index.html#guide">Guide</a>
@@ -197,10 +197,10 @@
             </div>
         </div>
         <div class="footer">
-            <p>
-                Through many of its unique properties, Bitcoin allows exciting uses that could not be covered by any previous
-                and everyone can take part. Through many of its unique properties
-            </p>
+            <!--<p>-->
+                <!--Through many of its unique properties, Bitcoin allows exciting uses that could not be covered by any previous-->
+                <!--and everyone can take part. Through many of its unique properties-->
+            <!--</p>-->
             <div id="subscribe-input-wraper">
                 <span class="new-news">Get the latest primecoin news to receive the latest updates</span>
                 <div class="createsend-button "  data-listid="j/03/77D/341/D67FD91990F19504">Subscribe</div>
@@ -266,7 +266,7 @@
                         <a href="http://www.Primes.zone">Latest stats</a>
                     </li>
                     <li>
-                        <a href="http://t.me/primecoinproject">Telegram Discussion</a>
+                        <a href="https://t.me/PrimecoinFoundation">Telegram Discussion</a>
                     </li>
                 </ul>
                 <ul class="col-6 col-md-3">
@@ -355,12 +355,11 @@
             $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
             $('#toConnect').css({"font-size":"24px","text-decoration":"underline"});
             $('#toConnect').addClass('disable-change');
-            $('#toGuide').css({"font-size":"16px","text-decoration":"none"});
-            $('#toAbout').css({"font-size":"16px","text-decoration":"none"})
+            $('#toAbout,#toGuide').css({"font-size":"16px","text-decoration":"none"});
+            $('#toAbout,#toGuide').removeClass('disable-change');
           }else{
             $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
             $('#toConnect').css({"font-size":"16px","text-decoration":"none"});
-            $('#toAbout').css({"font-size":"24px","text-decoration":"underline"})
             $('#toConnect').removeClass('disable-change');
           }
         }

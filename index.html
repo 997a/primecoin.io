@@ -208,7 +208,7 @@
 <div class="navBar" id="navBar">
     <ul class="navBar-nav row justify-content-center" id="navBar-nav">
         <li class="nav-item col-2 col-md-2">
-            <a class="nav-link td" href="about.html">About</a>
+            <a class="nav-link td" href="#about" id="toAbout">About</a>
         </li>
         <li class="nav-item col-2 col-md-2">
             <a class="nav-link td" href="index.html#guide" id="toGuide">Guide</a>
@@ -251,7 +251,7 @@
         </ul>
 
         <ul class=" col-md-4 col-12 sk">
-            <a href="about.html#sk" name="guide" >
+            <a href="about.html#sk" name="about" >
                 <img src="images/tubiao_sk.png">
                 <li>
                     <p class="p"> Sunny King</p>
@@ -281,7 +281,9 @@
     </div>
     <div class="index-center">
         <!-- Swiper -->
+        <a href="###" name="guide" style="text-decoration: none;outline: none;">
         <div class="swiper-container">
+
             <div class="swiper-wrapper">
                 <div class="swiper-slide row  swiper-no-swiping">
 
@@ -302,8 +304,8 @@
                 <div class="swiper-slide swiper-no-swiping">Slide 3</div>
                 <div class="swiper-slide swiper-no-swiping">Slide 4</div>
                 <div class="swiper-slide swiper-no-swiping">Slide 5</div>
-
             </div>
+
             <!-- Add Pagination -->
 
             <div class="swiper-pagination"></div>
@@ -312,13 +314,13 @@
                 <div  class="swiper-button-next" id="next"></div>
             </div>
         </div>
-
+        </a>
 
         <div class="footer">
-            <p>
-                Through many of its unique properties, Bitcoin allows exciting uses that could not be covered by any previous
-                and everyone can take part. Through many of its unique properties
-            </p>
+            <!--<p>-->
+                <!--Through many of its unique properties, Bitcoin allows exciting uses that could not be covered by any previous-->
+                <!--and everyone can take part. Through many of its unique properties-->
+            <!--</p>-->
             <div id="subscribe-input-wraper">
                 <span class="new-news">Get the latest primecoin news to receive the latest updates</span>
                 <div class="createsend-button "  data-listid="j/03/77D/341/D67FD91990F19504">Subscribe</div>
@@ -373,7 +375,7 @@
                         <a href="http://www.Primes.zone">Latest Status</a>
                     </li>
                     <li>
-                        <a href="http://t.me/primecoinproject">Telegram Discussion</a>
+                        <a href="https://t.me/PrimecoinFoundation">Telegram Discussion</a>
                     </li>
                 </ul>
                 <ul class="col-6 col-md-3">
@@ -533,47 +535,59 @@
       $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
       $('#toConnect').css({"font-size":"24px","text-decoration":"underline"});
       $('#toConnect').addClass('disable-change');
-      $('#toGuide').css({"font-size":"16px","text-decoration":"none"});
-        $('#toGuide').removeClass('disable-change');
+      $('#toAbout,#toGuide').css({"font-size":"16px","text-decoration":"none"});
+      $('#toAbout,#toGuide').removeClass('disable-change');
     }else{
       $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
       $('#toConnect').css({"font-size":"16px","text-decoration":"none"});
       $('#toConnect').removeClass('disable-change');
     }
   }
-  function handleScrollGuide(){
+
+  function handleScrollAbout(){
     var bodyHeight = $('body').height();
     var footerHeight = $('.index-content').height();
     var documentHeight = $(document).height();
 
-    if ($(document).scrollTop() >= (bodyHeight)){
+    if ($(document).scrollTop() >= (100)){
+      $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
+      $('#toAbout').css({"font-size":"24px","text-decoration":"underline"});
+      $('#toAbout').addClass('disable-change');
+      $('#toConnect,#toGuide').css({"font-size":"16px","text-decoration":"none"});
+      $('#toConnect,#toGuide').removeClass('disable-change');
+    }else{
+      $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
+      $('#toAbout').css({"font-size":"16px","text-decoration":"none"});
+      $('#toConnect').css({"font-size":"16px","text-decoration":"none"});
+      $('#toAbout').removeClass('disable-change');
+    }
+  }
+
+  function handleScrollGuide(){
+    var bodyHeight = $('body').height();
+    var changeHeight = $('.index-center').height();
+    var documentHeight = $(document).height();
+
+    if ($(document).scrollTop() >= (documentHeight-changeHeight-bodyHeight)){
       $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
       $('#toGuide').css({"font-size":"24px","text-decoration":"underline"});
       $('#toGuide').addClass('disable-change');
+      $('#toAbout').css({"font-size":"16px","text-decoration":"none"});
+      $('#toAbout').removeClass('disable-change');
       $('#toConnect').css({"font-size":"16px","text-decoration":"none"});
+      $('#toConnect').removeClass('disable-change');
     }else{
       $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
       $('#toGuide').css({"font-size":"16px","text-decoration":"none"});
-      $('#toConnect').css({"font-size":"16px","text-decoration":"none"});
       $('#toGuide').removeClass('disable-change');
     }
   }
 
-  function handleScroll(){
-    var bodyHeight = $('body').height();
-    var navHeight = $('.navbar').height();
-    var documentHeight = $(document).height();
-    if ($(document).scrollTop() >= (navHeight+60)){
-      $('.posi-wallet').hide();
-    }else{
-      $('.posi-wallet').show();
-    }
-  }
-  handleScroll();
+  handleScrollAbout();
   handleScrollGuide();
   handleScrollConnect();
   $(document).scroll(function () {
-    handleScroll();
+    handleScrollAbout();
     handleScrollGuide();
     handleScrollConnect();
   });
