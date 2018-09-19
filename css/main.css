@@ -165,9 +165,10 @@ table { border-collapse:collapse; }
         width:60%;
         margin:5% 20%;
         font-size:18px;
-
-
-    }
+   }
+   .col-5 {
+       padding-left: 0;
+   }
    .mydiv .right{
         width: 32%;
        margin-top: 20px;
