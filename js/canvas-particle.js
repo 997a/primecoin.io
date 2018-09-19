@@ -82,7 +82,7 @@ var CanvasParticle = (function(){
         // 获取特定div的宽高
         /*var width = document.getElementById("mydiv").style.width;
         var height = document.getElementById("mydiv").style.height;*/
-        var width = $("#mydiv").css("width");
+        var width = $("body").css("width");
         var height = $("#mydiv").css("height");
         console.log(width, height);
 
@@ -94,7 +94,6 @@ var CanvasParticle = (function(){
         canvas.height = height || window.innerWeight || document.documentElement.clientHeight || document.body.clientHeight;
 
     }
-
     // 画点
     function drawPoint(canvas){
         var context = canvas.context,
