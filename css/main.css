@@ -168,6 +168,7 @@ table { border-collapse:collapse; }
    }
    .left .col-md-5 , .left .col-12 {
        padding-left: 0;
+       padding-right: 0;
    }
    .mydiv .right{
        margin-top: 20px;
