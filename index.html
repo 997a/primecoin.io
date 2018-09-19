@@ -540,15 +540,31 @@
     var documentHeight = $(document).height();
 
     if ($(document).scrollTop() >= (documentHeight-footerHeight-bodyHeight)){
-      $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
-      $('#toConnect').css({"font-size":"24px","text-decoration":"underline"});
-      $('#toConnect').addClass('disable-change');
-      $('#toAbout,#toGuide').css({"font-size":"16px","text-decoration":"none"});
-      $('#toAbout,#toGuide').removeClass('disable-change');
+      if ($('body').width() > 768){
+        $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
+        $('#toConnect').css({"font-size":"24px","text-decoration":"underline"});
+        $('#toConnect').addClass('disable-change');
+        $('#toAbout,#toGuide').css({"font-size":"16px","text-decoration":"none"});
+        $('#toAbout,#toGuide').removeClass('disable-change');
+      }else{
+        $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
+        $('#toConnect').css({"font-size":"12px","text-decoration":"underline"});
+        $('#toConnect').addClass('disable-change');
+        $('#toAbout,#toGuide').css({"font-size":"10px","text-decoration":"none"});
+        $('#toAbout,#toGuide').removeClass('disable-change');
+      }
+      
     }else{
-      $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
-      $('#toConnect').css({"font-size":"16px","text-decoration":"none"});
-      $('#toConnect').removeClass('disable-change');
+      if ($('body').width() > 768){
+        $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
+        $('#toConnect').css({"font-size":"16px","text-decoration":"none"});
+        $('#toConnect').removeClass('disable-change');
+      }else{
+        $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"10px","text-decoration":"none"});
+        $('#toConnect').css({"font-size":"10px","text-decoration":"none"});
+        $('#toConnect').removeClass('disable-change');
+      }
+      
     }
   }
 
@@ -559,15 +575,31 @@
 
     if ($(document).scrollTop() >= (100)){
       $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
-      $('#toAbout').css({"font-size":"24px","text-decoration":"underline"});
-      $('#toAbout').addClass('disable-change');
-      $('#toConnect,#toGuide').css({"font-size":"16px","text-decoration":"none"});
-      $('#toConnect,#toGuide').removeClass('disable-change');
+      if ($('body').width() >= 768){
+        $('#toAbout').css({"font-size":"24px","text-decoration":"underline"});
+        $('#toAbout').addClass('disable-change');
+        $('#toConnect,#toGuide').css({"font-size":"16px","text-decoration":"none"});
+        $('#toConnect,#toGuide').removeClass('disable-change');
+      }else{
+        $('#toAbout').css({"font-size":"12px","text-decoration":"underline"});
+        $('#toAbout').addClass('disable-change');
+        $('#toConnect,#toGuide').css({"font-size":"10px","text-decoration":"none"});
+        $('#toConnect,#toGuide').removeClass('disable-change');
+      }
+      
     }else{
-      $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
-      $('#toAbout').css({"font-size":"16px","text-decoration":"none"});
-      $('#toConnect').css({"font-size":"16px","text-decoration":"none"});
-      $('#toAbout').removeClass('disable-change');
+      if ($('body').width() >= 768){
+        $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
+        $('#toAbout').css({"font-size":"16px","text-decoration":"none"});
+        $('#toConnect').css({"font-size":"16px","text-decoration":"none"});
+        $('#toAbout').removeClass('disable-change');
+      }else{
+        $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"10px","text-decoration":"none"});
+        $('#toAbout').css({"font-size":"10px","text-decoration":"none"});
+        $('#toConnect').css({"font-size":"10px","text-decoration":"none"});
+        $('#toAbout').removeClass('disable-change');
+      }
+      
     }
   }
 
@@ -577,17 +609,35 @@
     var documentHeight = $(document).height();
 
     if ($(document).scrollTop() >= (documentHeight-changeHeight-bodyHeight)){
-      $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
-      $('#toGuide').css({"font-size":"24px","text-decoration":"underline"});
-      $('#toGuide').addClass('disable-change');
-      $('#toAbout').css({"font-size":"16px","text-decoration":"none"});
-      $('#toAbout').removeClass('disable-change');
-      $('#toConnect').css({"font-size":"16px","text-decoration":"none"});
-      $('#toConnect').removeClass('disable-change');
+      if ($('body').width() >= 768){
+        $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
+        $('#toGuide').css({"font-size":"24px","text-decoration":"underline"});
+        $('#toGuide').addClass('disable-change');
+        $('#toAbout').css({"font-size":"16px","text-decoration":"none"});
+        $('#toAbout').removeClass('disable-change');
+        $('#toConnect').css({"font-size":"16px","text-decoration":"none"});
+        $('#toConnect').removeClass('disable-change');
+      }else{
+        $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"10px","text-decoration":"none"});
+        $('#toGuide').css({"font-size":"12px","text-decoration":"underline"});
+        $('#toGuide').addClass('disable-change');
+        $('#toAbout').css({"font-size":"10px","text-decoration":"none"});
+        $('#toAbout').removeClass('disable-change');
+        $('#toConnect').css({"font-size":"10px","text-decoration":"none"});
+        $('#toConnect').removeClass('disable-change');
+      }
+      
     }else{
-      $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
-      $('#toGuide').css({"font-size":"16px","text-decoration":"none"});
-      $('#toGuide').removeClass('disable-change');
+      if ($('body').width() >= 768){
+        $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
+        $('#toGuide').css({"font-size":"16px","text-decoration":"none"});
+        $('#toGuide').removeClass('disable-change');
+      }else{
+        $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"10px","text-decoration":"none"});
+        $('#toGuide').css({"font-size":"10px","text-decoration":"none"});
+        $('#toGuide').removeClass('disable-change');
+      }
+      
     }
   }
 
