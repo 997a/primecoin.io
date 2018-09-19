@@ -101,9 +101,12 @@
         }
         .triangle_border_down .rise{
             color: #1c7430;
+            display: block;
+            width: 100px;
             position: absolute;
             top:-35px;
-            left: -25px;
+            left:-50px;
+            text-align: center;
         }
 
 
@@ -159,7 +162,7 @@
                 color: #1c7430;
                 position: absolute;
                 top:-25px;
-                left: -20px;
+
             }
 
         }
@@ -225,16 +228,18 @@
     <img src="images/takeIn.png" alt="">
 </div>
 <div id="warp">
-    <div id="mydiv">
-        <div class="left fl">
+    <div class="mydiv row">
+        <div class="left  col-12 col-md-8 row">
             <h1 class="f">Primecoin</h1>
             <h2 class="b">A new type cryptocurrency which is Proof-of-Work based on searching for prime numbers.</h2>
-            <a href="#"> <span class="f ">Buy Primecoin</span></a>
-            <a href="#"><span class="f ">Download Wallet</span></a>
+            <a href="#" class="col-12 col-md-5"> <span class="f ">Buy Primecoin</span></a>
+            <a href="#" class=" col-12 col-md-5"><span class="f ">Download Wallet</span></a>
         </div>
-        <div class="right fr">
+        <div class="right col-12 col-md-4">
             <img src="images/logo.png">
-        </div>
+    </div>
+        <!--canvas-->
+    <div id="mydiv"></div>
 
     </div>
     <div class=" index-content f row">

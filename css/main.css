@@ -39,44 +39,45 @@ table { border-collapse:collapse; }
 
 #mydiv{
     width: 100%;
-    height:100vh;
+
 
 }
-#mydiv .left{
-    width: 60%;
+.mydiv .left{
+
     padding:10%;
     padding-top: 18%;
     box-sizing: border-box;
     position: relative;
     z-index: 1;
 }
-#mydiv .left h1{
+.mydiv .left h1{
     font-size:45px;
 }
-#mydiv .left span{
+.mydiv .left span{
     display: inline-block;
-    width:30%;
-    padding:3%;
+    width:80%;
+    padding:10px;
     margin:5%;
+    margin-top: 10%;
     text-align: center;
     box-sizing: border-box;
     border-radius: 5px;
     background-color:#0dcde2;
 
 }
-#mydiv .left span:hover{
+.mydiv .left span:hover{
     background:#0fd6f3;
 }
-#mydiv .right{
-     width: 40%;
-     padding:22% 5% 1% 5%;
+.mydiv .right{
+    padding:20% 5% 0 5%;
      box-sizing: border-box;
+     text-align: center;
     position: relative;
     z-index: 1;
  }
-#mydiv .right img{
-    width:60%;
-    height:60%;
+.mydiv .right img{
+    width:80%;
+
 }
 .index-content{
     width: 100%;
@@ -86,7 +87,7 @@ table { border-collapse:collapse; }
     margin-right: 0;
 }
 .index-content ul{
-    /*padding-top:10%;*/
+    padding-top:10%;
     box-sizing: border-box;
 }
 .index-content  .found{
@@ -134,43 +135,49 @@ table { border-collapse:collapse; }
         position: relative;
         z-index:0;
     }
-    #mydiv{
-    height:38vh;
+
+    .mydiv .left{
+        width: 100%;
+       padding: 0;
+        padding-top:20%;
     }
-    #mydiv .left{
-        width: 68%;
-        padding:18% 0% 5% 5% ;
+   .mydiv .left h1{
+        font-size:32px;
+       margin: 0 100px;
+       margin-left: 152px;
 
 
     }
-    #mydiv .left h1{
-        font-size: 24px;
-        margin-bottom: 0px;
+   .mydiv .left h2{
+        font-size:24px;
+        margin-left: 60px;
+       margin-bottom: 0;
+        padding:10%;
+       box-sizing: border-box;
+
     }
-    #mydiv .left h2{
-        font-size: 14px;
-        margin-bottom: 0px;
+   .mydiv .left span{
+        width:60%;
+        margin:5% 25%;
+        font-size:18px;
+
+
     }
-    #mydiv .left span{
-        width:42%;
-        font-size:10px;
-        padding:2%;
-        margin: 2%;
-    }
-    #mydiv .right{
+   .mydiv .right{
         width: 32%;
-        padding:18% 5% 1% 5%;
+        padding:0;
         box-sizing: border-box;
     }
-    #mydiv .right img{
-        width:100%;
-        height:100%;
+   .mydiv .right img{
+        width:50%;
+
     }
     .index-content{
         padding: 10px 15px;
         box-sizing: border-box;
         margin-left: 0;
         margin-right: 0;
+        margin-top: 20px;
     }
     .index-content ul a{
         margin: 0;
