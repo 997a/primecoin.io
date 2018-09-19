@@ -166,7 +166,7 @@ table { border-collapse:collapse; }
         margin:5% 20%;
         font-size:18px;
    }
-   .col-5 {
+   .col-md-5 , .col-12 {
        padding-left: 0;
    }
    .mydiv .right{
