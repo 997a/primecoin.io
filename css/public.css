@@ -156,7 +156,9 @@
     top: 9px;
     left: -30px;
 }
-
+#list-wraper ul{
+    text-align: center;
+}
 #list-wraper ul li{
     color: #fff;
     margin-bottom: 15px;
