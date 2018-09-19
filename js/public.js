@@ -50,11 +50,11 @@ $(function(){
     });
 
     $('#navBar-nav .td').mouseenter(function (){
-        $(this).css({"font-size":"24px","text-decoration":"underline"});
+        $(this).css({"font-size":"24px","text-decoration":"underline","font-weight":"bold"});
     });
     $('#navBar-nav .td').mouseleave(function (){
         if ($(this).attr('class') == 'nav-link td'){
-          $(this).css({"font-size":"16px","text-decoration":"none"});
+          $(this).css({"font-size":"16px","text-decoration":"none","font-weight":"normal"});
         }
    })
 });
