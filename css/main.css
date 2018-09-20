@@ -51,6 +51,7 @@ table { border-collapse:collapse; }
     box-sizing: border-box;
     position: relative;
     z-index: 1;
+    overflow: hidden;
 }
 .mydiv .left h1{
     font-size:45px;
@@ -65,7 +66,7 @@ table { border-collapse:collapse; }
     box-sizing: border-box;
     border-radius: 5px;
     background-color:#0dcde2;
-
+    font-size: 16px;
 }
 .mydiv .left span:hover{
     background:#0fd6f3;
@@ -131,6 +132,13 @@ table { border-collapse:collapse; }
     width: 100%;
 
 }
+
+@media screen and (max-width:1170px) {
+    .mydiv .left span{
+        font-size: 12px;
+    }
+}
+
 
 @media screen and (max-width:768px) {
     .row{
