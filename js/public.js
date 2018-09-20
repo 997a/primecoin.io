@@ -56,6 +56,17 @@ $(function(){
         if ($(this).attr('class') == 'nav-link td'){
           $(this).css({"font-size":"16px","text-decoration":"none","font-weight":"normal"});
         }
-   })
+   });
+
+  //subscribe
+  var vcurrent = document.getElementById('subscribe-input-wraper');
+  var newNodeCenter = document.createElement('button');
+  newNodeCenter.className = 'btn btn-primary subscribe';
+  newNodeCenter.innerHTML = 'subscribe';
+  vcurrent.appendChild(newNodeCenter);
+  newNodeCenter.onclick = function (){
+    window.location.href = 'http://btn.createsend1.com/subscribebutton/subscribe#listid=j%2F03%2F77D%2F341%2FD67FD91990F19504'
+  }
+
 });
 
