@@ -34,13 +34,15 @@ table { border-collapse:collapse; }
     background-size:100%;
     overflow: auto;
     position: relative;
-
+    margin-top: 115px;
 }
 
 #mydiv{
     width: 100%;
-
-
+}
+#warp .mydiv{
+    margin-right: 0;
+    margin-left: 0;
 }
 .mydiv .left{
 
@@ -138,12 +140,13 @@ table { border-collapse:collapse; }
         position: relative;
         z-index:0;
         overflow-x: hidden;
+        margin-top: 59px;
     }
 
     .mydiv .left{
         width: 100%;
-       padding: 0;
-        padding-top:20%;
+        padding: 0;
+        /*padding-top:20%;*/
     }
    .mydiv .left h1{
        font-size:32px;
