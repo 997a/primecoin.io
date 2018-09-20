@@ -586,7 +586,7 @@
     var footerHeight = $('.index-content').height();
     var documentHeight = $(document).height();
 
-    if ($(document).scrollTop() >= (100)){
+    if ($(document).scrollTop() >= 100){
       $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
       if ($('body').width() >= 768){
         $('#toAbout').css({"font-size":"24px","text-decoration":"underline"});
@@ -620,7 +620,7 @@
     var changeHeight = $('.index-center').height();
     var documentHeight = $(document).height();
 
-    if ($(document).scrollTop() >= (documentHeight-changeHeight-bodyHeight)){
+    if ($(document).scrollTop() >= (documentHeight-changeHeight-bodyHeight+100)){
       if ($('body').width() >= 768){
         $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
         $('#toGuide').css({"font-size":"24px","text-decoration":"underline"});
