@@ -57,6 +57,7 @@ var CanvasParticle = (function(){
         canvasSize(canvas.element);
         window.onresize = function(){
             canvasSize(canvas.element);
+          changeDivWidth();
         }
         body.onmousemove = function(e){
             var event = e || window.event;
@@ -84,7 +85,7 @@ var CanvasParticle = (function(){
         var height = document.getElementById("mydiv").style.height;*/
         var width = $("body").css("width");
         var height = $("#mydiv").css("height");
-        console.log(width, height);
+        // console.log(width, height);
 
         width = parseInt(width);
         height = parseInt(height);
