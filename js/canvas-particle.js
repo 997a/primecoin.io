@@ -84,11 +84,11 @@ var CanvasParticle = (function(){
         /*var width = document.getElementById("mydiv").style.width;
         var height = document.getElementById("mydiv").style.height;*/
         var width = $("body").css("width");
-        var height = $("#mydiv").css("height");
+        // var height = $("#mydiv").css("height");
         // console.log(width, height);
 
         width = parseInt(width);
-        height = parseInt(height);
+        height = 0.542*width;
 
         /* 画布大小*/
         canvas.width = width || window.innerWeight || document.documentElement.clientWidth || document.body.clientWidth;
