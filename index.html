@@ -92,10 +92,11 @@
             border-width:60px 100px 0px;
             border-style:solid;
             border-color:#fff transparent transparent;/*灰 透明 透明 */
-            position: fixed;
+            position: absolute;
             top:0;
             /*left: 280px;*/
             font-size:10px;
+            display: none;
 
 
         }
@@ -176,6 +177,11 @@
             }
 
         }
+        .getAbout{
+            position: absolute;
+            top: 65vh;
+            z-index: -10;
+        }
     </style>
 
 </head>
@@ -196,25 +202,25 @@
         <P class="rise" id="Rise" ></P>
     </div>
 
-    <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">-->
-        <!--<span class="navbar-toggler-icon"></span>-->
-    <!--</button>-->
-    <!--<div class="collapse navbar-collapse" id="navbarNavDropdown">-->
-        <!--<ul class="navbar-nav">-->
-            <!--<li class="nav-item">-->
-                <!--<a class="nav-link" href="about.html">About <span class="sr-only">(current)</span></a>-->
-            <!--</li>-->
-            <!--<li class="nav-item">-->
-                <!--<a class="nav-link" href="#guide" id="toGuide">Guide</a>-->
-            <!--</li>-->
-            <!--<li class="nav-item">-->
-                <!--<a class="nav-link" href="#connect" id="toConnect">Connect</a>-->
-            <!--</li>-->
-            <!--<li class="nav-item nav-download">-->
-                <!--<a class="nav-link" href="javascript:void(0);">Download Wallet!</a>-->
-            <!--</li>-->
-        <!--</ul>-->
-    <!--</div>-->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link td" href="#about" id="toAbout1">About <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link td" href="#guide" id="toGuide1">Guide</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link td" href="#connect" id="toConnect1">Connect</a>
+            </li>
+            <li class="nav-item nav-download">
+                <a class="nav-link" href="javascript:void(0);">Download Wallet!</a>
+            </li>
+        </ul>
+    </div>
 </nav>
 <script>
   changeDivWidth();
@@ -259,11 +265,13 @@
         </div>
         <div class="right col-12 col-md-4">
             <img src="images/logo.png">
-    </div>
+        </div>
         <!--canvas-->
     <div id="mydiv"></div>
-
+        <a  name="about" class="getAbout"></a>
     </div>
+    
+    
     <div class=" index-content f row">
 
         <ul class=" col-md-4 col-12 found">
@@ -278,7 +286,7 @@
         </ul>
 
         <ul class=" col-md-4 col-12 sk">
-            <a href="about.html#sk" name="about" >
+            <a href="about.html#sk" >
                 <img src="images/tubiao_sk.png">
                 <li>
                     <p class="p"> Sunny King</p>
@@ -569,30 +577,30 @@
     var footerHeight = $('.footer').height();
     var documentHeight = $(document).height();
 
-    if ($(document).scrollTop() >= (documentHeight-footerHeight-bodyHeight)){
+    if ($(document).scrollTop()  >= (documentHeight-footerHeight-bodyHeight+300)){
       if ($('body').width() > 768){
         $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
-        $('#toConnect').css({"font-size":"24px","text-decoration":"underline"});
-        $('#toConnect').addClass('disable-change');
-        $('#toAbout,#toGuide').css({"font-size":"16px","text-decoration":"none"});
-        $('#toAbout,#toGuide').removeClass('disable-change');
+        $('#toConnect,#toConnect1').css({"font-size":"24px","text-decoration":"underline"});
+        $('#toConnect,#toConnect1').addClass('disable-change');
+        $('#toAbout,#toAbout1,#toGuide,#toGuide1').css({"font-size":"16px","text-decoration":"none"});
+        $('#toAbout,#toAbout1,#toGuide,#toGuide1').removeClass('disable-change');
       }else{
         $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
-        $('#toConnect').css({"font-size":"12px","text-decoration":"underline"});
-        $('#toConnect').addClass('disable-change');
-        $('#toAbout,#toGuide').css({"font-size":"10px","text-decoration":"none"});
-        $('#toAbout,#toGuide').removeClass('disable-change');
+        $('#toConnect,#toConnect1').css({"font-size":"12px","text-decoration":"underline"});
+        $('#toConnect,#toConnect1').addClass('disable-change');
+        $('#toAbout,#toAbout1,#toGuide,#toGuide1').css({"font-size":"10px","text-decoration":"none"});
+        $('#toAbout,#toAbout1,#toGuide,#toGuide1').removeClass('disable-change');
       }
       
     }else{
       if ($('body').width() > 768){
-        $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
-        $('#toConnect').css({"font-size":"16px","text-decoration":"none"});
-        $('#toConnect').removeClass('disable-change');
+        $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none","font-weight":"normal"});
+        $('#toConnect,#toConnect1').css({"font-size":"16px","text-decoration":"none","font-weight":"normal"});
+        $('#toConnect,#toConnect1').removeClass('disable-change');
       }else{
-        $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"10px","text-decoration":"none"});
-        $('#toConnect').css({"font-size":"10px","text-decoration":"none"});
-        $('#toConnect').removeClass('disable-change');
+        $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"10px","text-decoration":"none","font-weight":"normal"});
+        $('#toConnect,#toConnect1').css({"font-size":"10px","text-decoration":"none","font-weight":"normal"});
+        $('#toConnect,#toConnect1').removeClass('disable-change');
       }
       
     }
@@ -603,31 +611,31 @@
     var footerHeight = $('.index-content').height();
     var documentHeight = $(document).height();
 
-    if ($(document).scrollTop() >= 100){
+    if ($(document).scrollTop() - bodyHeight + 300 >= 0){
       $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
       if ($('body').width() >= 768){
-        $('#toAbout').css({"font-size":"24px","text-decoration":"underline"});
-        $('#toAbout').addClass('disable-change');
-        $('#toConnect,#toGuide').css({"font-size":"16px","text-decoration":"none"});
-        $('#toConnect,#toGuide').removeClass('disable-change');
+        $('#toAbout,#toAbout1').css({"font-size":"24px","text-decoration":"underline"});
+        $('#toAbout,#toAbout1').addClass('disable-change');
+        $('#toConnect,#toGuide,#toConnect1,#toGuide1').css({"font-size":"16px","text-decoration":"none"});
+        $('#toConnect,#toGuide,#toConnect1,#toGuide1').removeClass('disable-change');
       }else{
-        $('#toAbout').css({"font-size":"12px","text-decoration":"underline"});
-        $('#toAbout').addClass('disable-change');
-        $('#toConnect,#toGuide').css({"font-size":"10px","text-decoration":"none"});
-        $('#toConnect,#toGuide').removeClass('disable-change');
+        $('#toAbout,#toAbout1').css({"font-size":"12px","text-decoration":"underline"});
+        $('#toAbout,#toAbout1').addClass('disable-change');
+        $('#toConnect,#toGuide,#toConnect1,#toGuide1').css({"font-size":"10px","text-decoration":"none"});
+        $('#toConnect,#toGuide,#toConnect1,#toGuide1').removeClass('disable-change');
       }
       
     }else{
       if ($('body').width() >= 768){
-        $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
-        $('#toAbout').css({"font-size":"16px","text-decoration":"none"});
-        $('#toConnect').css({"font-size":"16px","text-decoration":"none"});
-        $('#toAbout').removeClass('disable-change');
+        $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none","font-weight":"normal"});
+        $('#toAbout,#toAbout1').css({"font-size":"16px","text-decoration":"none","font-weight":"normal"});
+        $('#toConnect,#toConnect1').css({"font-size":"16px","text-decoration":"none","font-weight":"normal"});
+        $('#toAbout,#toAbout1').removeClass('disable-change');
       }else{
-        $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"10px","text-decoration":"none"});
-        $('#toAbout').css({"font-size":"10px","text-decoration":"none"});
-        $('#toConnect').css({"font-size":"10px","text-decoration":"none"});
-        $('#toAbout').removeClass('disable-change');
+        $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"10px","text-decoration":"none","font-weight":"normal"});
+        $('#toAbout,#toAbout1').css({"font-size":"10px","text-decoration":"none","font-weight":"normal"});
+        $('#toConnect,#toConnect1').css({"font-size":"10px","text-decoration":"none","font-weight":"normal"});
+        $('#toAbout,#toAbout1').removeClass('disable-change');
       }
     }
   }
@@ -637,43 +645,55 @@
     var changeHeight = $('.index-center').height();
     var documentHeight = $(document).height();
 
-    if ($(document).scrollTop() >= (documentHeight-changeHeight-bodyHeight+100)){
+    if ($(document).scrollTop() >= (documentHeight-changeHeight-bodyHeight+200)){
       if ($('body').width() >= 768){
         $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
-        $('#toGuide').css({"font-size":"24px","text-decoration":"underline"});
-        $('#toGuide').addClass('disable-change');
-        $('#toAbout').css({"font-size":"16px","text-decoration":"none"});
-        $('#toAbout').removeClass('disable-change');
-        $('#toConnect').css({"font-size":"16px","text-decoration":"none"});
-        $('#toConnect').removeClass('disable-change');
+        $('#toGuide,#toGuide1').css({"font-size":"24px","text-decoration":"underline"});
+        $('#toGuide,#toGuide1').addClass('disable-change');
+        $('#toAbout,#toAbout1').css({"font-size":"16px","text-decoration":"none"});
+        $('#toAbout,#toAbout1').removeClass('disable-change');
+        $('#toConnect,#toConnect1').css({"font-size":"16px","text-decoration":"none"});
+        $('#toConnect,#toConnect1').removeClass('disable-change');
       }else{
         $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"10px","text-decoration":"none"});
-        $('#toGuide').css({"font-size":"12px","text-decoration":"underline"});
-        $('#toGuide').addClass('disable-change');
-        $('#toAbout').css({"font-size":"10px","text-decoration":"none"});
-        $('#toAbout').removeClass('disable-change');
-        $('#toConnect').css({"font-size":"10px","text-decoration":"none"});
-        $('#toConnect').removeClass('disable-change');
+        $('#toGuide,#toGuide1').css({"font-size":"12px","text-decoration":"underline"});
+        $('#toGuide,#toGuide1').addClass('disable-change');
+        $('#toAbout,#toAbout1').css({"font-size":"10px","text-decoration":"none"});
+        $('#toAbout,#toAbout1').removeClass('disable-change');
+        $('#toConnect,#toConnect1').css({"font-size":"10px","text-decoration":"none"});
+        $('#toConnect,#toConnect1').removeClass('disable-change');
       }
       
     }else{
       if ($('body').width() >= 768){
-        $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none"});
-        $('#toGuide').css({"font-size":"16px","text-decoration":"none"});
-        $('#toGuide').removeClass('disable-change');
+        $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"16px","text-decoration":"none","font-weight":"normal"});
+        $('#toGuide,#toGuide1').css({"font-size":"16px","text-decoration":"none","font-weight":"normal"});
+        $('#toGuide,#toGuide1').removeClass('disable-change');
       }else{
-        $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"10px","text-decoration":"none"});
-        $('#toGuide').css({"font-size":"10px","text-decoration":"none"});
-        $('#toGuide').removeClass('disable-change');
+        $('.navbar-light .navbar-nav .active>.nav-link').css({"font-size":"10px","text-decoration":"none","font-weight":"normal"});
+        $('#toGuide,#toGuide1').css({"font-size":"10px","text-decoration":"none","font-weight":"normal"});
+        $('#toGuide,#toGuide1').removeClass('disable-change');
       }
       
     }
   }
+  function handlePrice(){
+    var bodyHeight = $('body').height();
+    var navHeight = $('.navbar').height();
+    var documentHeight = $(document).height();
+    if ($(document).scrollTop() >= 100){
+        $('.triangle_border_down').fadeOut();
+    }else{
+      $('.triangle_border_down').fadeIn();
+    }
+  }
 
+  handlePrice();
   handleScrollAbout();
   handleScrollGuide();
   handleScrollConnect();
   $(document).scroll(function () {
+    handlePrice();
     handleScrollAbout();
     handleScrollGuide();
     handleScrollConnect();

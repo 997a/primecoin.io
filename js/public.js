@@ -49,6 +49,12 @@ $(function(){
         }
     });
 
+    $('.nav-item').click(function (){
+      $("#pull img").attr('src','images/takeIn.png');
+      $("#navBar").animate({right: '-100%'});
+      $("#navBar").removeClass('arrow_box');
+    });
+
     $('#navBar-nav .td').mouseenter(function (){
         $(this).css({"font-size":"24px","text-decoration":"underline","font-weight":"bold"});
     });
@@ -57,6 +63,15 @@ $(function(){
           $(this).css({"font-size":"16px","text-decoration":"none","font-weight":"normal"});
         }
    });
+
+  $('.navbar-nav .td').mouseenter(function (){
+    $(this).css({"font-size":"24px","text-decoration":"underline","font-weight":"bold"});
+  });
+  $('.navbar-nav .td').mouseleave(function (){
+    if ($(this).attr('class') == 'nav-link td'){
+      $(this).css({"font-size":"16px","text-decoration":"none","font-weight":"normal"});
+    }
+  });
 
   //subscribe
   var vcurrent = document.getElementById('subscribe-input-wraper');

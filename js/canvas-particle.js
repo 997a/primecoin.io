@@ -16,6 +16,7 @@ var CanvasParticle = (function(){
         // mydiv是你想要将其作为背景的div的ID
         var body = document.getElementById("mydiv");
         var canvasObj = document.createElement("canvas");
+        var menuHeight = $('.navbar').css('height');
 
         var canvas = {
             element: canvasObj,
@@ -49,7 +50,7 @@ var CanvasParticle = (function(){
         $("#mydiv").append(canvas.element);
 
         /* 画布绝对定位 */
-        canvas.element.style = "position: absolute; top: 0; left: 0; ";
+        canvas.element.style = "position: absolute; top: 0; left: 0; margin-top:-"+menuHeight+"px";
 
 
 

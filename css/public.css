@@ -1,11 +1,19 @@
+body{
+    width: 100%;
+    overflow-x: hidden;
+}
 .navbar-brand{
     paddding-top: 0;
+}
+
+.navbar-toggler{
+    display: none;
 }
 
 .navbar-expand-lg{
     width: 100%;
     box-sizing: border-box;
-    padding: 30px 100px;
+    padding: 30px 80px;
     background-color: #242b33 !important;
     position: fixed;
     top: 0;
@@ -25,6 +33,7 @@
     position: relative;
 }
 #pull{
+    display: none;
     position: fixed;
     top: 115px;
     right: 0;
@@ -44,7 +53,7 @@
     top: 115px;
     z-index: 999999999999999;
     font-size: 16px;
-
+    display: none;
     border: 1px solid #072538;
     box-sizing: border-box;
 }
@@ -80,7 +89,61 @@
     line-height: 50px;
     text-align: center;
 }
-.nav-download{
+.navbar-expand-lg .navbar-nav{
+    position: absolute;
+    right: 0;
+    font-size: 16px;
+    /*font-weight: bold;*/
+}
+.navbar-light .navbar-nav .nav-link:hover{
+    color: #0fd6f3;
+}
+.navbar-light .navbar-nav .nav-link:link{
+    color: #fff;
+}
+.navbar-light .navbar-nav .nav-link:visited{
+    color: #fff;
+}
+.navbar-light .navbar-nav .nav-link{
+    color: #fff;
+    padding: 0 10px;
+    height: 50px;
+    line-height: 50px;
+}
+.navbar-light .nav-download{
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    /*padding: 0 15px;*/
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #0dcde2;
+    margin-left: 20px;
+}
+.navbar-light .nav-download:hover{
+    background-color: #0fd6f3;
+}
+.navbar-light .navbar-nav .td{
+    padding: 0;
+    width: 100px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.nav-download .nav-link{
+    text-align: center;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link{
+    color: #0fd6f3;
+}
+.navbar-light .navbar-toggler{
+    border-color: #fff;
+    background-color: #fff;
+    outline: none;
+}
+.navBar .nav-download{
     display: inline-block;
     width: 70px;
     height: 50px;
@@ -387,6 +450,12 @@
 /*}*/
 
 @media screen and (max-width: 992px){
+    #navBar{
+        display: block;
+    }
+    #pull{
+        display: block;
+    }
     .navbar-expand-lg .navbar-collapse{
         position: static;
     }
@@ -394,7 +463,7 @@
         position: static;
         /*right: 0;*/
         font-size: 16px;
-        font-weight: bold;
+        /*font-weight: bold;*/
     }
     .navbar-light .navBar-nav .nav-link{
         padding: 10px 10px;
@@ -461,7 +530,7 @@
         display:none;
     }
     #navBar{
-        top: 60px;
+        top: 59px;
     }
 
     .navBar .navBar-nav .nav-link{
@@ -477,7 +546,7 @@
     }
     #pull{
         height: 30px;
-        top: 60px;
+        top: 59px;
     }
     #pull img{
         width: 20px;
