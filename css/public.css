@@ -364,7 +364,7 @@ body{
     width: 100%;
     text-align: center;
     font-weight: normal;
-    font-size: 10px;
+    font-size: 14px;
     color: #ccc;
     padding-bottom: 20px;
     margin-bottom: 0;
@@ -556,7 +556,11 @@ body{
         height: 20px;
         line-height: 20px;
     }
+    .footer-bottom{
+        font-size: 10px;
+    }
 }
+
 .subscribe{
     padding: 2px 10px;
     font-size: 12px;
