@@ -50,7 +50,7 @@ var CanvasParticle = (function(){
         $("#mydiv").append(canvas.element);
 
         /* 画布绝对定位 */
-        canvas.element.style = "position: absolute; top: 0; left: 0; margin-top:-"+menuHeight+"px";
+        canvas.element.style = "position: absolute; top: 0; left: 0;";
 
 
 
@@ -60,11 +60,12 @@ var CanvasParticle = (function(){
             canvasSize(canvas.element);
           changeDivWidth();
         }
+      var menuHeight = parseInt($('.navbar').css('height'));
         body.onmousemove = function(e){
             var event = e || window.event;
             canvas.mouse = {
                 x: event.clientX,
-                y: event.clientY
+                y: event.clientY - menuHeight
             }
         }
         document.onmouseleave = function(){
