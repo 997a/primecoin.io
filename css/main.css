@@ -47,7 +47,7 @@ table { border-collapse:collapse; }
 .mydiv .left{
 
     padding:10%;
-    padding-top: 18%;
+    /*padding-top: 18%;*/
     box-sizing: border-box;
     position: relative;
     /*z-index: 1;*/
@@ -82,7 +82,7 @@ table { border-collapse:collapse; }
     background:#0fd6f3;
 }
 .mydiv .right{
-    padding:20% 5% 0 5%;
+    padding:12% 5% 0 5%;
      box-sizing: border-box;
      text-align: center;
     position: relative;
