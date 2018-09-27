@@ -25,7 +25,6 @@ $(function(){
         }
     }
 
-//或者延迟的文档加载完毕在加载图片
 
     preloadImg(imgSrcArr);
     // 默认显示

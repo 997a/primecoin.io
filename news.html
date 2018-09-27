@@ -5,6 +5,7 @@
     <!--<meta content=" width=device-width,initial-scale=1.0",name="viewport"id=" viewport"/>-->
     <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
     <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+    <link rel="icon" href="images/logo.png" type="image/x-icon"/>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/initialize.css">
@@ -336,19 +337,7 @@
             {'imgPath':'images/DevPortLaunch_Social_Eosio-home_opt.jpg','jumpLink':'https://www.baidu.com/6'},
             {'imgPath':'images/eos_vc_200m_joint_venture_home-blue_opt.jpg','jumpLink':'https://block.one/news/block-one-signs-200m-joint-venture-partnership-to-accelerate-asia-focused-eosio-ecosystem-development/'},
             {'imgPath':'images/resource_hackathon_home-blue_2.jpg','jumpLink':'https://www.youtube.com/watch?v=9XP4A4IfuXo'}
-            // {'imgPath':'images/daxiao2.jpg','jumpLink':'https://www.baidu.com/9'},
-            // {'imgPath':'images/daxiao2.jpg','jumpLink':'https://www.baidu.com/10'},
-            // {'imgPath':'images/daxiao2.jpg','jumpLink':'https://www.baidu.com/11'},
-            // {'imgPath':'images/daxiao2.jpg','jumpLink':'https://www.baidu.com/12'},
-            // {'imgPath':'images/daxiao2.jpg','jumpLink':'https://www.baidu.com/13'},
-            // {'imgPath':'images/daxiao2.jpg','jumpLink':'https://www.baidu.com/14'},
-            // {'imgPath':'images/daxiao2.jpg','jumpLink':'https://www.baidu.com/15'},
-            // {'imgPath':'images/daxiao2.jpg','jumpLink':'https://www.baidu.com/16'},
-            // {'imgPath':'images/daxiao2.jpg','jumpLink':'https://www.baidu.com/17'},
-            // {'imgPath':'images/daxiao2.jpg','jumpLink':'https://www.baidu.com/18'},
-            // {'imgPath':'images/daxiao2.jpg','jumpLink':'https://www.baidu.com/19'},
-            // {'imgPath':'images/daxiao2.jpg','jumpLink':'https://www.baidu.com/20'},
-            // {'imgPath':'images/daxiao2.jpg','jumpLink':'https://www.baidu.com/21'}
+           
         ]
     };
 
@@ -361,21 +350,6 @@
             clickable: true,
         },
     });
-
-    // function handleScrollConnect(){
-    //     var bodyHeight = $('body').height();
-    //     var footerHeight = $('.footer').height();
-    //     var documentHeight = $(document).height();
-    //
-    //     if ($(document).scrollTop() >= (documentHeight-footerHeight-bodyHeight)){
-    //         $('.navbar-light .navbar-nav .active>.nav-link').css('color','#fff');
-    //         $('#toConnect').css('color','#0fd6f3');
-    //     }else{
-    //         $('.navbar-light .navbar-nav .active>.nav-link').css('color','#fff');
-    //         $('#toConnect').css('color','#fff');
-    //         $('#toAbout').css('color','#0fd6f3');
-    //     }
-    // }
 
     function handleScrollConnect(){
       var bodyHeight = $('body').height();
@@ -429,7 +403,7 @@
         $("#page").paging({
             total:dataLength,
             numberPage:8
-        }, function (msg) {//回调
+        }, function (msg) {
             console.log(msg);
             if (msg == 1){
                 $(".news-top").show();
@@ -456,19 +430,4 @@
 
 
 </script>
-<!--<script type="text/javascript">-->
-    <!--(function () {-->
-        <!--setTimeout(function (){-->
-            <!--var e = document.createElement('script');-->
-            <!--e.type = 'text/javascript';-->
-            <!--e.async = true;-->
-            <!--e.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://btn.createsend1.com/js/sb.min.js?v=3';-->
-            <!--e.className = 'createsend-script';-->
-            <!--var s = document.getElementsByTagName('script')[0];-->
-            <!--s.parentNode.insertBefore(e, s);-->
-        <!--},1000);-->
-
-    <!--})();-->
-<!--</script>-->
-
 </html>

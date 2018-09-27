@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
     <title>Primecoin</title>
+    <link rel="icon" href="images/logo.png" type="image/x-icon"/>
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/initialize.css">
@@ -85,13 +86,13 @@
             background-image: url("images/Arrow Down.png");
         }
 
-        /*向下倒三角*/
+        
         .triangle_border_down{
             width:0;
             height:0;
             border-width:60px 100px 0px;
             border-style:solid;
-            border-color:#fff transparent transparent;/*灰 透明 透明 */
+            border-color:#fff transparent transparent;
             position: absolute;
             top:0;
             /*left: 280px;*/
@@ -157,7 +158,7 @@
                 height:150px;
 
             }
-            /*倒三角*/
+            
             .triangle_border_down{
                 border-width:40px 70px 0px;
                 font-size:10px;
@@ -224,10 +225,7 @@
 </nav>
 <script>
   changeDivWidth();
-  //当浏览器窗口大小改变时，设置显示内容的宽度
-  // window.onresize=function(){
-  //   changeDivWidth();
-  // };
+  
 
   function changeDivWidth(){
     var lw=$('#nav').offset().left;
@@ -485,36 +483,36 @@
     var wd = parseInt($('body').css('width'));
     var config = {};
   if (wd > 768){
-    //配置
+    
     config = {
-      vx: 4,//点x轴速度,正为右，负为左
-      vy:  4,//点y轴速度
-      height: 3,//点高宽，其实为正方形，所以不宜太大
+      vx: 4,
+      vy:  4,
+      height: 3,
       width: 3,
-      count:150,//点个数
-      color: "121, 162, 185",//点颜色
-      stroke: "130,255,255",//线条颜色
-      dist: 6000,//点吸附距离
-      e_dist: 20000,//鼠标吸附加速距离
-      max_conn: 10//点到点最大连接数
+      count:150,
+      color: "121, 162, 185",
+      stroke: "130,255,255",
+      dist: 6000,
+      e_dist: 20000,
+      max_conn: 10
     }
   }else{
-    //配置
+    
     config = {
-      vx: 2,//点x轴速度,正为右，负为左
-      vy:  2,//点y轴速度
-      height: 3,//点高宽，其实为正方形，所以不宜太大
+      vx: 2,
+      vy:  2,
+      height: 3,
       width: 3,
-      count:50,//点个数
-      color: "121, 162, 185",//点颜色
-      stroke: "130,255,255",//线条颜色
-      dist: 1000,//点吸附距离
-      e_dist: 2000,//鼠标吸附加速距离
-      max_conn: 10//点到点最大连接数
+      count:50,
+      color: "121, 162, 185",
+      stroke: "130,255,255",
+      dist: 1000,
+      e_dist: 2000,
+      max_conn: 10
     }
   }
   
-  //调用
+  
   CanvasParticle(config);
 
 
@@ -530,30 +528,35 @@
 <script src="js/public.js"></script>
 <script>
   
-  function  rangKeys(){
-    //声明一个随机数变量，默认为100
-    var GetRandomn = 100;
-//获取随机范围内数值的函数
-    function GetRandom(n){GetRandomn=Math.floor(Math.random()*n+1)}
-//开始调用，获得一个100-999的随机数
-    GetRandom("999");
-//输出查看
-    var p=document.getElementById('Rise')
-    p.innerHTML=(GetRandomn)
-
+  
+  
+  function getData(){
+    $.ajax({
+      type: "GET",
+      url: "https://api.coinmarketcap.com/v2/ticker/42/",
+      success: function(res){
+        var rate = res.data.quotes.USD.price.toFixed(6);
+        var increase = res.data.quotes.USD.percent_change_24h.toFixed(2);
+        if (increase >= 0){
+          $('#Rise').html('(+'+increase+'%)');
+          $('#Rise').css({'color':'red'});
+        }else{
+          $('#Rise').html('(-'+increase+'%)');
+          $('#Rise').css({'color':'#1c7430'});
+        }
+        $('.triangle_border_down .price').html('XPM/USD:$'+rate);
+      }
+    });
   }
-
-  setInterval(rangKeys,3000);
-
+  getData();
+  // setInterval(getData,5000);
+  
 
 </script>
 
 
 <!-- Swiper JS -->
 <script src="js/swiper.min.js"></script>
-<!--donate-->
-<script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
-
 
 
 <!-- Initialize Swiper -->
@@ -700,23 +703,8 @@
   });
 
 </script>
-<!--<script type="text/javascript">-->
-    <!--(function () {-->
-        <!--setTimeout(function (){-->
-            <!--var e = document.createElement('script');-->
-            <!--e.type = 'text/javascript';-->
-            <!--e.async = true;-->
-            <!--e.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://btn.createsend1.com/js/sb.min.js?v=3';-->
-            <!--e.className = 'createsend-script';-->
-            <!--var s = document.getElementsByTagName('script')[0];-->
-            <!--s.parentNode.insertBefore(e, s);-->
-        <!--},1000);-->
 
-    <!--})();-->
-    <!--// $('.subscribe-button-inner').hide();-->
-<!--</script>-->
-
-
-
+<!--donate-->
+<script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
 
 </html>
