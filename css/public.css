@@ -28,6 +28,8 @@ body{
     font-size: 23px;
     font-weight: bold;
     color: #fff;
+    position: relative;
+    top: 3px;
 }
 .navbar-expand-lg .navbar-collapse{
     position: relative;
@@ -221,7 +223,7 @@ body{
     left: -30px;
 }
 #list-wraper ul{
-    text-align: center;
+    text-align: left;
 }
 #list-wraper ul li{
     color: #fff;
@@ -484,6 +486,7 @@ body{
     }
     .navbar-brand span{
         font-size: 18px;
+        top: 2px;
     }
     .navbar-brand img{
         width: 34px;

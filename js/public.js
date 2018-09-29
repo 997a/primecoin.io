@@ -79,7 +79,7 @@ $(function(){
   newNodeCenter.innerHTML = 'subscribe';
   vcurrent.appendChild(newNodeCenter);
   newNodeCenter.onclick = function (){
-    window.location.href = 'http://btn.createsend1.com/subscribebutton/subscribe#listid=j%2F03%2F77D%2F341%2FD67FD91990F19504'
+    window.open('http://btn.createsend1.com/subscribebutton/subscribe#listid=j%2F03%2F77D%2F341%2FD67FD91990F19504');
   }
 
 });
