@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>Primecoin</title>
+    <link rel="icon" href="images/logo.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/initialize.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+   <style>
+
+
+       body {
+           font-size: 14px;
+           color:#000;
+           margin: 0;
+           padding: 0;
+       }
+
+       .center .swiper{
+           display: none;
+       }
+       #news .main {
+           display: block;
+           width:95%;
+           margin: 0 auto;
+           height:75vh;
+
+       }
+       .swiper-container {
+           width: 100%;
+
+       }
+       .swiper-slide {
+
+           font-size: 18px;
+           /* Center slide text vertically */
+           display: -webkit-box;
+           display: -ms-flexbox;
+           display: -webkit-flex;
+           display: flex;
+           -webkit-box-pack: center;
+           -ms-flex-pack: center;
+           -webkit-justify-content: center;
+           justify-content: center;
+           -webkit-box-align: center;
+           -ms-flex-align: center;
+           -webkit-align-items: center;
+           align-items: center;
+       }
+       .swiper-button-prev{
+           background-image: url("images/news/prev.png");
+           background-size: 100% ;
+       }
+       .swiper-button-next{
+           background-image: url("images/news/next.png");
+           background-size: 100% ;
+       }
+       .swiper-pagination-bullet{
+           width:20px;
+           height:20px;
+
+       }
+       .swiper-pagination-bullet-active{
+           background: #dee2e6;
+       }
+       .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
+           border-radius: 50%;
+           color: #ffffff;
+           background:transparent;
+       }
+       .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet-active{
+
+           background:#0ec1e5 ;
+
+       }
+       .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+           bottom:0px
+       }
+       .swiper-container-autoheight, .swiper-container-autoheight .swiper-slide{
+           height:70vh;
+       }
+
+       .news-container{
+           padding: 0 100px;
+           padding-bottom: 20px;
+           width: 100%;
+           overflow: hidden;
+           box-sizing: border-box;
+       }
+       .news-top,.news-bottom{
+           width: 100%;
+       }
+       .news-top-title,.news-bottom-title{
+           width: 100%;
+           text-align: center;
+           font-size:48px;
+           font-weight: 600;
+           color: #ffffff;
+
+       }
+       .news-top-container,.news-bottom-container{
+           width: 100%;
+          padding-top: 30px;
+       }
+       .news-top-container a,.news-bottom-container a{
+           display: block;
+           padding-left: 0;
+           padding-right: 0;
+       }
+       .news-top-container a img{
+           display: block;
+           width: 100%;
+           position: relative;
+       }
+       .news-bottom-container a img{
+           display: block;
+           width: 100%;
+           position: relative;
+
+       }
+       .news-top-container .title , .news-bottom-container .title{
+           width: 100%;
+           height: 25%;
+           background:rgba(125,125,125,0.5);
+           position: absolute;
+           top: 75%;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           font-size: 16px;
+       }
+       .page-two{
+           padding:100px;
+           padding-top: 0px;
+           padding-bottom: 0px;
+           box-sizing: border-box;
+       }
+       .page-two .news-bottom-container .col-md-3{
+           /*padding:50px ;*/
+           box-sizing: border-box;
+       }
+       .page-two .news-title{
+           width: 80%;
+           height: 25%;
+           background:rgba(125,125,125,0.5);
+           position: absolute;
+           top: 75%;
+           left: 10%;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+       }
+       .page-two a img{
+           width: 80%;
+           margin: 0 auto;
+       }
+       #button-prev{
+           width: 22px;
+           height: 20px;
+           position: absolute;
+           top:auto;
+           bottom: 0;
+           background:url('images/news/prev.png') no-repeat center center;
+           opacity: 1.35;
+           background-size: 100%;
+       }
+
+       #button-next{
+           width: 22px;
+           height: 20px;
+           position:absolute;
+           top: auto;
+           bottom: 0;
+           background:url('images/news/next.png') no-repeat center center;
+           opacity: 1.35;
+           background-size: 100%;
+       }
+       #button-prev{
+           left: 50%;
+           margin-left: -100px;
+       }
+
+       #button-next{
+           right: 50%;
+           margin-right: -100px;
+       }
+
+       #button-first {
+           height: 20px;
+           line-height: 20px;
+           position: absolute;
+           top:auto;
+           bottom:0px;
+           left: 50%;
+           margin-left: -135px;
+           color: #fff;
+           font-size: 18px;
+           z-index: 99999;
+           cursor: pointer;
+       }
+
+       #button-last{
+           height: 20px;
+           line-height: 20px;
+           position:absolute;
+           top:auto;
+           bottom: 0px;
+           right: 50%;
+           margin-right: -130px;
+           color: #fff;
+           font-size: 18px;
+           z-index: 99999;
+           cursor: pointer;
+       }
+       #p ,#message{
+           display: none;
+           padding-top: 100px;
+           color: #fff;
+           font-size: 48px;
+           text-align: center;
+           font-weight: bold;
+       }
+       .triangle_border_down{
+           width:0;
+           height:0;
+           border-width:60px 100px 0px;
+           border-style:solid;
+           border-color:#fff transparent transparent;
+           position: absolute;
+           top:0;
+           /*left: 280px;*/
+           font-size:10px;
+           display: none;
+
+
+       }
+       .triangle_border_down .price{
+           color: #c6c8ca;
+           display: block;
+           width: 100px;
+           position: absolute;
+           top:-56px;
+           left: -50px;
+           text-align: center;
+       }
+       .triangle_border_down .rise{
+           color: #1c7430;
+           display: block;
+           width: 100px;
+           position: absolute;
+           top:-35px;
+           left:-50px;
+           text-align: center;
+       }
+
+       @media (max-width: 768px) {
+           body{
+               font-size: 12px;
+           }
+           #news .main {
+               display: none;
+           }
+           #p ,#message{
+               padding-top: 60px;
+           }
+           .center{
+               width: 100%;
+               height: auto;
+               background: #030724;
+
+           }
+           .center .swiper{
+               display: block;
+           }
+
+           .swiper-container {
+               width: 100%;
+
+           }
+           .swiper-slide {
+               text-align: center;
+               font-size: 18px;
+               /* Center slide text vertically */
+               display: -webkit-box;
+               display: -ms-flexbox;
+               display: -webkit-flex;
+               display: flex;
+               -webkit-box-pack: center;
+               -ms-flex-pack: center;
+               -webkit-justify-content: center;
+               justify-content: center;
+               -webkit-box-align: center;
+               -ms-flex-align: center;
+               -webkit-align-items: center;
+               align-items: center;
+           }
+           .swiper-container-autoheight, .swiper-container-autoheight .swiper-slide{
+               height:auto;
+           }
+           .news-container{
+               padding: 0;
+           }
+           .news-top-container a img{
+               margin-top: 20px;
+           }
+           .news-bottom-container{
+               padding: 0 30px;
+               box-sizing: border-box;
+           }
+           .news-bottom-container a img{
+               margin-top: 30px;
+
+           }
+           .swiper-button-next, .swiper-button-prev{
+               position: fixed;
+               margin-top: 94px;
+           }
+       }
+
+       .swiper-pagination-bullet{
+           opacity: 1;
+       }
+
+
+
+       @media screen and (min-width: 1920px){
+           .swiper-container-autoheight, .swiper-container-autoheight .swiper-slide{
+               height: 50vh;
+           }
+           #news .main{
+               height: 55vh;
+           }
+           .swiper-button-next, .swiper-button-prev{
+               width: 54px;
+               height: 50px;
+           }
+           .swiper-pagination-bullet{
+               width: 36px;
+               height: 36px;
+               line-height: 40px;
+               text-align: center;
+               font-size: 24px;
+           }
+           #button-prev{
+               width: 38px;
+               height: 36px;
+               left: 50%;
+               margin-left: -160px;
+               top:auto;
+               bottom: 0;
+               /*background-size: 36px;*/
+           }
+
+           #button-next{
+               width: 38px;
+               height: 36px;
+               right: 50%;
+               margin-right: -160px;
+               top:auto;
+               bottom: 0;
+               /*background-size: 36px;*/
+           }
+           #button-first {
+               height: 36px;
+               line-height: 36px;
+               left: 50%;
+               margin-left: -210px;
+               font-size:34px;
+           }
+
+           #button-last{
+               height: 36px;
+               line-height: 36px;
+               right: 50%;
+               margin-right: -200px;
+               font-size:34px;
+           }
+       }
+
+   </style>
+
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html" id="nav">
+        <img src="images/logo.png" alt="">
+        <span>Primecoin</span>
+    </a>
+    <!--<span class="posi-wallet">-->
+    <!--<img src="images/tubiao_qianbao.png" alt="">-->
+    <!--Current Price-->
+    <!--</span>-->
+
+    <div class="triangle_border_down" id="div_ov_y">
+        <p class="price">XPM/USD:$0.745925</p>
+        <P class="rise" id="Rise" ></P>
+    </div>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link td" href="#about" id="toAbout1">About <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link td" href="#guide" id="toGuide1">Guide</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link td" href="#connect" id="toConnect1">Connect</a>
+            </li>
+            <li class="nav-item nav-download">
+                <a class="nav-link" href="javascript:void(0);">Download Wallet!</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<script>
+    changeDivWidth();
+
+
+    function changeDivWidth(){
+        var lw=$('#nav').offset().left;
+        var w = document.getElementById('nav').clientWidth;//获取宽度
+        document.getElementById("div_ov_y").style.left=w+lw+20+"px";
+
+    }
+</script>
+<div class="navBar" id="navBar">
+    <ul class="navBar-nav row justify-content-center" id="navBar-nav">
+        <li class="nav-item col-2 col-md-2">
+            <a class="nav-link td" href="#about" id="toAbout">About</a>
+        </li>
+        <li class="nav-item col-2 col-md-2">
+            <a class="nav-link td" href="index.html#guide" id="toGuide">Guide</a>
+        </li>
+        <li class="nav-item col-2 col-md-2">
+            <a class="nav-link td" href="#connect" id="toConnect">Connect</a>
+        </li>
+        <li class="nav-item nav-download col-4 col-md-2">
+            <a class="nav-link" href="javascript:void(0);">Download Wallet!</a>
+        </li>
+    </ul>
+</div>
+<div id="pull">
+    <img src="images/takeIn.png" alt="">
+</div>
+<div id="warp">
+
+
+    <div id="news" class="view">
+        <p id="message">Pinned Messages</p>
+        <!--<p  id="p">Latest News</p>-->
+        <div class="main">
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="news-container">
+                            <div class="news-content-main">
+                                <div class="news-top">
+                                    <!--<p class="news-top-title">Pinned Messages</p>-->
+                                    <div class="row news-top-container justify-content-around">
+                                        <a href="news/EstablishmentOfPrimecoinFoundation.html" class="col-5 col-md-4">
+                                            <img src="images/news/1.jpg" alt="">
+                                            <div class="title">Establishment of Primecoin Foundation </div>
+                                        </a>
+                                        <!--<a href="newsOthers.html" class="col-5 col-md-4">-->
+                                        <!--<img src="images/news/4.jpg" alt="">-->
+                                        <!--<div class="title"></div>-->
+                                        <!--</a>-->
+                                    </div>
+                                </div>
+                                <div class="news-bottom">
+                                    <p class="news-bottom-title">Latest News</p>
+                                    <!--<div class="row news-bottom-container justify-content-between">-->
+                                    <div class="row news-bottom-container justify-content-center">
+                                        <a href="news/EstablishmentOfPrimecoinFoundation.html" class="col-6 col-md-3">
+                                            <img src="images/news/1.jpg" alt="">
+                                            <div class="title" style="font-size: 14px" >Establishment of Primecoin Foundation</div>
+                                        </a>
+                                        <!--<a href="###" class="col-6 col-md-2">-->
+                                        <!--<img src="images/news/8.jpg" alt="">-->
+                                        <!--<div class="title"></div>-->
+                                        <!--</a>-->
+                                        <!--<a href="###" class="col-6 col-md-2">-->
+                                        <!--<img src="images/news/6.jpg" alt="">-->
+                                        <!--<div class="title"></div>-->
+                                        <!--</a>-->
+                                        <!--<a href="###" class="col-6 col-md-2">-->
+                                        <!--<img src="images/news/7.jpg" alt="">-->
+                                        <!--<div class="title"></div>-->
+                                        <!--</a>-->
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--<div class="swiper-slide">-->
+                    <!--<div class="news-bottom page-two">-->
+
+                    <!--<div class="row news-bottom-container justify-content-between" style="margin-bottom: 100px">-->
+                    <!--<a href="###" class="col-6 col-md-3">-->
+                    <!--<img src="images/news/3.jpg" alt="">-->
+                    <!--<div class="news-title"></div>-->
+                    <!--</a>-->
+                    <!--<a href="###" class="col-6 col-md-3">-->
+                    <!--<img src="images/news/8.jpg" alt="">-->
+                    <!--<div class="news-title"></div>-->
+                    <!--</a>-->
+                    <!--<a href="###" class="col-6 col-md-3">-->
+                    <!--<img src="images/news/6.jpg" alt="">-->
+                    <!--<div class="news-title"></div>-->
+                    <!--</a>-->
+                    <!--<a href="###" class="col-6 col-md-3">-->
+                    <!--<img src="images/news/7.jpg" alt="">-->
+                    <!--<div class="news-title"></div>-->
+                    <!--</a>-->
+                    <!--</div>-->
+                    <!--<div class="row news-bottom-container justify-content-between">-->
+                    <!--<a href="###" class="col-6 col-md-3">-->
+                    <!--<img src="images/news/3.jpg" alt="">-->
+                    <!--<div class="news-title"></div>-->
+                    <!--</a>-->
+                    <!--<a href="###" class="col-6 col-md-3">-->
+                    <!--<img src="images/news/8.jpg" alt="">-->
+                    <!--<div class="news-title"></div>-->
+                    <!--</a>-->
+                    <!--<a href="###" class="col-6 col-md-3">-->
+                    <!--<img src="images/news/6.jpg" alt="">-->
+                    <!--<div class="news-title"></div>-->
+                    <!--</a>-->
+                    <!--<a href="###" class="col-6 col-md-3">-->
+                    <!--<img src="images/news/7.jpg" alt="">-->
+                    <!--<div class="news-title"></div>-->
+                    <!--</a>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="swiper-slide">-->
+                    <!--<div class="news-bottom page-two">-->
+
+                    <!--<div class="row news-bottom-container justify-content-between" style="margin-bottom: 100px">-->
+                    <!--<a href="###" class="col-6 col-md-3">-->
+                    <!--<img src="images/news/3.jpg" alt="">-->
+                    <!--<div class="news-title"></div>-->
+                    <!--</a>-->
+                    <!--<a href="###" class="col-6 col-md-3">-->
+                    <!--<img src="images/news/8.jpg" alt="">-->
+                    <!--<div class="news-title"></div>-->
+                    <!--</a>-->
+                    <!--<a href="###" class="col-6 col-md-3">-->
+                    <!--<img src="images/news/6.jpg" alt="">-->
+                    <!--<div class="news-title"></div>-->
+                    <!--</a>-->
+                    <!--<a href="###" class="col-6 col-md-3">-->
+                    <!--<img src="images/news/7.jpg" alt="">-->
+                    <!--<div class="news-title"></div>-->
+                    <!--</a>-->
+                    <!--</div>-->
+                    <!--<div class="row news-bottom-container justify-content-between">-->
+                    <!--<a href="###" class="col-6 col-md-3">-->
+                    <!--<img src="images/news/3.jpg" alt="">-->
+                    <!--<div class="news-title"></div>-->
+                    <!--</a>-->
+                    <!--<a href="###" class="col-6 col-md-3">-->
+                    <!--<img src="images/news/8.jpg" alt="">-->
+                    <!--<div class="news-title"></div>-->
+                    <!--</a>-->
+                    <!--<a href="###" class="col-6 col-md-3">-->
+                    <!--<img src="images/news/6.jpg" alt="">-->
+                    <!--<div class="news-title"></div>-->
+                    <!--</a>-->
+                    <!--<a href="###" class="col-6 col-md-3">-->
+                    <!--<img src="images/news/7.jpg" alt="">-->
+                    <!--<div class="news-title"></div>-->
+                    <!--</a>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="swiper-slide">-->
+                    <!--<div class="news-bottom page-two">-->
+
+                    <!--<div class="row news-bottom-container justify-content-between" style="margin-bottom: 100px">-->
+                    <!--<a href="###" class="col-6 col-md-3">-->
+                    <!--<img src="images/news/3.jpg" alt="">-->
+                    <!--<div class="news-title"></div>-->
+                    <!--</a>-->
+                    <!--<a href="###" class="col-6 col-md-3">-->
+                    <!--<img src="images/news/8.jpg" alt="">-->
+                    <!--<div class="news-title"></div>-->
+                    <!--</a>-->
+                    <!--<a href="###" class="col-6 col-md-3">-->
+                    <!--<img src="images/news/6.jpg" alt="">-->
+                    <!--<div class="news-title"></div>-->
+                    <!--</a>-->
+                    <!--<a href="###" class="col-6 col-md-3">-->
+                    <!--<img src="images/news/7.jpg" alt="">-->
+                    <!--<div class="news-title"></div>-->
+                    <!--</a>-->
+                    <!--</div>-->
+                    <!--<div class="row news-bottom-container justify-content-between">-->
+                    <!--<a href="###" class="col-6 col-md-3">-->
+                    <!--<img src="images/news/3.jpg" alt="">-->
+                    <!--<div class="news-title"></div>-->
+                    <!--</a>-->
+                    <!--<a href="###" class="col-6 col-md-3">-->
+                    <!--<img src="images/news/8.jpg" alt="">-->
+                    <!--<div class="news-title"></div>-->
+                    <!--</a>-->
+                    <!--<a href="###" class="col-6 col-md-3">-->
+                    <!--<img src="images/news/6.jpg" alt="">-->
+                    <!--<div class="news-title"></div>-->
+                    <!--</a>-->
+                    <!--<a href="###" class="col-6 col-md-3">-->
+                    <!--<img src="images/news/7.jpg" alt="">-->
+                    <!--<div class="news-title"></div>-->
+                    <!--</a>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="swiper-slide">-->
+                    <!--<div class="news-bottom page-two">-->
+
+                    <!--<div class="row news-bottom-container justify-content-between" style="margin-bottom: 100px">-->
+                    <!--<a href="###" class="col-6 col-md-3">-->
+                    <!--<img src="images/news/3.jpg" alt="">-->
+                    <!--<div class="news-title"></div>-->
+                    <!--</a>-->
+                    <!--<a href="###" class="col-6 col-md-3">-->
+                    <!--<img src="images/news/8.jpg" alt="">-->
+                    <!--<div class="news-title"></div>-->
+                    <!--</a>-->
+                    <!--<a href="###" class="col-6 col-md-3">-->
+                    <!--<img src="images/news/6.jpg" alt="">-->
+                    <!--<div class="news-title"></div>-->
+                    <!--</a>-->
+                    <!--<a href="###" class="col-6 col-md-3">-->
+                    <!--<img src="images/news/7.jpg" alt="">-->
+                    <!--<div class="news-title"></div>-->
+                    <!--</a>-->
+                    <!--</div>-->
+                    <!--<div class="row news-bottom-container justify-content-between">-->
+                    <!--<a href="###" class="col-6 col-md-3">-->
+                    <!--<img src="images/news/3.jpg" alt="">-->
+                    <!--<div class="news-title"></div>-->
+                    <!--</a>-->
+                    <!--<a href="###" class="col-6 col-md-3">-->
+                    <!--<img src="images/news/8.jpg" alt="">-->
+                    <!--<div class="news-title"></div>-->
+                    <!--</a>-->
+                    <!--<a href="###" class="col-6 col-md-3">-->
+                    <!--<img src="images/news/6.jpg" alt="">-->
+                    <!--<div class="news-title"></div>-->
+                    <!--</a>-->
+                    <!--<a href="###" class="col-6 col-md-3">-->
+                    <!--<img src="images/news/7.jpg" alt="">-->
+                    <!--<div class="news-title"></div>-->
+                    <!--</a>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                </div>
+                <!-- Add Pagination -->
+
+                <!--<div class="swiper-pagination"></div>-->
+                <!--<div class="swiper-button-prev  prev" id="button-prev" ></div>-->
+                <!--<div class="swiper-button-next next " id="button-next"  ></div>-->
+                <!--<div class=" prev" id="button-first" >first</div>-->
+                <!--<div class=" next " id="button-last"  >last</div>-->
+                <!-- Add Navigation -->
+                <!--<div class="swiper-button-prev"></div>-->
+                <!--<div class="swiper-button-next"></div>-->
+
+            </div>
+            <!-- Swiper JS -->
+            <script src="js/swiper.min.js"></script>
+
+
+        </div>
+
+
+        <div class="footer">
+            <!--<p>-->
+            <!--Through many of its unique properties, Bitcoin allows exciting uses that could not be covered by any previous-->
+            <!--and everyone can take part. Through many of its unique properties-->
+            <!--</p>-->
+            <div id="subscribe-input-wraper">
+                <span class="new-news">Get the latest primecoin news to receive the latest updates</span>
+                <!--<div class="createsend-button "  data-listid="j/03/77D/341/D67FD91990F19504">Subscribe</div>-->
+            </div>
+
+            <div class="row" id="list-wraper">
+                <ul class="col-6 col-md-3">
+                    <li>
+                        Resource
+                    </li>
+                    <li>
+                        <a name="connect" target="_blank" href="http://primecoin.io/bin/primecoin-paper.pdf">Whitepaper</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://forum.primecoin.org/c/technical-support">Technical Support</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="javascript:void(0);">Software</a>
+                    </li>
+                </ul>
+                <ul class="col-6 col-md-3">
+                    <li>
+                        Related Links
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.vee.tech/">VEE</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://peercoin.net/">Peercoin</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.Primecoin.org">Foundation</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://github.com/primecoin/primecoin/wiki">Wiki</a>
+                    </li>
+                </ul>
+                <ul class="col-6 col-md-3">
+                    <li>
+                        Developer
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://github.com/primecoin/primecoin">Github</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://forum.primecoin.org/c/developer-discussion">Technical Discussion</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.Primecoin.org">Get Sponsorship</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.Primes.zone">Latest Status</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://t.me/PrimecoinFoundation">Telegram Discussion</a>
+                    </li>
+                </ul>
+                <ul class="col-6 col-md-3">
+                    <li>
+                        Contact  US
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://forum.primecoin.org/t/how-to-contact-us/56">Forum</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="news.html">Press</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://forum.primecoin.org/t/how-to-contact-us/56">Message us</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="javascript:void(0);" data-toggle="modal" data-target="#myModal">Donate</a>
+                    </li>
+
+                </ul>
+
+            </div>
+            <div class="row justify-content-md-center" id="footer-link">
+                <div><a class="footer-link-one" target="_blank" href="https://t.me/PrimecoinFoundation "></a><span>Telegram</span><div class="arrow-down"></div></div>
+                <div><a class="footer-link-two" target="_blank" href="https://discord.gg/UTQz4Zq"></a><span>Discord</span><div class="arrow-down"></div></div>
+                <div><a class="footer-link-three" target="_blank" href="http://forum.primecoin.org"></a><span>Forum</span><div class="arrow-down"></div></div>
+                <div><a class="footer-link-four" target="_blank" href="https://www.youtube.com/channel/UCQZpBc1864PakvidBOHFqPw?"></a><span>Youtobe</span><div class="arrow-down"></div></div>
+                <div><a class="footer-link-five" target="_blank" href=" https://twitter.com/Primecoin_org"></a><span>Twitter</span><div class="arrow-down"></div></div>
+                <div><a class="footer-link-six" target="_blank" href="https://www.reddit.com/r/primecoin/"></a><span>Reddit</span><div class="arrow-down"></div></div>
+            </div>
+            <p class="footer-bottom">
+                © Copyright 2018. Primecoin.
+            </p>
+        </div>
+
+
+        <!---->
+    </div>
+
+
+    <!--modal-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <p>Your help means a lot for the Primecoin Project. If you wish to help the foundation, please pay to the below address.  </p>
+                <p style="text-align: center;">Primecoin wallet address:</p>
+                <p style="word-wrap: break-word;">APMb1yoFSL8wN4FGSKCJp4EB5BzhfEjwx2</p>
+                <img src="images/qrcode.png" alt="" class="qrcode" style="width: 60px;margin-left: calc(50% - 30px);">
+                <form id="sub_Form" class="js-cm-form" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="A61C50BEC994754B1D79C5819EC1255C189E7A242C023A36B4EA163EDFD48EEED086B8A1C9AA115FC8987185682F747D77F1B068296A34E192C1EE337F463A56">
+                    <p>
+                        <label for="field_Email" >Email:</label>
+                        <input id="field_Email" name="cm-wdukiy-wdukiy" type="email" class="js-cm-email-input" required />
+                    </p>
+                    <div>
+                        <input id="cm_privacy_consent" name="cm-privacy-consent" required type="checkbox"/>
+                        <label for="cm_privacy_consent">I agree to be emailed</label>
+                        <input id="cm_privacy_consent_hidden" name="cm-privacy-consent-hidden" type="hidden" value="true" />
+                    </div>
+                    <p style="margin-bottom: 0">
+                        <button class="js-cm-submit-button btn" type="submit">Submit</button>
+                    </p>
+                </form>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+
+    </div>
+
+</div>
+</body>
+
+
+
+
+
+
+<script type="text/javascript" src="js/canvas-particle.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/public.js"></script>
+<script>
+
+
+
+    function getData(){
+        $.ajax({
+            type: "GET",
+            url: "https://api.coinmarketcap.com/v2/ticker/42/",
+            success: function(res){
+                var rate = res.data.quotes.USD.price.toFixed(6);
+                var increase = res.data.quotes.USD.percent_change_24h.toFixed(2);
+                if (increase >= 0){
+                    $('#Rise').html('(+'+increase+'%)');
+                    $('#Rise').css({'color':'red'});
+                }else{
+                    $('#Rise').html('('+increase+'%)');
+                    $('#Rise').css({'color':'#1c7430'});
+                }
+                $('.triangle_border_down .price').html('XPM/USD:$'+rate);
+            }
+        });
+    }
+    getData();
+    // setInterval(getData,5000);
+
+    function handlePrice(){
+        var bodyHeight = $('body').height();
+        var navHeight = $('.navbar').height();
+        var documentHeight = $(document).height();
+        if ($(document).scrollTop() >= 100){
+            $('.triangle_border_down').fadeOut(100);
+        }else{
+            $('.triangle_border_down').fadeIn(100);
+        }
+    }
+
+    handlePrice();
+    $(document).scroll(function () {
+        handlePrice();
+    })
+</script>
+
+
+
+
+</html>

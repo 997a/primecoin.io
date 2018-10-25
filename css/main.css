@@ -18,15 +18,6 @@ table { border-collapse:collapse; }
 .c5{color: #c5c5c5c5}
 .fw{font-weight: bold}
 
-
-
-
-
-
-
-
-
-
 #warp{
     width: 100%;
     height:auto;
@@ -94,11 +85,10 @@ table { border-collapse:collapse; }
     z-index: 2;
 }
 .index-content{
-    width: 100%;
+    width:80%;
     padding: 0 100px;
     box-sizing: border-box;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0 auto;
 }
 .index-content ul{
     padding-top:10%;
@@ -142,6 +132,76 @@ table { border-collapse:collapse; }
 .index-center{
     width: 100%;
 
+}
+.index-contribution{
+    width: 100%;
+    height: 90vh;
+    background-color: rgba(74, 86, 100, 1);
+    text-align: center;
+    padding:100px;
+    box-sizing: border-box;
+}
+.index-contribution h1{
+    font-weight: 700;
+    font-style: normal;
+    font-size: 48px;
+    color: #CCCCCC;
+}
+.index-contribution .primes-button {
+    width: 300px;
+    height: 90px;
+    font-size: 28px;
+    border-radius: 45px;
+    background-color: rgba(22, 155, 213, 1);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.index-contribution .primes-button a{
+   text-decoration: none;
+    color: #fff;
+}
+.news-bottom{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+
+}
+
+.news-bottom-title{
+    width: 100%;
+    text-align: center;
+    font-size:48px;
+    font-weight: 600;
+    color: #ffffff;
+}
+.news-bottom-container{
+    width: 100%;
+}
+
+.news-bottom-container a{
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+}
+.news-bottom-container a img{
+    display: block;
+    width: 100%;
+    position: relative;
+
+}
+.news-bottom-container .title{
+    width: 100%;
+    height: 25%;
+    background:rgba(125,125,125,0.5);
+    position: absolute;
+    top: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
 }
 
 @media screen and (max-width:1170px) {
@@ -202,8 +262,7 @@ table { border-collapse:collapse; }
     .index-content{
         padding: 10px 15px;
         box-sizing: border-box;
-        margin-left: 0;
-        margin-right: 0;
+        margin: 0 auto;
         margin-top: 20px;
     }
     .index-content ul a{
