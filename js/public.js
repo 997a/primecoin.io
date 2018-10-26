@@ -55,7 +55,7 @@ $(function(){
     });
 
     $('#navBar-nav .td').mouseenter(function (){
-        $(this).css({"font-size":"24px","text-decoration":"underline","font-weight":"bold"});
+        $(this).css({"font-size":"20px","text-decoration":"underline","font-weight":"bold"});
     });
     $('#navBar-nav .td').mouseleave(function (){
         if ($(this).attr('class') == 'nav-link td'){
@@ -64,7 +64,7 @@ $(function(){
    });
 
   $('.navbar-nav .td').mouseenter(function (){
-    $(this).css({"font-size":"24px","text-decoration":"underline","font-weight":"bold"});
+    $(this).css({"font-size":"20px","text-decoration":"underline","font-weight":"bold"});
   });
   $('.navbar-nav .td').mouseleave(function (){
     if ($(this).attr('class') == 'nav-link td'){

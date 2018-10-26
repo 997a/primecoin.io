@@ -263,9 +263,7 @@
            body{
                font-size: 12px;
            }
-           #news .main {
-               display: none;
-           }
+
            #p ,#message{
                padding-top: 60px;
            }
@@ -275,9 +273,7 @@
                background: #030724;
 
            }
-           .center .swiper{
-               display: block;
-           }
+
 
            .swiper-container {
                width: 100%;
@@ -313,9 +309,10 @@
                padding: 0 30px;
                box-sizing: border-box;
            }
-           .news-bottom-container a img{
-               margin-top: 30px;
 
+           .news-bottom-title{
+               font-size: 20px;
+               margin-top: 20px;
            }
            .swiper-button-next, .swiper-button-prev{
                position: fixed;
@@ -406,27 +403,32 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+    <!--web -->
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link td" href="#about" id="toAbout1">About <span class="sr-only">(current)</span></a>
+                <a class="nav-link td" href="index.html#about" id="toAbout1">About <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link td" href="#guide" id="toGuide1">Guide</a>
+                <a class="nav-link td" href="index.html#guide" id="toGuide1">Guide</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link td" href="#connect" id="toConnect1">Connect</a>
+                <a class="nav-link td" href="index.html#contribution" >Contribution</a>
             </li>
-            <li class="nav-item nav-download">
-                <a class="nav-link" href="javascript:void(0);">Download Wallet!</a>
+            <li class="nav-item">
+                <a class="nav-link td" href="index.html#news" >News</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link td" href="index.html#connect" id="toConnect1">Connect</a>
+            </li>
+            <!--<li class="nav-item nav-download">-->
+            <!--<a class="nav-link" href="javascript:void(0);">Download Wallet!</a>-->
+            <!--</li>-->
         </ul>
     </div>
 </nav>
 <script>
     changeDivWidth();
-
-
     function changeDivWidth(){
         var lw=$('#nav').offset().left;
         var w = document.getElementById('nav').clientWidth;//获取宽度
@@ -437,17 +439,23 @@
 <div class="navBar" id="navBar">
     <ul class="navBar-nav row justify-content-center" id="navBar-nav">
         <li class="nav-item col-2 col-md-2">
-            <a class="nav-link td" href="#about" id="toAbout">About</a>
+            <a class="nav-link td" href="index.html#about" id="toAbout">About</a>
         </li>
         <li class="nav-item col-2 col-md-2">
             <a class="nav-link td" href="index.html#guide" id="toGuide">Guide</a>
         </li>
         <li class="nav-item col-2 col-md-2">
-            <a class="nav-link td" href="#connect" id="toConnect">Connect</a>
+            <a class="nav-link td" href="index.html#contribution" >Contribution</a>
         </li>
-        <li class="nav-item nav-download col-4 col-md-2">
-            <a class="nav-link" href="javascript:void(0);">Download Wallet!</a>
+        <li class="nav-item col-2 col-md-2">
+            <a class="nav-link td" href="index.html#news" >News</a>
         </li>
+        <li class="nav-item col-2 col-md-2">
+            <a class="nav-link td" href="index.html#connect" id="toConnect">Connect</a>
+        </li>
+        <!--<li class="nav-item nav-download col-4 col-md-2">-->
+        <!--<a class="nav-link" href="javascript:void(0);">Download Wallet!</a>-->
+        <!--</li>-->
     </ul>
 </div>
 <div id="pull">
@@ -469,7 +477,7 @@
                                 <div class="news-top">
                                     <!--<p class="news-top-title">Pinned Messages</p>-->
                                     <div class="row news-top-container justify-content-around">
-                                        <a href="news/EstablishmentOfPrimecoinFoundation.html" class="col-5 col-md-4">
+                                        <a href="news/EstablishmentOfPrimecoinFoundation.html" class="col-8 col-md-4">
                                             <img src="images/news/1.jpg" alt="">
                                             <div class="title">Establishment of Primecoin Foundation </div>
                                         </a>
@@ -483,7 +491,7 @@
                                     <p class="news-bottom-title">Latest News</p>
                                     <!--<div class="row news-bottom-container justify-content-between">-->
                                     <div class="row news-bottom-container justify-content-center">
-                                        <a href="news/EstablishmentOfPrimecoinFoundation.html" class="col-6 col-md-3">
+                                        <a href="news/EstablishmentOfPrimecoinFoundation.html" class="col-8 col-md-3">
                                             <img src="images/news/1.jpg" alt="">
                                             <div class="title" style="font-size: 14px" >Establishment of Primecoin Foundation</div>
                                         </a>
@@ -780,7 +788,7 @@
                 <div><a class="footer-link-six" target="_blank" href="https://www.reddit.com/r/primecoin/"></a><span>Reddit</span><div class="arrow-down"></div></div>
             </div>
             <p class="footer-bottom">
-                © Copyright 2018. Primecoin.
+                © Copyright 2018. Primecoin.<a href="Privacy.html" style="color: #007bff">Privacy Policy</a>
             </p>
         </div>
 

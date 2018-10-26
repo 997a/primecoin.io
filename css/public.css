@@ -372,13 +372,13 @@ body{
     margin-bottom: 0;
 }
 .btn-primary{
-    background-color: #0fd6f3;
-    border-color: #0fd6f3;
+    background-color:rgba(255, 153, 0, 1);
+    border-color:rgba(255, 153, 0, 1);
 }
 .btn-primary:hover{
     color:#fff;
-    background-color:#09DEF3;
-    border-color:#09DEF3;
+    background-color:rgba(255, 153, 0, 1);
+    border-color:rgba(255, 153, 0, 1);
 }
 .btn-primary.focus,.btn-primary:focus{
      box-shadow:0 0 0 .2rem rgba(13,220,235,.5);
@@ -565,10 +565,9 @@ body{
 }
 
 .subscribe{
-    padding: 2px 10px;
-    font-size: 12px;
+    padding: 2px 15px;
+    font-size:20px;
     position: relative;
     top: -7px;
 }
-
 
