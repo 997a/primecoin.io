@@ -14,6 +14,8 @@ $(function(){
         './images/10.png',
         './images/11.png',
         './images/12.png'
+
+
     ];
 
     var imgWrap = [];
