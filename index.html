@@ -7,7 +7,7 @@
     <link rel="icon" href="images/logo.png" type="image/x-icon"/>
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/initialize.css">
+    <!--<link rel="stylesheet" href="css/initialize.css">-->
     <link rel="stylesheet" href="css/public.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/jquery-3.3.1.min.js"></script>
@@ -140,56 +140,7 @@
             margin-top: 100px;
      }
 
-        /* Carousel */
-        #carousel1 {
-            width:960px;
-            height:400px;
-            overflow:hidden;
-            position:relative;
-            border-bottom:solid 1px #d8d9da;
-            margin:0 auto;
-        }
-        #carousel1 img {
-            border:none;
-            width:240px;
-            height:180px;
-            border:solid 1px #000;
-        }
-        #carousel1 #title-text {
-            font-size:22px;
-            margin:10px 20px 0 0;
-            padding:0;
-            text-align:right;
-        }
-        #carousel1 #alt-text {
-            font-size:14px;
-            margin:5px 20px 0 0;
-            padding:0;
-            text-align:right;
-        }
-        #carousel1 #user-c {
-            padding:0;
-            position:absolute;
-            right:15px;
-            bottom:10px;
-        }
-        #carousel1 .carouselLeft, #carousel1 .carouselRight {
-            position:absolute;
-            bottom:20px;
-            width:29px;
-            height:30px;
-            overflow:hidden;
-            cursor:pointer;
-        }
-        #carousel1 .carouselLeft {
-            right:60px;
-            background:url("images/news/first.png") no-repeat;
-        }
-        #carousel1 .carouselRight {
-            right:808px;
-            background:url("images/news/last.png") no-repeat;
 
-        }
 
 
 
@@ -918,6 +869,7 @@ function handleScrollAbout(){
         grabCursor: true,
         centeredSlides: true,
         slidesPerView: 'auto',
+        initialSlide:1,
         coverflowEffect: {
             rotate:0,
             stretch:0,
