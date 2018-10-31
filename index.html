@@ -7,18 +7,19 @@
     <link rel="icon" href="images/logo.png" type="image/x-icon"/>
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!--<link rel="stylesheet" href="css/initialize.css">-->
     <link rel="stylesheet" href="css/public.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/jquery-3.3.1.min.js"></script>
     <style type="text/css">
+        #none ,#iphone{
+            display: none;
+        }
         .swiper-container {
             width: 100%;
             height: 100vh;
         }
         .swiper-slide {
             color: #ffffff;
-
             /* Center slide text vertically */
             display: -webkit-box;
             display: -ms-flexbox;
@@ -34,13 +35,12 @@
             align-items: center;
         }
         .swiper-slide iframe{
-            width: 500px;
             height:500px;
 
         }
         .swiper-slide .text{
-            height:400px;
-            overflow: auto;
+            position: fixed;
+            left:83%;
         }
         .swiper-container-vertical>.swiper-pagination-bullets{
 
@@ -64,12 +64,12 @@
         .swiper-container1  .swiper-slide {
             background-position: center;
             background-size: cover;
-             width: 300px;
+             width: 400px;
             height: 300px;
-            background: #c6c8ca;
+            background:#000;
 
         }
-        #prev,  #next{
+         #prev,  #next{
             position: absolute;
             width: 24px;
             height: 24px;
@@ -91,13 +91,48 @@
             height: 300px;
 
         }
-
-        #next{
+         #next {
             position: absolute;
             top: 63%;
 
 
             background-image: url("images/Arrow Down.png");
+        }
+         .list{
+             position: fixed;
+             margin-left:40%;
+             line-height: 28px;
+             color: #999999;
+         }
+         .f{
+             color: #fff;
+         }
+        .button{
+             width:150px;
+             height: 50px;
+             margin-top: 400px;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             border: 1px solid #fff;
+             border-radius:5px;
+         }
+        .Button:hover{
+              background-color: #169BD5;
+          }
+        .Button1:hover{
+            background-color: #169BD5;
+        }
+        h2{
+            color: #FF9900;
+            text-align: center;
+        }
+
+        table td{
+            padding:1px 15px;
+        }
+        table tr td:nth-child(3){
+            color: #1c7430;
         }
         .triangle_border_down{
             width:0;
@@ -139,13 +174,22 @@
         .news-bottom-container{
             margin-top: 100px;
      }
-
-
-
-
+        .swiper-pagination-custom {
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+        }
+        .col-md-9{
+            max-width: 65%;
+        }
 
         @media screen and (max-width:768px){
-
+           #none ,#iphone{
+               display: block;
+           }
+            #block , #web{
+                display: none;
+            }
             .swiper-slide{
                 margin-left: 0;
                 margin-right: 0;
@@ -216,6 +260,7 @@
             top: 65vh;
             z-index: -10;
         }
+
     </style>
 
 
@@ -296,20 +341,24 @@
 </div>
 <div id="warp">
     <div class="mydiv row">
+        <div class="right col-12 col-md-4" id="iphone">
+            <img src="images/logo.png">
+        </div>
+
         <div class="left  col-12 col-md-8 row">
             <h1 class="f">Primecoin</h1>
             <h2 class="b">A new type cryptocurrency which is Proof-of-Work based on searching for prime numbers.</h2>
-            <a href="#" class="col-12 col-md-6 col-lg-5"> <span class="f ">Buy Primecoin</span></a>
-            <a href="#" class=" col-12 col-md-6 col-lg-5"><span class="f ">Download Wallet</span></a>
+            <a href="https://coincodex.com/crypto/primecoin/exchanges/" class="col-12 col-md-6 col-lg-5"> <span class="f ">Buy Primecoin</span></a>
+            <a href="download.html" class=" col-12 col-md-6 col-lg-5"><span class="f ">Download Wallet</span></a>
         </div>
-        <div class="right col-12 col-md-4">
+        <div class="right col-12 col-md-4" id="web">
             <img src="images/logo.png">
         </div>
         <!--canvas-->
     <div id="mydiv"></div>
         <a  name="about" class="getAbout"></a>
     </div>
-    <div class=" index-content f row">
+    <div class=" index-content f row" id="block">
         <ul class=" col-md-4 col-12 found">
             <a href="about.html#foundation">
                 <img src="images/tubiao_Foundation.png">
@@ -349,72 +398,134 @@
                         A solution to blockchain energy problem through scientific computing</p>
                 </li></a>
         </ul>
+    </div>
+    <div class=" index-content f row" id="none">
+        <ul class=" col-md-4 col-12 sk">
+            <a href="about.html#sk" >
+                <img src="images/tubiao_sk.png">
+                <li>
+                    <p class="p"> Sunny King</p>
+                    <p>Creator of Peercoin and Primecoin, founder of VEE
+                        Inventor of Proof of Stake(PoS) and useful Proof of Work(uPoW)
+                        Blockchain veteran and revolutionist since 2012</p>
+                </li></a>
 
-
+        </ul>
+        <ul class=" col-md-4 col-12 found">
+            <a href="about.html#foundation">
+                <img src="images/tubiao_Foundation.png">
+                <li>
+                    <p class="p">Primecion Foundation</p>
+                    <p>Established under the advice of Sunny King
+                        Dedicated to promotethe evolving Primecoin and community
+                        Preserves the legacy of uPoS</p>
+                </li> </a>
+        </ul>
+        <ul class="col-md-4 col-12 found">
+            <a href="about.html#primecoin">
+                <img src="images/tubiao_Primecoin.png">
+                <li>
+                    <p class="p">Primecion</p>
+                    <p>An unique type of crypto-currency that searches for prime numbers
+                        The most established and the first to employ uPoW
+                        A solution to blockchain energy problem through scientific computing</p>
+                </li>
+            </a>
+        </ul>
     </div>
     <div class="index-center">
         <!-- Swiper -->
         <a href="###" name="guide" style="text-decoration: none;outline: none;">
         <div class="swiper-container">
 
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper" >
                 <div class="swiper-slide row  swiper-no-swiping">
 
-                    <!--<video src="video/yh.mp4"  controls="controls" class="col-10 col-md-5 ">-->
-                    <!--</video>-->
-
-                    <iframe src="http://player.youku.com/embed/XMzcwNTY3NTM2MA"class="col-10 col-md-8" frameborder=0 allowfullscreen></iframe>
-
-                    <!--<div class="col-10 col-md-5 text">-->
-                        <!--<h1>wallet</h1>-->
-                        <!--<p>Bitcoin uses peer-to-peer technology to operate with no central authority or banks; managing transactions and the issuing of bitcoins is carried out collectively by the network. Bitcoin is open-source; its design is public, nobody owns or controls Bitcoin and everyone can take part. Through many of its unique properties, Bitcoin allows exciting uses that could not be covered by any previous payment system.-->
-                            <!--and everyone can take part. Through many of its unique properties, Bitcoin allows exciting uses that could not be covered by any previous payment system.</p>-->
-                        <!--<p>Bitcoin uses peer-to-peer technology to operate with no central authority or banks; managing transactions and the issuing of bitcoins is carried out collectively by the network. Bitcoin is open-source; its design is public, nobody owns or controls Bitcoin and everyone can take part. Through many of its unique properties, Bitcoin allows exciting uses that could not be covered by any previous payment system.-->
-                            <!--and everyone can take part. Through many of its unique properties, Bitcoin allows exciting uses that could not be covered by any previous payment system.</p>-->
-                    <!--</div>-->
+                    <iframe src="http://player.youku.com/embed/XMzcwNTY3NTM2MA"class="col-10 col-md-9 show" frameborder=0 allowfullscreen></iframe>
+                   <div class="list">
+                       <li class="f">Wallet tutorial one</li>
+                       <li>Wallet tutorial two</li>
+                       <li>Wallet tutorial three</li>
+                       <li>Wallet tutorial four</li>
+                       <li>Wallet tutorial five</li>
+                   </div>
+                    <div class="col-10 col-md-1 text show">
+                        <div class="button Button" >
+                        </div>
+                    </div>
+                    <div class="col-10 col-md-9 hide">
+                        <h2>Wallet tutorial one</h2>
+                        <p>
+                            After installation, you have to choose between the default hot wallet, or a cold wallet. To have a cold wallet, you can go to settings, and click on
+                            “Switch to Primecoin Cold”. Once you choose cold wallet, you will not be able to reverse the action. After you do so, you should permanently disable
+                            all internet connection on your mobile device in order to protect the safety of your private keys.
+                        </p>
+                        <p>To create a wallet address, click the plus sign button on the bottom left of the main page. You may choose to create a Hierarchical Deterministic wallet address or a normal address in the “others” option.
+                            To generate HD wallet, click Generate, grant permissions, set a password that only you will remember, and scan a random area with your camera to generate a random key.
+                            We highly recommend a backup of this address either by screenshot or by hand.
+                        </p>
+                        <p>Now you have created a unique address.  Provide your address or QR code to your sending party to receive funds.  Then, you can make transactions by clicking the send button.</p>
+                        <p>To set transaction fee, go to settings, and choose a desired amount in “Default Transaction Fee” section. After sending a transaction, you will be able to view it in your wallet.
+                            The transaction is considered complete when the confirmation count reaches your desired non-zero amount.
+                        </p>
+                        <p>To view how to conduct transactions with a cold wallet, please click the link on the right for another video.</p>
+                    </div>
+                    <div class="col-10 col-md-1 text hide">
+                        <div class="button Button1" >
+                        </div>
+                    </div>
                 </div>
-                <div class="swiper-slide swiper-no-swiping">Slide 2</div>
+                <div class="swiper-slide row col-12 swiper-no-swiping">
+
+                    <iframe src="http://player.youku.com/embed/XMzcwNTY3NTM2MA"class="col-10 col-md-9 show" frameborder=0 allowfullscreen></iframe>
+                    <div class="list">
+                        <li>Wallet tutorial one</li>
+                        <li class="f">Wallet tutorial two</li>
+                        <li>Wallet tutorial three</li>
+                        <li>Wallet tutorial four</li>
+                        <li>Wallet tutorial five</li>
+                    </div>
+                    <div class="col-10 col-md-1 text show">
+                        <div class="button Button" >
+                        </div>
+                    </div>
+                    <div class="col-10 col-md-9 hide">
+                        <h2>Wallet tutorial two</h2>
+                        <p>
+                            After installation, you have to choose between the default hot wallet, or a cold wallet. To have a cold wallet, you can go to settings, and click on
+                            “Switch to Primecoin Cold”. Once you choose cold wallet, you will not be able to reverse the action. After you do so, you should permanently disable
+                            all internet connection on your mobile device in order to protect the safety of your private keys.
+                        </p>
+                        <p>To create a wallet address, click the plus sign button on the bottom left of the main page. You may choose to create a Hierarchical Deterministic wallet address or a normal address in the “others” option.
+                            To generate HD wallet, click Generate, grant permissions, set a password that only you will remember, and scan a random area with your camera to generate a random key.
+                            We highly recommend a backup of this address either by screenshot or by hand.
+                        </p>
+                        <p>Now you have created a unique address.  Provide your address or QR code to your sending party to receive funds.  Then, you can make transactions by clicking the send button.</p>
+                        <p>To set transaction fee, go to settings, and choose a desired amount in “Default Transaction Fee” section. After sending a transaction, you will be able to view it in your wallet.
+                            The transaction is considered complete when the confirmation count reaches your desired non-zero amount.
+                        </p>
+                        <p>To view how to conduct transactions with a cold wallet, please click the link on the right for another video.</p>
+                    </div>
+                    <div class="col-10 col-md-1 text hide">
+                        <div class="button Button1" >
+                        </div>
+                    </div>
+                </div>
                 <div class="swiper-slide swiper-no-swiping">Slide 3</div>
                 <div class="swiper-slide swiper-no-swiping">Slide 4</div>
                 <div class="swiper-slide swiper-no-swiping">Slide 5</div>
             </div>
+
+
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
             <div class="navigation">
                 <div  class="swiper-button-prev" id="prev"></div>
                 <div  class="swiper-button-next" id="next"></div>
             </div>
-            <button style="background: #007bff">aaa</button>
+
         </div>
-        <div class="swiper-container" style="display: none">
 
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide row  swiper-no-swiping">
-
-                        <iframe src="http://player.youku.com/embed/XMzcwNTY3NTM2MA" class="col-10 col-md-8" frameborder=0 allowfullscreen></iframe>
-
-                        <!--<div class="col-10 col-md-5 text">-->
-                        <!--<h1>wallet</h1>-->
-                        <!--<p>Bitcoin uses peer-to-peer technology to operate with no central authority or banks; managing transactions and the issuing of bitcoins is carried out collectively by the network. Bitcoin is open-source; its design is public, nobody owns or controls Bitcoin and everyone can take part. Through many of its unique properties, Bitcoin allows exciting uses that could not be covered by any previous payment system.-->
-                        <!--and everyone can take part. Through many of its unique properties, Bitcoin allows exciting uses that could not be covered by any previous payment system.</p>-->
-                        <!--<p>Bitcoin uses peer-to-peer technology to operate with no central authority or banks; managing transactions and the issuing of bitcoins is carried out collectively by the network. Bitcoin is open-source; its design is public, nobody owns or controls Bitcoin and everyone can take part. Through many of its unique properties, Bitcoin allows exciting uses that could not be covered by any previous payment system.-->
-                        <!--and everyone can take part. Through many of its unique properties, Bitcoin allows exciting uses that could not be covered by any previous payment system.</p>-->
-                        <!--</div>-->
-                    </div>
-                    <div class="swiper-slide swiper-no-swiping">Slide 2</div>
-                    <div class="swiper-slide swiper-no-swiping">Slide 3</div>
-                    <div class="swiper-slide swiper-no-swiping">Slide 4</div>
-                    <div class="swiper-slide swiper-no-swiping">Slide 5</div>
-                </div>
-
-                <!-- Add Pagination -->
-
-                <div class="swiper-pagination"></div>
-                <div class="navigation">
-                    <div  class="swiper-button-prev" id="prev1"></div>
-                    <div  class="swiper-button-next" id="next1"></div>
-                </div>
-            </div>
 
         </a>
         <a href="###" name="contribution"style="text-decoration: none;outline: none;" >
@@ -431,9 +542,168 @@
            </div>
             <div class="swiper-container1">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">aaa</div>
-                    <div class="swiper-slide" >bbb</div>
-                    <div class="swiper-slide">ccc</div>
+                    <div class="swiper-slide" >
+                       <table border="1";>
+                            <tr>
+                                <td>Length</td>
+                                <td>Digits</td>
+                                <td style="color: #fff">Block(link)</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>244</td>
+                                <td>4346</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>167</td>
+                                <td>9021</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>151</td>
+                                <td>57284</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>146</td>
+                                <td>182690</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>140</td>
+                                <td>95569</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>113</td>
+                                <td>558800</td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>107</td>
+                                <td>368051</td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td>97</td>
+                                <td>2718842</td>
+                            </tr>
+                        </table>
+
+                </div>
+                    <div class="swiper-slide" >  <table border="1";>
+
+                        <tr>
+                            <td>Length</td>
+                            <td>Digits</td>
+                            <td style="color: #fff">Block(link)</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>97</td>
+                            <td>46</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>268</td>
+                            <td>7101</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>172</td>
+                            <td>11900</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>163</td>
+                            <td>75899</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>138</td>
+                            <td>479357</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>124</td>
+                            <td>487155</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>118</td>
+                            <td>476538</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>105</td>
+                            <td>340499</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>99</td>
+                            <td>942208</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>96</td>
+                            <td>2592901</td>
+                        </tr>
+                    </table></div>
+                    <div class="swiper-slide">  <table border="1";>
+
+                        <tr>
+                            <td>Length</td>
+                            <td>Digits</td>
+                            <td style="color: #fff">Block(link)</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>134</td>
+                            <td>54</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>208</td>
+                            <td>17715</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>183</td>
+                            <td>26660</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>167</td>
+                            <td>79349</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>145</td>
+                            <td>519253</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>127</td>
+                            <td>365304</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>109</td>
+                            <td>323183</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>101</td>
+                            <td>539977</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>97</td>
+                            <td>547276</td>
+                        </tr>
+                    </table>
+                    </div>
                 </div>
                 <!-- Add Pagination -->
 
@@ -879,6 +1149,27 @@ function handleScrollAbout(){
         }
 
     });
+</script>
+<script>
+  $(".Button").html("See text tutorial")
+  $(".hide").hide()
+  $(".Button").click(function() {
+          this.innerHTML == "See video tutorial"
+          $(".show").hide();
+          $(".hide").show()
+      }
+
+  )
+  $(".Button1").html("See video tutorial")
+  $(".Button1").click(
+      function() {
+          this.innerHTML == "See text tutorial"
+          $(".show").show();
+          $(".hide").hide()
+
+      }
+  )
+
 </script>
 
 <!--donate-->
