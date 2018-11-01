@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+li {
+    list-style: none
+}
+
+.clear {
+    clear: both
+}
+
+.menus {
+    width:100%;
+    padding-top: 40px;
+    background: rgba(33, 41, 43, 1);
+}
+
+.menus ul {
+    width:100%;
+    margin-bottom: 0;
+    position: relative;
+    float: left
+}
+
+.menus li {
+    float: left;
+    width:20%;
+    height:90px;
+    line-height:90px;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    background: white;
+
+}
+.menus li img{
+    width:40px;
+   height:40px;
+}
+
+
+
+
+.tab {
+    width:100%;
+    height: 500px;
+    font-size: 40px;
+    line-height: 500px;
+    text-align: center;
+    color: #888;
+    background: rgba(33, 41, 43, 1);
+    font-weight: 700;
+    display: none
+}
+
+.show {
+    display: block;
+
+
+}
+
+.title {
+    text-align: center;
+    padding: 20px;
+    background: #ccc
+}

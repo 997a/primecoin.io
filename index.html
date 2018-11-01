@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="js/jquery-3.3.1.min.js"></script>
     <style type="text/css">
-        #none ,#iphone{
+        #none ,#iphone ,#swiper-iphone{
             display: none;
         }
         .swiper-container {
@@ -94,9 +94,7 @@
          #next {
             position: absolute;
             top: 63%;
-
-
-            background-image: url("images/Arrow Down.png");
+             background-image: url("images/Arrow Down.png");
         }
          .list{
              position: fixed;
@@ -127,7 +125,6 @@
             color: #FF9900;
             text-align: center;
         }
-
         table td{
             padding:1px 15px;
         }
@@ -184,46 +181,41 @@
         }
 
         @media screen and (max-width:768px){
-           #none ,#iphone{
+           #none ,#iphone ,#swiper-iphone{
                display: block;
            }
-            #block , #web{
+            #block , #web ,#swiper-web{
                 display: none;
             }
-            .swiper-slide{
-                margin-left: 0;
-                margin-right: 0;
-            }
-            .swiper-slide .text{
-                height:200px;
-                overflow: auto;
-
-            }
-            .swiper-slide .text h1{
-                text-align: center;
-                font-size: 26px;
-            }
-
-            .swiper-container{
-                height: 500px;
-            }
-
-
-            .swiper-container-vertical>.swiper-pagination-bullets{
-                right:15px;
-            }
-            #prev,  #next{
-                top:33%;
-                left:calc(100% - 31px)
-            }
-            #next{
-                top:70%;
-
-            }
             .swiper-slide iframe{
-                width: 500px;
-                height:150px;
+                height: 200px;
+            }
+            .swiper-slide p{
+                font-size: 12px;
+                margin-bottom: 0px;
+            }
+            .list{
+                position: relative;
+                margin-left: 0px;
+            }
+            #prev1,  #next1{
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                top:73%;
+                left: calc(100% - 60px);
+                background-size: 24px 24px;
+                background-image: url("images/Arrow up.png");
+                outline: none;
 
+            }
+            #next1 {
+                position: absolute;
+                top:98%;
+                background-image: url("images/Arrow Down.png");
+            }
+            .swiper-container-vertical>.swiper-pagination-bullets{
+                top:85%;
             }
             .news-bottom {
                 padding: 0px;
@@ -235,7 +227,20 @@
             .primes-button{
                 margin-top: 100px;
             }
-
+            .index-contribution h1 , .news-bottom-title{
+                font-size: 30px;
+            }
+            .index-contribution .text h2 {
+                font-size: 26px;
+            }
+            .index-contribution .text span{
+                font-size: 20px;
+            }
+            .primes-button {
+                width: 242px;
+                height:60px;
+                font-size: 22px;
+            }
             .triangle_border_down{
                 border-width:40px 70px 0px;
                 font-size:10px;
@@ -436,12 +441,12 @@
     <div class="index-center">
         <!-- Swiper -->
         <a href="###" name="guide" style="text-decoration: none;outline: none;">
-        <div class="swiper-container">
+        <div class="swiper-container"  id="swiper-web">
 
             <div class="swiper-wrapper" >
                 <div class="swiper-slide row  swiper-no-swiping">
 
-                    <iframe src="http://player.youku.com/embed/XMzcwNTY3NTM2MA"class="col-10 col-md-9 show" frameborder=0 allowfullscreen></iframe>
+                    <iframe src="http://player.youku.com/embed/XMzcwNTY3NTM2MA"class="col-md-9 show" frameborder=0 allowfullscreen></iframe>
                    <div class="list">
                        <li class="f">Wallet tutorial one</li>
                        <li>Wallet tutorial two</li>
@@ -449,11 +454,11 @@
                        <li>Wallet tutorial four</li>
                        <li>Wallet tutorial five</li>
                    </div>
-                    <div class="col-10 col-md-1 text show">
+                    <div class=" col-md-1 text show">
                         <div class="button Button" >
                         </div>
                     </div>
-                    <div class="col-10 col-md-9 hide">
+                    <div class=" col-md-9 hide">
                         <h2>Wallet tutorial one</h2>
                         <p>
                             After installation, you have to choose between the default hot wallet, or a cold wallet. To have a cold wallet, you can go to settings, and click on
@@ -470,14 +475,14 @@
                         </p>
                         <p>To view how to conduct transactions with a cold wallet, please click the link on the right for another video.</p>
                     </div>
-                    <div class="col-10 col-md-1 text hide">
+                    <div class=" col-md-1 text hide">
                         <div class="button Button1" >
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide row col-12 swiper-no-swiping">
 
-                    <iframe src="http://player.youku.com/embed/XMzcwNTY3NTM2MA"class="col-10 col-md-9 show" frameborder=0 allowfullscreen></iframe>
+                    <iframe src="http://player.youku.com/embed/XMzcwNTY3NTM2MA"class="col-md-9 show" frameborder=0 allowfullscreen></iframe>
                     <div class="list">
                         <li>Wallet tutorial one</li>
                         <li class="f">Wallet tutorial two</li>
@@ -485,11 +490,11 @@
                         <li>Wallet tutorial four</li>
                         <li>Wallet tutorial five</li>
                     </div>
-                    <div class="col-10 col-md-1 text show">
+                    <div class=" col-md-1 text show">
                         <div class="button Button" >
                         </div>
                     </div>
-                    <div class="col-10 col-md-9 hide">
+                    <div class="col-md-9 hide">
                         <h2>Wallet tutorial two</h2>
                         <p>
                             After installation, you have to choose between the default hot wallet, or a cold wallet. To have a cold wallet, you can go to settings, and click on
@@ -506,7 +511,7 @@
                         </p>
                         <p>To view how to conduct transactions with a cold wallet, please click the link on the right for another video.</p>
                     </div>
-                    <div class="col-10 col-md-1 text hide">
+                    <div class="col-md-1 text hide">
                         <div class="button Button1" >
                         </div>
                     </div>
@@ -515,18 +520,71 @@
                 <div class="swiper-slide swiper-no-swiping">Slide 4</div>
                 <div class="swiper-slide swiper-no-swiping">Slide 5</div>
             </div>
-
-
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
             <div class="navigation">
                 <div  class="swiper-button-prev" id="prev"></div>
                 <div  class="swiper-button-next" id="next"></div>
             </div>
-
         </div>
+            <!--iphone-->
+            <div class="swiper-container" id="swiper-iphone">
+
+                <div class="swiper-wrapper" >
+                    <div class="swiper-slide row  swiper-no-swiping">
+
+                        <iframe src="http://player.youku.com/embed/XMzcwNTY3NTM2MA"class="col-12" frameborder=0 allowfullscreen></iframe>
+                        <div class=" col-12">
+                            <p>
+                                After installation, you have to choose between the default hot wallet, or a cold wallet. To have a cold wallet, you can go to settings, and click on
+                                “Switch to Primecoin Cold”. Once you choose cold wallet, you will not be able to reverse the action. After you do so, you should permanently disable
+                                all internet connection on your mobile device in order to protect the safety of your private keys.
+                            </p>
+
+                        </div>
+                        <div class="list">
+                            <li class="f">Wallet tutorial one</li>
+                            <li>Wallet tutorial two</li>
+                            <li>Wallet tutorial three</li>
+                            <li>Wallet tutorial four</li>
+                            <li>Wallet tutorial five</li>
+                        </div>
 
 
+
+                    </div>
+                    <div class="swiper-slide row  swiper-no-swiping">
+                        <iframe src="http://player.youku.com/embed/XMzcwNTY3NTM2MA"class="col-12" frameborder=0 allowfullscreen></iframe>
+                        <div class=" col-12">
+                            <p>
+                                After installation, you have to choose between the default hot wallet, or a cold wallet. To have a cold wallet, you can go to settings, and click on
+                                “Switch to Primecoin Cold”. Once you choose cold wallet, you will not be able to reverse the action. After you do so, you should permanently disable
+                                all internet connection on your mobile device in order to protect the safety of your private keys.
+                            </p>
+
+                        </div>
+                        <div class="list">
+                            <li>Wallet tutorial one</li>
+                            <li  class="f">Wallet tutorial two</li>
+                            <li>Wallet tutorial three</li>
+                            <li>Wallet tutorial four</li>
+                            <li>Wallet tutorial five</li>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="swiper-slide swiper-no-swiping">Slide 3</div>
+                    <div class="swiper-slide swiper-no-swiping">Slide 4</div>
+                    <div class="swiper-slide swiper-no-swiping">Slide 5</div>
+                </div>
+
+
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <div class="navigation">
+                    <div  class="swiper-button-prev" id="prev1"></div>
+                    <div  class="swiper-button-next" id="next1"></div>
+                </div>
+            </div>
         </a>
         <a href="###" name="contribution"style="text-decoration: none;outline: none;" >
         <div class="index-contribution" id="Contribution">
@@ -705,8 +763,6 @@
                     </table>
                     </div>
                 </div>
-                <!-- Add Pagination -->
-
             </div>
 
 
@@ -864,6 +920,10 @@
     </div>
 
 </div>
+
+
+
+
 </body>
 
 <script>

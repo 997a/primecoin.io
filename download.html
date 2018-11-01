@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/public.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/index1.css" />
     <script src="js/jquery-3.3.1.min.js"></script>
+
 
     <style>
 
@@ -20,211 +22,9 @@
             margin: 0;
             padding: 0;
         }
-
-        .center .swiper{
-            display: none;
-        }
-        #news .main {
-            display: block;
-            width:100%;
-            background: #000000;
+        .Tab{
             padding-top: 100px;
 
-
-        }
-        .swiper-container {
-            width: 100%;
-
-        }
-        .swiper-slide {
-
-            font-size: 18px;
-            /* Center slide text vertically */
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            -webkit-justify-content: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            -webkit-align-items: center;
-            align-items: center;
-        }
-        .swiper-button-prev{
-            background-image: url("images/news/prev.png");
-            background-size: 100% ;
-        }
-        .swiper-button-next{
-            background-image: url("images/news/next.png");
-            background-size: 100% ;
-        }
-        .swiper-pagination-bullet{
-            width:20px;
-            height:20px;
-
-        }
-        .swiper-pagination-bullet-active{
-            background: #dee2e6;
-        }
-        .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
-            border-radius: 50%;
-            color: #ffffff;
-            background:transparent;
-        }
-        .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet-active{
-
-            background:#0ec1e5 ;
-
-        }
-        .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
-            bottom:0px
-        }
-        .swiper-container-autoheight, .swiper-container-autoheight .swiper-slide{
-            height:70vh;
-        }
-
-        .news-container{
-            padding: 0 100px;
-            padding-bottom: 20px;
-            width: 100%;
-            overflow: hidden;
-            box-sizing: border-box;
-        }
-        .news-top,.news-bottom{
-            width: 100%;
-        }
-        .news-top-title,.news-bottom-title{
-            width: 100%;
-            text-align: center;
-            font-size:48px;
-            font-weight: 600;
-            color: #ffffff;
-
-        }
-        .news-top-container,.news-bottom-container{
-            width: 100%;
-            padding-top: 30px;
-        }
-        .news-top-container a,.news-bottom-container a{
-            display: block;
-            padding-left: 0;
-            padding-right: 0;
-        }
-        .news-top-container a img{
-            display: block;
-            width: 100%;
-            position: relative;
-        }
-        .news-bottom-container a img{
-            display: block;
-            width: 100%;
-            position: relative;
-
-        }
-        .news-top-container .title , .news-bottom-container .title{
-            width: 100%;
-            height: 25%;
-            background:rgba(125,125,125,0.5);
-            position: absolute;
-            top: 75%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 16px;
-        }
-        .page-two{
-            padding:100px;
-            padding-top: 0px;
-            padding-bottom: 0px;
-            box-sizing: border-box;
-        }
-        .page-two .news-bottom-container .col-md-3{
-            /*padding:50px ;*/
-            box-sizing: border-box;
-        }
-        .page-two .news-title{
-            width: 80%;
-            height: 25%;
-            background:rgba(125,125,125,0.5);
-            position: absolute;
-            top: 75%;
-            left: 10%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .page-two a img{
-            width: 80%;
-            margin: 0 auto;
-        }
-        #button-prev{
-            width: 22px;
-            height: 20px;
-            position: absolute;
-            top:auto;
-            bottom: 0;
-            background:url('images/news/prev.png') no-repeat center center;
-            opacity: 1.35;
-            background-size: 100%;
-        }
-
-        #button-next{
-            width: 22px;
-            height: 20px;
-            position:absolute;
-            top: auto;
-            bottom: 0;
-            background:url('images/news/next.png') no-repeat center center;
-            opacity: 1.35;
-            background-size: 100%;
-        }
-        #button-prev{
-            left: 50%;
-            margin-left: -100px;
-        }
-
-        #button-next{
-            right: 50%;
-            margin-right: -100px;
-        }
-
-        #button-first {
-            height: 20px;
-            line-height: 20px;
-            position: absolute;
-            top:auto;
-            bottom:0px;
-            left: 50%;
-            margin-left: -135px;
-            color: #fff;
-            font-size: 18px;
-            z-index: 99999;
-            cursor: pointer;
-        }
-
-        #button-last{
-            height: 20px;
-            line-height: 20px;
-            position:absolute;
-            top:auto;
-            bottom: 0px;
-            right: 50%;
-            margin-right: -130px;
-            color: #fff;
-            font-size: 18px;
-            z-index: 99999;
-            cursor: pointer;
-        }
-        #p ,#message{
-            display: none;
-            padding-top: 100px;
-            color: #fff;
-            font-size: 48px;
-            text-align: center;
-            font-weight: bold;
         }
         .triangle_border_down{
             width:0;
@@ -259,124 +59,48 @@
             text-align: center;
         }
 
+
+
+
         @media (max-width: 768px) {
-            body{
+            body {
                 font-size: 12px;
             }
+            .Tab{
+                padding-top: 58px;
+            }
+            .menus li{
+                width: 20%;
+                height: 70px;
+                line-height: 70px;
+                font-size: 10px;
+            }
+            .menus li img{
+                width:18px;
+                height:18px;
+            }
+            .triangle_border_down{
+                border-width:40px 70px 0px;
+                font-size:10px;
+            }
+            .triangle_border_down .price{
+                color: #c6c8ca;
+                position: absolute;
+                top:-40px;
+                left: -50px;
 
-            #p ,#message{
-                padding-top: 60px;
-            }
-            .center{
-                width: 100%;
-                height: auto;
-                background: #030724;
 
             }
-
-
-            .swiper-container {
-                width: 100%;
-
+            .triangle_border_down .rise{
+                color: #1c7430;
+                position: absolute;
+                top:-25px;
             }
-            .swiper-slide {
-                text-align: center;
-                font-size: 18px;
-                /* Center slide text vertically */
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: -webkit-flex;
-                display: flex;
-                -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                -webkit-justify-content: center;
-                justify-content: center;
-                -webkit-box-align: center;
-                -ms-flex-align: center;
-                -webkit-align-items: center;
-                align-items: center;
-            }
-            .swiper-container-autoheight, .swiper-container-autoheight .swiper-slide{
-                height:auto;
-            }
-            .news-container{
-                padding: 0;
-            }
-            .news-top-container a img{
-                margin-top: 20px;
-            }
-            .news-bottom-container{
-                padding: 0 30px;
-                box-sizing: border-box;
-            }
-
-            .news-bottom-title{
-                font-size: 20px;
-                margin-top: 20px;
-            }
-            .swiper-button-next, .swiper-button-prev{
-                position: fixed;
-                margin-top: 94px;
-            }
-        }
-
-        .swiper-pagination-bullet{
-            opacity: 1;
         }
 
 
 
-        @media screen and (min-width: 1920px){
-            .swiper-container-autoheight, .swiper-container-autoheight .swiper-slide{
-                height: 50vh;
-            }
 
-            .swiper-button-next, .swiper-button-prev{
-                width: 54px;
-                height: 50px;
-            }
-            .swiper-pagination-bullet{
-                width: 36px;
-                height: 36px;
-                line-height: 40px;
-                text-align: center;
-                font-size: 24px;
-            }
-            #button-prev{
-                width: 38px;
-                height: 36px;
-                left: 50%;
-                margin-left: -160px;
-                top:auto;
-                bottom: 0;
-                /*background-size: 36px;*/
-            }
-
-            #button-next{
-                width: 38px;
-                height: 36px;
-                right: 50%;
-                margin-right: -160px;
-                top:auto;
-                bottom: 0;
-                /*background-size: 36px;*/
-            }
-            #button-first {
-                height: 36px;
-                line-height: 36px;
-                left: 50%;
-                margin-left: -210px;
-                font-size:34px;
-            }
-
-            #button-last{
-                height: 36px;
-                line-height: 36px;
-                right: 50%;
-                margin-right: -200px;
-                font-size:34px;
-            }
-        }
 
     </style>
 
@@ -388,11 +112,6 @@
         <img src="images/logo.png" alt="">
         <span>Primecoin</span>
     </a>
-    <!--<span class="posi-wallet">-->
-    <!--<img src="images/tubiao_qianbao.png" alt="">-->
-    <!--Current Price-->
-    <!--</span>-->
-
     <div class="triangle_border_down" id="div_ov_y">
         <p class="price">XPM/USD:$0.745925</p>
         <P class="rise" id="Rise" ></P>
@@ -458,6 +177,35 @@
 </div>
 <div id="pull">
     <img src="images/takeIn.png" alt="">
+</div>
+<div class="Tab">
+
+    <div class="menus menus2">
+        <ul>
+            <div class="bg"></div>
+            <li><img src="images/win.png" alt=""><span>Windows</span></li>
+            <li><img src="images/ios.png" alt=""><span>Apple Mac</span></li>
+            <li><img src="images/linux.png" alt=""><span>Linux</span></li>
+            <li><img src="images/ios.png" alt=""><span>Apple IOS</span></li>
+            <li><img src="images/android.png" alt=""><span>Android</span></li>
+        </ul>
+        <div class="clear"></div>
+        <div class="tab tab1 show">
+            tab1
+        </div>
+        <div class="tab tab1">
+            tab2
+        </div>
+        <div class="tab tab1">
+            tab3
+        </div>
+        <div class="tab tab1">
+            tab4
+        </div>
+        <div class="tab tab1">
+            tab5
+        </div>
+    </div>
 </div>
 <div class="footer">
         <!--<p>-->
@@ -580,16 +328,10 @@
     </div><!-- /.modal -->
 
 </div>
-
-
 </body>
 
 
-
-
-
-
-<script type="text/javascript" src="js/canvas-particle.js"></script>
+<script src="js/index.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/public.js"></script>
