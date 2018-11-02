@@ -69,6 +69,8 @@
             font-size:36px;
         }
         .main .content{
+            max-width:1200px;
+            margin: 0 auto;
             display: -webkit-flex;
             display: -moz-flex;
             display: -o-flex;
@@ -76,6 +78,7 @@
             display: flex;
             text-align: left;
             justify-content:center;
+
 
         }
         #d{
@@ -785,16 +788,16 @@
         handlePrice();
     })
 </script>
+
 <script>
-    var  h=$("#d2").height()-$("#d1").height()
-    console.log(h)
+
     function handleScroll(){
         if ($(document).scrollTop()<=$(document).height()-$("#d").height()-$(".footer").height()){
 
-            $("#d1").css({"position":"fixed","top":"80px"})
+            $("#d1").css({"position":"fixed","top":"100px"})
         }else{
 
-            $("#d1").css({"position":"absolute","top":"260px"})
+            $("#d1").css({"position":"absolute","top":"200px"})
 
         }
     }
