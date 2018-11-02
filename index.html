@@ -788,10 +788,7 @@
                     </div>
                 </div>
             </div>
-
-
             <div class="clear"></div>
-
             <div class="primes-button" style="margin-top: 0px"><a href="https://primes.zone/">View all records</a></div>
         </div>
         </a>
@@ -945,10 +942,6 @@
     </div>
 
 </div>
-
-
-
-
 </body>
 
 <script>
@@ -1256,6 +1249,66 @@ function handleScrollAbout(){
   )
 
 </script>
+<script>
+    $(function(){
+        $("#toAbout1").click(function(){
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var $target = $(this.hash);
+                $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+                if ($target.length) {
+                    var targetOffset = $target.offset().top;
+                    $('html,body').animate({scrollTop: targetOffset},1000);
+                    return false;
+                }
+            }
+        });
+        $("#toGuide1").click(function(){
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var $target = $(this.hash);
+                $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+                if ($target.length) {
+                    var targetOffset = $target.offset().top;
+                    $('html,body').animate({scrollTop: targetOffset},1000);
+                    return false;
+                }
+            }
+        });
+        $("#toContribution1").click(function(){
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var $target = $(this.hash);
+                $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+                if ($target.length) {
+                    var targetOffset = $target.offset().top;
+                    $('html,body').animate({scrollTop: targetOffset},1000);
+                    return false;
+                }
+            }
+        });
+        $("#toNews1").click(function(){
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var $target = $(this.hash);
+                $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+                if ($target.length) {
+                    var targetOffset = $target.offset().top;
+                    $('html,body').animate({scrollTop: targetOffset},1000);
+                    return false;
+                }
+            }
+        });
+        $("#toConnect1").click(function(){
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var $target = $(this.hash);
+                $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+                if ($target.length) {
+                    var targetOffset = $target.offset().top;
+                    $('html,body').animate({scrollTop: targetOffset},1000);
+                    return false;
+                }
+            }
+        });
+    });
+</script>
+
 
 <!--donate-->
 <!--<script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>-->
