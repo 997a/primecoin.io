@@ -191,7 +191,9 @@ body{
     padding: 0 120px;
     padding-top: 60px;
     box-sizing: border-box;
-    background-color: #242b33;
+    background:url("../images/index6.jpg") no-repeat;
+    background-size: 100% 100%;
+
     color: #fff;
 }
 #subscribe-input{

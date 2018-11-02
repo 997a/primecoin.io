@@ -21,20 +21,25 @@ table { border-collapse:collapse; }
 #warp{
     width: 100%;
     height:auto;
-    background: url("../images/di1.jpg");
+    /*background: url("../images/di1.jpg");*/
+    background: #242b33;
     background-size:100%;
     overflow: auto;
     overflow-x: hidden;
     position: relative;
-    margin-top: 115px;
+   padding-top: 180px;
 }
 
 #mydiv{
     width: 100%;
+
 }
 #warp .mydiv{
+
     margin-right: 0;
     margin-left: 0;
+    background: url("../images/index1.jpg") no-repeat;
+    background-size:100% auto;
 }
 .mydiv .left{
 
@@ -85,14 +90,19 @@ table { border-collapse:collapse; }
     position: relative;
     z-index: 2;
 }
+.index-Two{
+    width: 100%;
+    background:url("../images/index2.jpg") no-repeat;
+    background-size: 100% auto;
+}
 .index-content{
     width:70%;
-    padding: 0 100px;
+    padding: 30px 100px;
     box-sizing: border-box;
     background: url("../images/banner2.png")center no-repeat;
-    background-size:auto 100%;
+    background-size:auto 90%;
     margin: 0 auto;
-    margin-top: 300px;
+
 
 }
 .index-content ul{
@@ -142,6 +152,8 @@ table { border-collapse:collapse; }
     text-align: center;
     padding:100px;
     box-sizing: border-box;
+    background: url("../images/index4.jpg") no-repeat;
+    background-size: 100% 100%;
 }
 .index-contribution h1{
     font-weight: 700;
@@ -168,6 +180,7 @@ table { border-collapse:collapse; }
 .news-bottom{
     width: 100%;
     text-align: center;
+
 
 }
 

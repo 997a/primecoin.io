@@ -50,7 +50,7 @@ var CanvasParticle = (function(){
         $("#mydiv").append(canvas.element);
 
         /* 画布绝对定位 */
-        canvas.element.style = "position: absolute; top: 0; left: 0;";
+        canvas.element.style = "position: absolute; top:0; left: 0;right: 0";
 
 
 
@@ -90,7 +90,7 @@ var CanvasParticle = (function(){
         // console.log(width, height);
 
         width = parseInt(width);
-        height = 0.542*width;
+        height = 0.502*width;
 
         /* 画布大小*/
         canvas.width = width || window.innerWeight || document.documentElement.clientWidth || document.body.clientWidth;
