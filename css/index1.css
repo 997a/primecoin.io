@@ -46,8 +46,8 @@ li {
 
 .tab {
     width:100%;
+    font-size:36px;
     height: 500px;
-    font-size: 40px;
     line-height: 500px;
     text-align: center;
     color: #888;
@@ -55,7 +55,31 @@ li {
     font-weight: 700;
     display: none
 }
+.lin{
+    line-height:100px;
+}
+.tab a{
+    font-size: 36px;
+    color: #000000;
+    text-decoration: none;
+}
+.tab .win{
+    width: 500px;
+    height: 230px;
+    margin: 30px auto;
+    background:rgba(215, 215, 215, 1) !important;
+    background:url("../images/W.png") no-repeat center;
+    background-size:50%;
 
+}
+.tab .linux{
+    width: 500px;
+    height: 230px;
+    margin: 30px auto;
+    background:rgba(215, 215, 215, 1) !important;
+    background:url("../images/l.png") no-repeat center;
+    background-size:50%;
+}
 .show {
     display: block;
 

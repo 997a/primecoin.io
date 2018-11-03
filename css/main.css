@@ -22,12 +22,12 @@ table { border-collapse:collapse; }
     width: 100%;
     height:auto;
     /*background: url("../images/di1.jpg");*/
-    background: #242b33;
+    /*background: #242b33;*/
     background-size:100%;
     overflow: auto;
     overflow-x: hidden;
     position: relative;
-   padding-top: 180px;
+   padding-top: 115px;
 }
 
 #mydiv{
@@ -35,11 +35,11 @@ table { border-collapse:collapse; }
 
 }
 #warp .mydiv{
-
+    height: 100vh;
     margin-right: 0;
     margin-left: 0;
-    background: url("../images/index1.jpg") no-repeat;
-    background-size:100% auto;
+    background: url("../images/index1.png") no-repeat;
+    background-size:100% 100%;
 }
 .mydiv .left{
 
@@ -92,15 +92,15 @@ table { border-collapse:collapse; }
 }
 .index-Two{
     width: 100%;
-    background:url("../images/index2.jpg") no-repeat;
-    background-size: 100% auto;
+    background:url("../images/index2.png") no-repeat;
+    background-size: 100% 100%;
 }
 .index-content{
     width:70%;
     padding: 30px 100px;
     box-sizing: border-box;
     background: url("../images/banner2.png")center no-repeat;
-    background-size:auto 90%;
+    background-size:auto 100%;
     margin: 0 auto;
 
 
