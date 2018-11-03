@@ -183,7 +183,7 @@ table { border-collapse:collapse; }
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top:130px;
+    margin-top:75px;
 }
 .primes-button a{
    text-decoration: none;
