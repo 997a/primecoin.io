@@ -391,7 +391,7 @@
     <div class=" index-content f row" id="block">
         <ul class=" col-md-4 col-12 found">
             <a href="about.html#foundation">
-                <img src="images/tubiao_Foundation.png">
+                <img src="images/tubiao_Foundation.png" class="img-f">
                 <li>
                     <p class="p">Primecion Foundation</p>
                     <p>Established under the advice of Sunny King
@@ -401,7 +401,7 @@
         </ul>
         <ul class=" col-md-4 col-12 sk">
             <a href="about.html#sk" >
-                <img src="images/tubiao_sk.png">
+                <img src="images/tubiao_sk.png" class="img-s">
                 <li>
                     <p class="p"> Sunny King</p>
                     <p>Creator of Peercoin and Primecoin, founder of VEE
@@ -411,16 +411,9 @@
 
         </ul>
         <ul class="col-md-4 col-12 found">
-            <!--<a href="news.html">-->
-                <!--<img src="images/tubiao_News.png">-->
-                <!--<li>-->
-                    <!--<p class="p">News</p>-->
-                    <!--<p>The Primecoin Foundation is led by the creator of Primecoin, Sunny King. It supports and promotes the evolving Primecoin protocol and its community,-->
-                        <!--engages in cutting-edge base layer research to preserve the legacy of Useful PoW that Primecoin introduced, and establishes an easily accessible ecosystem that realizes the future of decentralization.-->
-                    <!--</p>-->
-                <!--</li></a>-->
+
             <a href="about.html#primecoin">
-                <img src="images/tubiao_Primecoin.png">
+                <img src="images/tubiao_Primecoin.png" class="img-p">
                 <li>
                     <p class="p">Primecion</p>
                     <p>An unique type of crypto-currency that searches for prime numbers
@@ -1275,7 +1268,7 @@ function handleScrollAbout(){
                 $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
                 if ($target.length) {
                     var targetOffset = $target.offset().top;
-                    $('html,body').animate({scrollTop: targetOffset},1000);
+                    $('html,body').animate({scrollTop: targetOffset-100},1000);
                     return false;
                 }
             }
@@ -1286,7 +1279,7 @@ function handleScrollAbout(){
                 $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
                 if ($target.length) {
                     var targetOffset = $target.offset().top;
-                    $('html,body').animate({scrollTop: targetOffset},1000);
+                    $('html,body').animate({scrollTop: targetOffset-50},1000);
                     return false;
                 }
             }

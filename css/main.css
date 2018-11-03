@@ -115,15 +115,27 @@ table { border-collapse:collapse; }
 }
 
 
-.index-content ul img{
-    width: 30%;
-    margin-left: 35%;
-}
+
 .index-content ul a{
     display: block;
     color: #ffffff;
     margin: 40px auto;
     outline: none;
+}
+.index-content ul  .img-f{
+    width: 30%;
+    margin-left:15%;
+    margin-top:15%;
+}
+.index-content ul  .img-s{
+    width: 36%;
+    margin-left: 32%;
+    margin-top:-10%;
+}
+.index-content ul  .img-p{
+    width: 30%;
+    margin-left:47%;
+    margin-top:15%;
 }
 .index-content ul li .p{
     width: 100%;
