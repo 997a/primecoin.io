@@ -81,7 +81,7 @@
             justify-content: center;
 
         }
-        #d{
+        #d ,#other-news{
             width:15%;
             position: relative;
         }
@@ -91,13 +91,12 @@
             box-sizing: border-box;
             position: fixed;
 
-
-
-
         }
         #d3{
-            padding-top: 80px;
+            padding-top:80px;
             box-sizing: border-box;
+            position: fixed;
+
         }
         #d1 .timer , #d3 .timer{
             display: flex;
@@ -191,10 +190,7 @@
             font-weight:bold;
         }
 
-        #d3{
-            width:15%;
-            position: relative;
-        }
+
 
         .news-bottom-container img{
             width: 120px;
@@ -207,17 +203,21 @@
 
         }
         .news-bottom-container a{
-            width: 120px;
+            width: 170px;
             height: 80px;
             margin-top: 10px;
+            margin-bottom: 30px;
             position: relative;
         }
         .news-bottom-container .title{
-            width: 120px;
-            height: 25%;
+            width: 170px;
+            height:70%;
             background:rgba(125,125,125,0.5);
             position: absolute;
-            top: 75%;
+            top: 70%;
+            font-size: 12px;
+            text-align: center;
+            color:#fff;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -227,7 +227,22 @@
             margin-left: 40px;
         }
 
+        .button a{
+            width: 100%;
+            line-height: 30px;
+        }
+        .button a:hover{
+            text-decoration: none;
+        }
 
+        .btn-tw:hover{
+            background-color: rgb(78,141,167);
+            border: rgb(78,141,167);
+        }
+        .btn-face:hover{
+            background-color: rgb(208,161,91);
+            border: rgb(208,161,91);
+        }
 
 
         @media (max-width: 768px) {
@@ -306,6 +321,7 @@
         @media screen and (min-width: 1920px){
             .main{
                 max-width: 1920px;
+                margin: 0 auto;
                 padding-top: 140px;
             }
             #d1 {
@@ -351,22 +367,7 @@
 
         }
 
-        .button a{
-            width: 100%;
-            line-height: 30px;
-        }
-        .button a:hover{
-            text-decoration: none;
-        }
 
-        .btn-tw:hover{
-            background-color: rgb(78,141,167);
-            border: rgb(78,141,167);
-        }
-        .btn-face:hover{
-            background-color: rgb(208,161,91);
-            border: rgb(208,161,91);
-        }
     </style>
 </head>
 
@@ -509,31 +510,35 @@
                     <br><br><span>U</span>nder the advice and overseeing of Sunny King, Primecoin has planned a development campaign for the next 5 years. While carrying on the heritage of scientific, useful and environmentally friendly cryptocurrency, Primecoin will first be compatible with Bitcoin version 0.16, upon which smart contract, lightning network, atomic swap, decentralized exchange and user-friendly clients will be available to its users shortly.
                     <br> <br><span> P</span>rimecoin seeks innovation and excellence. It strives to produce real-world value and application and make them easily accessible to users. The establishment of the Foundation will facilitate the transmutation and to contribute to the blockchain future.
                 </div>
-                <!--<div id="d3">-->
-                <!--<div class="timer">-->
-                <!--<img src="images/news/line1.png">-->
-                <!--<div class="circular share">Related Links</div>-->
-                <!--<img src="images/news/line.png">-->
-                <!--</div>-->
-                <!--<div class="news-bottom-container">-->
-                <!--<a href="###">-->
-                <!--<img src="images/news/3.jpg" alt="">-->
-                <!--<div class="title"></div>-->
-                <!--</a>-->
-                <!--<a href="###">-->
-                <!--<img src="images/news/8.jpg" alt="">-->
-                <!--<div class="title"></div>-->
-                <!--</a>-->
-                <!--<a href="###">-->
-                <!--<img src="images/news/6.jpg" alt="">-->
-                <!--<div class="title"></div>-->
-                <!--</a>-->
-                <!--<a href="###">-->
-                <!--<img src="images/news/7.jpg" alt="">-->
-                <!--<div class="title"></div>-->
-                <!--</a>-->
-                <!--</div>-->
-                <!--</div>-->
+                <div id="other-news">
+                    <div id="d3">
+                    <div class="timer">
+                        <img src="images/news/line1.png">
+                        <div class="circular share">Related Links</div>
+                        <img src="images/news/line.png">
+                    </div>
+                    <div class="news-bottom-container">
+                        <a href="newsOthers.html">
+                            <img src="images/news/2.jpg" alt="">
+                            <div class="title">Primecoin Foundation and ANBI Exchange Reached Strategic Cooperation</div>
+                        </a>
+                        <a href="https://bitcoinmagazine.com/articles/primecoin-the-cryptocurrency-whose-mining-is-actually-useful-1373298534/" target="_blank" >
+                            <img src="images/news/01.png" alt="">
+                            <div class="title"  >Vitalik Buterin:Primecoin: The Cryptocurrency Whose Mining Is Actually Useful</div>
+                        </a>
+                        <a href="https://bitcoinmagazine.com/articles/primecoin-has-exchange-casino-already-breaking-world-records-1373574788/ " target="_blank">
+                            <img src="images/news/01.png" alt="">
+                            <div class="title" >Vitalik Buterin:Primecoin Has Exchange, Casino, Already Breaking World Records</div>
+                        </a>
+                        <a href="https://bitcoinmagazine.com/articles/july-in-review-1375922022/" target="_blank" >
+                            <img src="images/news/03.png" alt="">
+                            <div class="title"  >Vitalik Buterin:July In Review</div>
+                        </a>
+
+                    </div>
+                </div>
+                </div>
+
             </div>
         </div>
 
@@ -795,9 +800,11 @@
         if ($(document).scrollTop()<=$(document).height()-$("#d").height()+$(".navBar").height()){
 
             $("#d1").css({"position":"fixed","top":"80px"})
+            $("#d3").css({"position":"fixed","top":"80px"})
         }else{
 
             $("#d1").css({"position":"absolute","top":"690px"})
+            $("#d3").css({"position":"absolute","top":"690px"})
 
         }
     }

@@ -74,7 +74,7 @@
             font-size:36px;
         }
         .main .content{
-            max-width:1200px;
+            max-width:1920px;
             margin: 0 auto;
             display: -webkit-flex;
             display: -moz-flex;
@@ -86,11 +86,11 @@
 
 
         }
-        #d{
+        #d ,#other-news{
             width:15%;
             position: relative;
         }
-        #d1{
+        #d1 ,#d3{
 
             padding-top:80px;
             box-sizing: border-box;
@@ -100,10 +100,7 @@
 
 
         }
-        #d3{
-            padding-top: 80px;
-            box-sizing: border-box;
-        }
+
         #d1 .timer , #d3 .timer{
             display: flex;
             justify-content: center;
@@ -196,13 +193,9 @@
             font-weight:bold;
         }
 
-        #d3{
-            width:15%;
-            position: relative;
-        }
 
         .news-bottom-container img{
-            width: 120px;
+            width: 170px;
             height: 80px;
         }
         .news-bottom-container{
@@ -212,17 +205,21 @@
 
         }
         .news-bottom-container a{
-            width: 120px;
+            width: 170px;
             height: 80px;
             margin-top: 10px;
+            margin-bottom: 30px;
             position: relative;
         }
         .news-bottom-container .title{
-            width: 120px;
-            height: 25%;
+            width: 170px;
+            height:70%;
+            font-size: 12px;
+            color: #fff;
+            text-align: center;
             background:rgba(125,125,125,0.5);
             position: absolute;
-            top: 75%;
+            top: 70%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -231,7 +228,22 @@
             width:1000px;
             margin-left: 40px;
         }
+        .button a{
+            width: 100%;
+            line-height: 30px;
+        }
+        .button a:hover{
+            text-decoration: none;
+        }
 
+        .btn-tw:hover{
+            background-color: rgb(78,141,167);
+            border: rgb(78,141,167);
+        }
+        .btn-face:hover{
+            background-color: rgb(208,161,91);
+            border: rgb(208,161,91);
+        }
 
 
 
@@ -355,22 +367,7 @@
 
         }
 
-        .button a{
-            width: 100%;
-            line-height: 30px;
-        }
-        .button a:hover{
-            text-decoration: none;
-        }
 
-        .btn-tw:hover{
-            background-color: rgb(78,141,167);
-            border: rgb(78,141,167);
-        }
-        .btn-face:hover{
-            background-color: rgb(208,161,91);
-            border: rgb(208,161,91);
-        }
     </style>
 </head>
 
@@ -514,31 +511,34 @@
                 Now, the Foundation has established a strategic partnership with the exchange. ANBI has launched their XPM/BTC trading pair at 10AM, October 24th, 2018 (Singapore Standard Time), and is planning to launch other trading pairs.
                 The foundation will use ANBI as its official resource to convert its donation received into XPM in order to carry out our duty to fund Primecoin related ecosystem. We welcome and encourage everyone in the community to trade on ANBI.
             </div>
-            <!--<div id="d3">-->
-            <!--<div class="timer">-->
-            <!--<img src="images/news/line1.png">-->
-            <!--<div class="circular share">Related Links</div>-->
-            <!--<img src="images/news/line.png">-->
-            <!--</div>-->
-            <!--<div class="news-bottom-container">-->
-            <!--<a href="###">-->
-            <!--<img src="images/news/3.jpg" alt="">-->
-            <!--<div class="title"></div>-->
-            <!--</a>-->
-            <!--<a href="###">-->
-            <!--<img src="images/news/8.jpg" alt="">-->
-            <!--<div class="title"></div>-->
-            <!--</a>-->
-            <!--<a href="###">-->
-            <!--<img src="images/news/6.jpg" alt="">-->
-            <!--<div class="title"></div>-->
-            <!--</a>-->
-            <!--<a href="###">-->
-            <!--<img src="images/news/7.jpg" alt="">-->
-            <!--<div class="title"></div>-->
-            <!--</a>-->
-            <!--</div>-->
-            <!--</div>-->
+            <div id="other-news">
+                <div id="d3">
+                <div class="timer">
+                    <img src="images/news/line1.png">
+                    <div class="circular share">Related Links</div>
+                    <img src="images/news/line.png">
+                </div>
+                <div class="news-bottom-container">
+                    <a href="https://bitcoinmagazine.com/articles/primecoin-the-cryptocurrency-whose-mining-is-actually-useful-1373298534/" target="_blank" >
+                        <img src="images/news/01.png" alt="">
+                        <div class="title"  >Vitalik Buterin:Primecoin: The Cryptocurrency Whose Mining Is Actually Useful</div>
+                    </a>
+                    <a href="https://bitcoinmagazine.com/articles/primecoin-has-exchange-casino-already-breaking-world-records-1373574788/ " target="_blank">
+                        <img src="images/news/01.png" alt="">
+                        <div class="title" >Vitalik Buterin:Primecoin Has Exchange, Casino, Already Breaking World Records</div>
+                    </a>
+                    <a href="https://bitcoinmagazine.com/articles/july-in-review-1375922022/" target="_blank" >
+                        <img src="images/news/03.png" alt="">
+                        <div class="title"  >Vitalik Buterin:July In Review</div>
+                    </a>
+                    <a href="https://bitcoinmagazine.com/articles/defense-alternative-cryptocurrencies/" target="_blank">
+                        <img src="images/news/05.jpg" alt="">
+                        <div class="title"  >Vitalik Buterin:In Defense Of Alternative Cryptocurrencies</div>
+                    </a>
+                </div>
+            </div>
+            </div>
+
         </div>
     </div>
 
@@ -797,9 +797,11 @@
         if ($(document).scrollTop()<=$(document).height()-$("#d").height()-$(".footer").height()){
 
             $("#d1").css({"position":"fixed","top":"100px"})
+            $("#d3").css({"position":"fixed","top":"100px"})
         }else{
 
             $("#d1").css({"position":"absolute","top":"200px"})
+            $("#d3").css({"position":"absolute","top":"200px"})
 
         }
     }
