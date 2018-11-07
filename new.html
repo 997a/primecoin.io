@@ -28,7 +28,7 @@
            display: block;
            width:100%;
            background: #000000;
-           padding:160px 0px;
+           padding:90px 0px;
 
 
 
@@ -88,7 +88,7 @@
        }
 
        .news-container{
-           padding: 20px 100px;
+           padding: 40px 100px;
            width: 100%;
            overflow: hidden;
            box-sizing: border-box;
@@ -115,21 +115,24 @@
        }
        .news-top-container a img{
            display: block;
-           width: 100%;
+           width:80%;
            position: relative;
+           margin: 0 auto;
        }
        .news-bottom-container a img{
            display: block;
-           width:95%;
+           width:75%;
            position: relative;
+           margin: 0 auto;
 
        }
        .news-top-container .title , .news-bottom-container .title{
-           width: 100%;
-           height: 25%;
+           width:80%;
+           height:30%;
+           margin-left: 10%;
            background:rgba(125,125,125,0.5);
            position: absolute;
-           top: 75%;
+           top:70%;
            display: flex;
            justify-content: center;
            align-items: center;
@@ -139,8 +142,9 @@
        }
 
        .news-bottom-container .title{
-           width:95%;
+           width:75%;
            font-size: 12px;
+           margin-left: 12.5%;
        }
        .page-two{
            padding: 20px 100px;
@@ -150,31 +154,13 @@
 
 
        }
-       .page-two .news-bottom-container{
+
+      .news-bottom-container{
            margin-left: 0;
            margin-right: 0;
        }
-       .page-two .news-bottom-container .col-md-3{
-           /*padding:50px ;*/
-           box-sizing: border-box;
-       }
-       .page-two .news-title{
-           width: 80%;
-           height: 25%;
-           background:rgba(125,125,125,0.5);
-           position: absolute;
-           top: 75%;
-           left: 10%;
-           display: flex;
-           justify-content: center;
-           align-items: center;
-       }
-       .page-two a img{
-           width:95%;
-           margin: 0 auto;
-           margin-left: 0;
 
-       }
+
        #button-prev{
            width: 22px;
            height: 20px;
@@ -270,7 +256,9 @@
        #button-last ,#button-first ,.prev ,.next ,.swiper-pagination{
            display:block;
        }
-
+       .swiper-pagination-bullet{
+           opacity: 1;
+       }
 
        @media (max-width: 768px) {
            body{
@@ -341,9 +329,7 @@
 
        }
 
-       .swiper-pagination-bullet{
-           opacity: 1;
-       }
+
 
 
 
@@ -385,7 +371,7 @@
            }
            #button-first {
                height: 36px;
-               line-height: 36px;
+               line-height:46px;
                left: 50%;
                margin-left: -210px;
                font-size:20px;
@@ -393,7 +379,7 @@
 
            #button-last{
                height: 36px;
-               line-height: 36px;
+               line-height:46px;
                right: 50%;
                margin-right: -200px;
                font-size:20px;
@@ -437,7 +423,7 @@
                 <a class="nav-link td" href="index.html#contribution" >Contribution</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link td" href="index.html#news" >News</a>
+                <a class="nav-link td" href="index.html#news" style="border:2px solid #ef6b00;border-image:linear-gradient(#ef6b00,#efca00) 20 20" >News</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link td" href="index.html#connect" id="toConnect1">Connect</a>
@@ -616,13 +602,13 @@
                                     <img src="images/news/24.png" alt="">
                                     <div class="title" >Bitcoin Market Wrap Up 6/7 – 6/14: Btc Reverses Trend, Vtc Goes Down, Xpm In Its Prime</div>
                                 </a>
-                                <a href="https://www.coindesk.com/cryptsy-founder-paul-vernon-worthy-altcoins-pre-mining-compliance/  " target="_blank" class="col-8 col-md-3">
-                                    <img src="images/news/25.png" alt="">
-                                    <div class="title"  >Cryptsy Founder Paul Vernon On Worthy Altcoins, Pre-Mining And Compliance</div>
-                                </a>
                                 <a href="https://cointelegraph.com/news/history-of-cryptocurrency-from-bitcoins-inception-to-the-crypto-boom  " target="_blank" class="col-8 col-md-3">
                                     <img src="images/news/26.png" alt="">
                                     <div class="title" >History Of Cryptocurrency, Part I: From Bitcoin’S Inception To The Crypto-Boom</div>
+                                </a>
+                                <a href="https://bitcoinist.com/real-scientific-breakthroughs-made-prime-number-based-cryptocurrency-gapcoin-runner-popular-primecoin/ " target="_blank" class="col-8 col-md-3">
+                                    <img src="images/news/27.jpg" alt="">
+                                    <div class="title"  >Real Scientific Breakthroughs Made By Prime Number Based Cryptocurrency Gapcoin Runner-Up To Popular Primecoin</div>
                                 </a>
 
                             </div>
@@ -635,10 +621,7 @@
                                 <div class="news-bottom">
                                     <p class="news-bottom-title">Latest News</p>
                                     <div class="row news-bottom-container justify-content-around">
-                                        <a href="https://bitcoinist.com/real-scientific-breakthroughs-made-prime-number-based-cryptocurrency-gapcoin-runner-popular-primecoin/ " target="_blank" class="col-8 col-md-3">
-                                            <img src="images/news/27.jpg" alt="">
-                                            <div class="title"  >Real Scientific Breakthroughs Made By Prime Number Based Cryptocurrency Gapcoin Runner-Up To Popular Primecoin</div>
-                                        </a>
+
                                         <a href="https://bitcoinist.com/market-summary-rollercoaster/" target="_blank" class="col-8 col-md-3">
                                             <img src="images/news/28.png" alt="">
                                             <div class="title" >Market Summary: Rollercoaster</div>
@@ -651,15 +634,16 @@
                                             <img src="images/news/30.jpg" alt="">
                                             <div class="title" >5 Global Problems Bitcoin'S Proof Of Work Can Help Solve</div>
                                         </a>
+                                        <a href="https://www.ccn.com/primecoin-cloud-mining-using-digital-ocean-complete-guide/  " target="_blank" class="col-8 col-md-3">
+                                            <img src="images/news/35.jpg" alt="">
+                                            <div class="title"  >Primecoin Cloud Mining Using Digital Ocean – The Complete Guide</div>
+                                        </a>
 
                                     </div>
                                 </div>
                             </div>
                             <div class="row news-bottom-container justify-content-around">
-                                <a href="https://www.ccn.com/primecoin-cloud-mining-using-digital-ocean-complete-guide/  " target="_blank" class="col-8 col-md-3">
-                                    <img src="images/news/35.jpg" alt="">
-                                    <div class="title"  >Primecoin Cloud Mining Using Digital Ocean – The Complete Guide</div>
-                                </a>
+
                                 <a href=" https://www.coindesk.com/discount-code-and-primecoin-mining-enthusiasm-cause-cloud-server-overload/" target="_blank" class="col-8 col-md-3">
                                     <img src="images/news/36.png" alt="">
                                     <div class="title" >Discount Code And Primecoin Mining Enthusiasm Cause Cloud Server Overload</div>
@@ -667,6 +651,10 @@
                                 <a href="https://www.coindesk.com/new-currency-primecoin-searches-for-prime-numbers-as-proof-of-work/" target="_blank" class="col-8 col-md-3">
                                     <img src="images/news/37.png" alt="">
                                     <div class="title"  >New Currency Primecoin Searches For Prime Numbers As Proof Of Work</div>
+                                </a>
+                                <a href="https://www.cloudsigma.com/is-primecoin-the-next-big-thing-after-bitcoin/ " target="_blank" class="col-8 col-md-3">
+                                    <img src="" alt="">
+                                    <div></div>
                                 </a>
                                 <a href="https://www.cloudsigma.com/is-primecoin-the-next-big-thing-after-bitcoin/ " target="_blank" class="col-8 col-md-3">
                                     <img src="" alt="">
