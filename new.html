@@ -89,7 +89,6 @@
 
        .news-container{
            padding: 20px 100px;
-
            width: 100%;
            overflow: hidden;
            box-sizing: border-box;
@@ -144,10 +143,16 @@
            font-size: 12px;
        }
        .page-two{
-           padding-top: 0px;
-           padding-bottom: 0px;
+           padding: 20px 100px;
+           width: 100%;
+           overflow: hidden;
            box-sizing: border-box;
 
+
+       }
+       .page-two .news-bottom-container{
+           margin-left: 0;
+           margin-right: 0;
        }
        .page-two .news-bottom-container .col-md-3{
            /*padding:50px ;*/
@@ -228,15 +233,7 @@
            z-index: 99999;
            cursor: pointer;
        }
-       #message{
-           display: none;
-           padding-top: 120px;
-           color: #fff;
-           background:#000000;
-           font-size: 48px;
-           text-align: center;
-           font-weight: bold;
-       }
+
 
        .triangle_border_down{
            width:0;
@@ -270,19 +267,17 @@
            left:-50px;
            text-align: center;
        }
+       #button-last ,#button-first ,.prev ,.next ,.swiper-pagination{
+           display:block;
+       }
+
 
        @media (max-width: 768px) {
            body{
                font-size: 12px;
            }
-          #message{
-               padding-top: 60px;
-           }
-           .center{
-               width: 100%;
-               height: auto;
-               background: #030724;
-
+            #news .main{
+               padding: 65px 0px;
            }
 
 
@@ -337,11 +332,19 @@
                position: fixed;
                margin-top: 94px;
            }
+           .page-two{
+               padding: 0;
+           }
+           #button-last ,#button-first ,.prev ,.next ,.swiper-pagination{
+               display: none;
+           }
+
        }
 
        .swiper-pagination-bullet{
            opacity: 1;
        }
+
 
 
 
@@ -352,18 +355,18 @@
 
            .swiper-button-next, .swiper-button-prev{
                width: 54px;
-               height: 50px;
+               height:30px;
            }
            .swiper-pagination-bullet{
                width: 36px;
                height: 36px;
                line-height: 40px;
                text-align: center;
-               font-size: 24px;
+               font-size: 20px;
            }
            #button-prev{
                width: 38px;
-               height: 36px;
+               height:20px;
                left: 50%;
                margin-left: -160px;
                top:auto;
@@ -373,7 +376,7 @@
 
            #button-next{
                width: 38px;
-               height: 36px;
+               height:20px;
                right: 50%;
                margin-right: -160px;
                top:auto;
@@ -385,7 +388,7 @@
                line-height: 36px;
                left: 50%;
                margin-left: -210px;
-               font-size:34px;
+               font-size:20px;
            }
 
            #button-last{
@@ -393,7 +396,7 @@
                line-height: 36px;
                right: 50%;
                margin-right: -200px;
-               font-size:34px;
+               font-size:20px;
            }
 
        }
@@ -506,7 +509,7 @@
                                 </div>
                                 <div class="news-bottom">
                                     <p class="news-bottom-title">Latest News</p>
-                                    <div class="row news-bottom-container justify-content-between">
+                                    <div class="row news-bottom-container justify-content-around">
 
                                         <a href="https://bitcoinmagazine.com/articles/primecoin-the-cryptocurrency-whose-mining-is-actually-useful-1373298534/" target="_blank" class="col-8 col-md-3">
                                             <img src="images/news/01.png" alt="">
@@ -534,7 +537,7 @@
                         <div class="row news-bottom-container justify-content-between" style="margin-bottom: 100px">
                             <div class="news-bottom">
                                 <p class="news-bottom-title">Latest News</p>
-                                <div class="row news-bottom-container justify-content-between">
+                                <div class="row news-bottom-container justify-content-around">
 
                                     <a href="FoundNews.html"  class="col-8 col-md-3">
                                         <img src="images/news/1.jpg" alt="">
@@ -556,7 +559,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row news-bottom-container justify-content-between">
+                        <div class="row news-bottom-container justify-content-around">
                             <a href="https://bitcoinmagazine.com/articles/quarkcoin-noble-intentions-wrong-approach-1387343686/" target="_blank" class="col-8 col-md-3">
                                 <img src="images/news/07.png" alt="">
                                 <div class="title" >Vitalik Buterin:Quarkcoin: Noble Intentions, Wrong Approach</div>
@@ -577,62 +580,13 @@
                         </div>
                     </div>
                 </div>
-                    <!--<div class="swiper-slide">-->
-                        <!--<div class="news-bottom page-two">-->
-
-                            <!--<div class="row news-bottom-container justify-content-between" style="margin-bottom: 100px">-->
-                                <!--<div class="news-bottom">-->
-                                    <!--<p class="news-bottom-title">Latest News</p>-->
-                                    <!--<div class="row news-bottom-container justify-content-between">-->
-
-                                        <!--<a href="https://www.ccn.com/this-blockchain-database-cloud-could-help-dapp-development/" target="_blank" class="col-8 col-md-3">-->
-                                            <!--<img src="images/news/11.jpg" alt="">-->
-                                            <!--<div class="title"  >This Blockchain Database Cloud Could Help Dapp Development</div>-->
-                                        <!--</a>-->
-                                        <!--<a href="https://cryptocurrencynews.com/altcoins-2/primecoin-xpm-bitcoin-private-btcp-stellar-xlm/" target="_blank" class="col-8 col-md-3">-->
-                                            <!--<img src="images/news/12.jpg" alt="">-->
-                                            <!--<div class="title" >Primecoin (Xpm), Bitcoin Private (Btcp), And Stellar (Xlm): Ships Sinking</div>-->
-                                        <!--</a>-->
-                                        <!--<a href="https://cryptocurrencynews.com/altcoins-2/primecoin-xpm-bitcoin-private-btcp-stellar-xlm/" target="_blank" class="col-8 col-md-3">-->
-                                            <!--<img src="images/news/13.jpg" alt="">-->
-                                            <!--<div class="title"  >A Look At Primecoin (Xpm) Cryptocurrency And Its Performance In 2018</div>-->
-                                        <!--</a>-->
-                                        <!--<a href="https://hacked.com/trade-recommendation-primecoin/" target="_blank" class="col-8 col-md-3">-->
-                                            <!--<img src="images/news/14.jpg" alt="">-->
-                                            <!--<div class="title" >Trade Recommendation: Primecoin</div>-->
-                                        <!--</a>-->
-
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                            <!--<div class="row news-bottom-container justify-content-between">-->
-                                <!--<a href="https://hacked.com/trade-recommendation-primecoin-bitcoin/" target="_blank" class="col-8 col-md-3">-->
-                                    <!--<img src="images/news/15.jpg" alt="">-->
-                                    <!--<div class="title"  >Trade Recommendation: Primecoin/Bitcoin</div>-->
-                                <!--</a>-->
-                                <!--<a href="https://99bitcoins.com/what-is-primecoin/" target="_blank" class="col-8 col-md-3">-->
-                                    <!--<img src="images/news/16.jpg" alt="">-->
-                                    <!--<div class="title" >What Is Primecoin? The Prime Number Hunter</div>-->
-                                <!--</a>-->
-                                <!--<a href="https://99bitcoins.com/whats-the-deal-with-primecoin-infographic/ " target="_blank" class="col-8 col-md-3">-->
-                                    <!--<img src="images/news/17.png" alt="">-->
-                                    <!--<div class="title"  >What’S The Deal With Primecoin?</div>-->
-                                <!--</a>-->
-                                <!--<a href="https://99bitcoins.com/primecoin-the-quickly-risen-coin-thats-serving-science-infographic/  " target="_blank" class="col-8 col-md-3">-->
-                                    <!--<img src="images/news/18.png" alt="">-->
-                                    <!--<div class="title" >Primecoin: The Quickly Risen Coin That’S Serving Science</div>-->
-                                <!--</a>-->
-
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
                     <div class="swiper-slide">
                         <div class="news-bottom page-two">
 
                             <div class="row news-bottom-container justify-content-between" style="margin-bottom: 100px">
                                 <div class="news-bottom">
                                     <p class="news-bottom-title">Latest News</p>
-                                    <div class="row news-bottom-container justify-content-between">
+                                    <div class="row news-bottom-container justify-content-around">
                                         <a href="https://99bitcoins.com/primecoin-the-cryptocurrency-that-can-make-mining-useful/ " target="_blank" class="col-8 col-md-3">
                                             <img src="images/news/19jpg.jpg" alt="">
                                             <div class="title"  >Primecoin: The Cryptocurrency That Can Make Mining Useful</div>
@@ -653,7 +607,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row news-bottom-container justify-content-between">
+                            <div class="row news-bottom-container justify-content-around">
                                 <a href="https://cointelegraph.com/news/the-proof-of-work-evolution" target="_blank" class="col-8 col-md-3">
                                     <img src="images/news/23.png" alt="">
                                     <div class="title"  >The Proof-Of-Work Evolution</div>
@@ -680,7 +634,7 @@
                             <div class="row news-bottom-container justify-content-between" style="margin-bottom: 100px">
                                 <div class="news-bottom">
                                     <p class="news-bottom-title">Latest News</p>
-                                    <div class="row news-bottom-container justify-content-between">
+                                    <div class="row news-bottom-container justify-content-around">
                                         <a href="https://bitcoinist.com/real-scientific-breakthroughs-made-prime-number-based-cryptocurrency-gapcoin-runner-popular-primecoin/ " target="_blank" class="col-8 col-md-3">
                                             <img src="images/news/27.jpg" alt="">
                                             <div class="title"  >Real Scientific Breakthroughs Made By Prime Number Based Cryptocurrency Gapcoin Runner-Up To Popular Primecoin</div>
@@ -701,7 +655,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row news-bottom-container justify-content-between">
+                            <div class="row news-bottom-container justify-content-around">
                                 <a href="https://www.ccn.com/primecoin-cloud-mining-using-digital-ocean-complete-guide/  " target="_blank" class="col-8 col-md-3">
                                     <img src="images/news/35.jpg" alt="">
                                     <div class="title"  >Primecoin Cloud Mining Using Digital Ocean – The Complete Guide</div>
@@ -715,8 +669,8 @@
                                     <div class="title"  >New Currency Primecoin Searches For Prime Numbers As Proof Of Work</div>
                                 </a>
                                 <a href="https://www.cloudsigma.com/is-primecoin-the-next-big-thing-after-bitcoin/ " target="_blank" class="col-8 col-md-3">
-                                    <img src="images/news/38.png" alt="">
-                                    <div class="title" >Is Primecoin The Next Big Thing After Bitcoin?</div>
+                                    <img src="" alt="">
+                                    <div></div>
                                 </a>
                             </div>
                         </div>
@@ -735,40 +689,6 @@
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
             </div>
-            <!-- Swiper JS -->
-            <script src="js/swiper.min.js"></script>
-            <script>
-                var mySwiper = new Swiper('.swiper-container', {
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
-
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,
-                        renderBullet: function (index, className) {
-                            return '<span class="' + className + '">' + (index + 1) + '</span>';
-                        },
-                    },
-                    on:{
-                        transitionEnd:function () {
-                            var index =this.activeIndex;
-                            if(index!=0){
-                                // $("#p").show();
-                                $("#message").html("Latest News")
-                            }
-                            else {
-                                // $("#p").hide();
-                                $("#message").show();
-                                $("#message").html("Announcement")
-                            }
-                        }
-                    }
-                });
-
-            </script>
-
 
         </div>
 
@@ -954,6 +874,48 @@
     $(document).scroll(function () {
         handlePrice();
     })
+</script>
+
+<!-- Swiper JS -->
+<script src="js/swiper.min.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + '</span>';
+            },
+        },
+        on:{
+            transitionEnd:function () {
+                var index =this.activeIndex;
+                if(index!=0){
+                    // $("#p").show();
+                    $("#message").html("Latest News")
+                }
+                else {
+                    // $("#p").hide();
+                    $("#message").show();
+                    $("#message").html("Announcement")
+                }
+            }
+        }
+
+    });
+    $("#button-first").click(function(){
+        $(".swiper-pagination span").eq(0).trigger('click')
+    })
+    $("#button-last").click(function(){
+        $(".swiper-pagination span").eq(3).trigger('click')
+    })
+
+
 </script>
 
 
