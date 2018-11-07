@@ -21,6 +21,7 @@
             background:url("images/index3.jpg") no-repeat;
             background-size: 100% auto;
         }
+
         .swiper-slide {
             color: #ffffff;
             display: -webkit-box;
@@ -35,6 +36,11 @@
             -ms-flex-align: center;
             -webkit-align-items: center;
             align-items: center;
+        }
+        .swiper-container  .swiper-slide{
+            justify-content: left;
+            padding: 60px 100px;
+            box-sizing: border-box;
         }
         .swiper-slide iframe{
             height:500px;
@@ -99,8 +105,9 @@
         }
          .list{
              position: fixed;
-             margin-left:40%;
+             margin-left:70%;
              line-height: 28px;
+             font-size: 14px;
              color: #999999;
          }
          .f{
@@ -201,16 +208,23 @@
             #block , #web ,#swiper-web{
                 display: none;
             }
+            .swiper-container  .swiper-slide{
+                justify-content: left;
+                padding:20px;
+            }
             .swiper-slide iframe{
                 height: 200px;
             }
-            .swiper-slide p{
+            .swiper-container   .swiper-slide p{
+                max-height: 300px;
+                overflow-y: scroll;
                 font-size: 12px;
                 margin-bottom: 0px;
             }
             .list{
                 position: relative;
-                margin-left: 0px;
+                margin-left:45px;
+                font-size: 12px;
             }
             #prev1,  #next1{
                 position: absolute;
@@ -225,11 +239,11 @@
             }
             #next1 {
                 position: absolute;
-                top:98%;
+                top:99%;
                 background-image: url("images/Arrow Down.png");
             }
             .swiper-container-vertical>.swiper-pagination-bullets{
-                top:85%;
+                top:84%;
             }
             .news-bottom {
                 padding: 0px;
@@ -474,8 +488,8 @@
 
                     <iframe src="https://youtu.be/gSufQz_h9xI"class="col-md-9 show" frameborder=0 allowfullscreen></iframe>
                    <div class="list">
-                       <li class="f">Wallet tutorial one</li>
-                       <li>Wallet tutorial two</li>
+                       <li class="f">Desktop Wallet Installation and Initiation</li>
+                       <li>Mobile Wallet Installation and tutorial</li>
                        <li>Wallet tutorial three</li>
                        <li>Wallet tutorial four</li>
                        <li>Wallet tutorial five</li>
@@ -485,21 +499,15 @@
                         </div>
                     </div>
                     <div class=" col-md-9 hide">
-                        <h2>Wallet tutorial one</h2>
-                        <p>
-                            After installation, you have to choose between the default hot wallet, or a cold wallet. To have a cold wallet, you can go to settings, and click on
-                            “Switch to Primecoin Cold”. Once you choose cold wallet, you will not be able to reverse the action. After you do so, you should permanently disable
-                            all internet connection on your mobile device in order to protect the safety of your private keys.
+                        <h2>Desktop Wallet Installation and Initiation</h2>
+                        <p>After downloading the destop wallet, open the installation file. If you are using Windows or Linux, you need to choose an installation path. For mac, simply drag and drop the file into your applications folder.
+                            After the installation is complete, open the wallet app. Depending on your CPU capacity and internet connectivity, it may take from hours to days to download and verify the Primecoin blockchain if you have chosen the full node wallet.
+                            After the latest block is downloaded and verified, it will automatically keep synchronized with the rest of the network.
                         </p>
-                        <p>To create a wallet address, click the plus sign button on the bottom left of the main page. You may choose to create a Hierarchical Deterministic wallet address or a normal address in the “others” option.
-                            To generate HD wallet, click Generate, grant permissions, set a password that only you will remember, and scan a random area with your camera to generate a random key.
-                            We highly recommend a backup of this address either by screenshot or by hand.
+                      <p>
+                          To create a wallet, click “request payment”. All the necessary information will appear on the pop-up screen. Please make a backup of these information for your own security. Then, your wallet will appear in the “request payment history” box.
                         </p>
-                        <p>Now you have created a unique address.  Provide your address or QR code to your sending party to receive funds.  Then, you can make transactions by clicking the send button.</p>
-                        <p>To set transaction fee, go to settings, and choose a desired amount in “Default Transaction Fee” section. After sending a transaction, you will be able to view it in your wallet.
-                            The transaction is considered complete when the confirmation count reaches your desired non-zero amount.
-                        </p>
-                        <p>To view how to conduct transactions with a cold wallet, please click the link on the right for another video.</p>
+
                     </div>
                     <div class=" col-md-1 text hide">
                         <div class="button Button1" >
@@ -508,10 +516,10 @@
                 </div>
                 <div class="swiper-slide row col-12 swiper-no-swiping">
 
-                    <iframe src="https://youtu.be/gSufQz_h9xI"class="col-md-9 show" frameborder=0 allowfullscreen></iframe>
+                    <iframe src="https://youtu.be/LN9oLEewGtU"class="col-md-9 show" frameborder=0 allowfullscreen></iframe>
                     <div class="list">
-                        <li>Wallet tutorial one</li>
-                        <li class="f">Wallet tutorial two</li>
+                        <li>Desktop Wallet Installation and Initiation</li>
+                        <li class="f">Mobile Wallet Installation and tutorial</li>
                         <li>Wallet tutorial three</li>
                         <li>Wallet tutorial four</li>
                         <li>Wallet tutorial five</li>
@@ -521,21 +529,14 @@
                         </div>
                     </div>
                     <div class="col-md-9 hide">
-                        <h2>Wallet tutorial two</h2>
-                        <p>
-                            After installation, you have to choose between the default hot wallet, or a cold wallet. To have a cold wallet, you can go to settings, and click on
-                            “Switch to Primecoin Cold”. Once you choose cold wallet, you will not be able to reverse the action. After you do so, you should permanently disable
-                            all internet connection on your mobile device in order to protect the safety of your private keys.
-                        </p>
-                        <p>To create a wallet address, click the plus sign button on the bottom left of the main page. You may choose to create a Hierarchical Deterministic wallet address or a normal address in the “others” option.
-                            To generate HD wallet, click Generate, grant permissions, set a password that only you will remember, and scan a random area with your camera to generate a random key.
-                            We highly recommend a backup of this address either by screenshot or by hand.
-                        </p>
-                        <p>Now you have created a unique address.  Provide your address or QR code to your sending party to receive funds.  Then, you can make transactions by clicking the send button.</p>
-                        <p>To set transaction fee, go to settings, and choose a desired amount in “Default Transaction Fee” section. After sending a transaction, you will be able to view it in your wallet.
-                            The transaction is considered complete when the confirmation count reaches your desired non-zero amount.
-                        </p>
-                        <p>To view how to conduct transactions with a cold wallet, please click the link on the right for another video.</p>
+                        <h2>Mobile Wallet Installation and tutorial</h2>
+                      <p>After installation, you have to choose between the default hot wallet, or a cold wallet.
+                          To have a cold wallet, you can go to settings, and click on “Switch to Primecoin Cold”.
+                          Once you choose cold wallet, you will not be able to reverse the action. After you do so, you should permanently disable all internet connection on your mobile device in order to protect the safety of your private keys.
+                          To create a wallet address, click the plus sign button on the bottom left of the main page. You may choose to create a Hierarchical Deterministic wallet address or a normal address in the “others” option. Hierarchical Deterministic To generate HD wallet,
+                          click Generate, grant permissions, set a password that only you will remember, and scan a random area with your camera to generate a random key. We highly recommend a backup of this address either by screenshot or by hand. Now you have created a unique address.
+                          Provide your address or QR code to your sending party to receive funds. Then, you can make transactions by clicking the send button. To set transaction fee, go to settings, and choose a desired amount in “Default Transaction Fee” section. After sending a transaction,
+                          you will be able to view it in your wallet. The transaction is considered complete when the confirmation count reaches your desired non-zero amount. To view how to conduct transactions with a cold wallet, please click the link on the right for another video.</p>
                     </div>
                     <div class="col-md-1 text hide">
                         <div class="button Button1" >
@@ -569,8 +570,8 @@
 
                         </div>
                         <div class="list">
-                            <li class="f">Wallet tutorial one</li>
-                            <li>Wallet tutorial two</li>
+                            <li class="f">Desktop Wallet Installation and Initiation</li>
+                            <li>Mobile Wallet Installation and tutorial</li>
                             <li>Wallet tutorial three</li>
                             <li>Wallet tutorial four</li>
                             <li>Wallet tutorial five</li>
@@ -580,18 +581,20 @@
 
                     </div>
                     <div class="swiper-slide row  swiper-no-swiping">
-                        <iframe src="https://youtu.be/gSufQz_h9xI" class="col-12" frameborder=0 allowfullscreen></iframe>
+                        <iframe src="https://youtu.be/LN9oLEewGtU" class="col-12" frameborder=0 allowfullscreen></iframe>
                         <div class=" col-12">
                             <p>
-                                After installation, you have to choose between the default hot wallet, or a cold wallet. To have a cold wallet, you can go to settings, and click on
-                                “Switch to Primecoin Cold”. Once you choose cold wallet, you will not be able to reverse the action. After you do so, you should permanently disable
-                                all internet connection on your mobile device in order to protect the safety of your private keys.
+                                After installation, you have to choose between the default hot wallet, or a cold wallet. To have a cold wallet,
+                                you can go to settings, and click on “Switch to Primecoin Cold”. Once you choose cold wallet, you will not be able to reverse the action.
+                                After you do so, you should permanently disable all internet connection on your mobile device in order to protect the safety of your private keys.
+                                To create a wallet address, click the plus sign button on the bottom left of the main page. You may choose to create a Hierarchical Deterministic wallet address or a normal address in the “others” option.
+                                Hierarchical Deterministic To generate HD wallet, click Generate, grant permissions, set a password that only you will remember, and scan a random area with your camera to generate a random key. We highly recommend a backup of this address either by screenshot or by hand. Now you have created a unique address. Provide your address or QR code to your sending party to receive funds. Then, you can make transactions by clicking the send button. To set transaction fee, go to settings, and choose a desired amount in “Default Transaction Fee” section. After sending a transaction, you will be able to view it in your wallet. The transaction is considered complete when the confirmation count reaches your desired non-zero amount.
+                                To view how to conduct transactions with a cold wallet, please click the link on the right for another video.
                             </p>
-
                         </div>
                         <div class="list">
-                            <li>Wallet tutorial one</li>
-                            <li  class="f">Wallet tutorial two</li>
+                            <li>Desktop Wallet Installation and Initiation</li>
+                            <li  class="f">Mobile Wallet Installation and tutorial</li>
                             <li>Wallet tutorial three</li>
                             <li>Wallet tutorial four</li>
                             <li>Wallet tutorial five</li>
