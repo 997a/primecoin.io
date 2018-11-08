@@ -111,8 +111,8 @@ var CanvasParticle = (function(){
                 point = {
                     x: Math.floor(Math.random() * canvas.element.width*0.02),
                     y: Math.floor(Math.random() * canvas.element.height*0.02),
-                    vx: canvas.config.vx /3 - Math.random() * canvas.config.vx,
-                    vy: canvas.config.vy /3 - Math.random() * canvas.config.vy
+                    vx: canvas.config.vx / 3 - Math.random() * canvas.config.vx,
+                    vy: canvas.config.vy / 3 - Math.random() * canvas.config.vy
                 }
             }else{
                 // 处理球的速度和位置，并且做边界处理
