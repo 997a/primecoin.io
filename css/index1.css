@@ -81,6 +81,14 @@ li {
     background:url("../images/l.png") no-repeat center !important;
     background-size:50%;
 }
+.tab .mac{
+    width: 500px;
+    height: 230px;
+    margin: 30px auto;
+    background:rgba(215, 215, 215, 1) !important;
+    background:url("../images/pg.png") no-repeat center !important;
+    background-size:50%;
+}
 .show {
     display: block;
 
@@ -91,4 +99,13 @@ li {
     text-align: center;
     padding: 20px;
     background: #ccc
+}
+@media(max-width: 768px) {
+    .lin{
+        line-height:60px;
+    }
+    .tab .win,  .tab .mac ,.tab .linux{
+        width: 400px;
+        font-size: 24px;
+    }
 }
