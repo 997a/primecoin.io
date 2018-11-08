@@ -42,6 +42,13 @@
             padding: 60px 100px;
             box-sizing: border-box;
         }
+        .swiper-container .swiper-slide  .col-md-9{
+            max-height: 500px;
+            overflow-y: scroll;
+        }
+        .swiper-container .swiper-slide  .col-md-9::-webkit-scrollbar {
+            display: none;
+        }
         .swiper-slide iframe{
             height:500px;
 
@@ -243,7 +250,7 @@
                 position: absolute;
                 width: 24px;
                 height: 24px;
-                top:83%;
+                top:81%;
                 left: calc(100% - 60px);
                 background-size: 24px 24px;
                 background-image: url("images/Arrow up.png");
@@ -252,7 +259,7 @@
             }
             #next1 {
                 position: absolute;
-                top:95%;
+                top:97%;
                 background-image: url("images/Arrow Down.png");
             }
             .swiper-container-vertical>.swiper-pagination-bullets{
@@ -365,7 +372,7 @@
                 <a class="nav-link td" href="#connect" id="toConnect1">Connect</a>
             </li>
             <li class="nav-item ">
-            <a class="nav-link td" href=" http://www.primecoin.today/"target="_blank" >中文<br><p style="font-size: 10px;line-height:12px">(Translated and hosted by community member)</p></a>
+            <a class="nav-link td hover" href=" http://www.primecoin.today/"target="_blank" >中文<br><p class="cn" >(Translated and hosted by community member)</p></a>
         </li>
         </ul>
     </div>
@@ -505,6 +512,7 @@
                     <iframe class="col-md-9 show" src="https://www.youtube.com/embed/gSufQz_h9xI?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                    <div class="list">
                        <li class="f " >Desktop Wallet Installation and Initiation</li>
+                       <li>Desktop transaction video address</li>
                        <li >Mobile Wallet Installation and tutorial</li >
                        <!--<li>Wallet tutorial three</li>-->
                        <!--<li>Wallet tutorial four</li>-->
@@ -530,11 +538,40 @@
                         </div>
                     </div>
                 </div>
+                <div class="swiper-slide row  swiper-no-swiping">
+
+                    <iframe class="col-md-9 show" src="https://www.youtube.com/embed/skT2jKvmWpQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="list">
+                        <li >Desktop Wallet Installation and Initiation</li>
+                        <li  class="f ">Desktop transaction video address</li>
+                        <li>Mobile Wallet Installation and tutorial</li >
+
+                    </div>
+                    <div class=" col-md-1 text show">
+                        <div class="button Button" >
+                        </div>
+                    </div>
+                    <div class=" col-md-9 hide">
+                        <h2>Desktop transaction video address</h2>
+                        <p>
+                            This video will show you how to make a Primecoin transaction. First, you must make sure you have sufficient balance in the overview page. Then, click the send window. You can either choose a previously stored receiver from your address book, or manually enter or past the receiving address in the “Pay To” box. You can add a label under which name the address will be stored. In this case, I will be paying to a wallet of my own. Then, enter the amount of primecoins you want to send below. You can also choose the unit. mXPM represents one thousandth of a primecoin, and uXPM represents one millionth of a primecoin. If you check the “Subtract fee from amount” box, then the receiver is responsible for the transaction fee. Otherwise, you will pay for the transaction fee, and the amount deducted from your address is the total of amount sent and the transaction fee. Below, you may also choose the transaction fee you want to include. The default is 0.01 primecoins per transaction, which will most likely make sure your transaction will be included in the next generated block. Then, choose a target confirmation. The higher the target, the more secure the transaction is considered to be. Choose the amount of blocks that suits your personal security target. Remember that funds may not be available before the chosen blocks of confirmations is reached. Otherwise, you can customize the transaction fee you wish to include. During high transaction demand, it may be reasonable to set a higher transaction fee so that your transaction will be accepted by a block more quickly. Once you have finished, you can click send. A summary of the transaction will be shown. As we can see here, since I have chosen that the receiver is responsible for the transaction fee, he will actually receive less than the amount I sent. Immediately, you can see a decrease in balance. Since I am sending to myself, the balance only decreased by a hundredth of primecoins. However, 9 hundreds of Primecoin will not be available for spending before confirmations are reached. In the “Transactions” window, you will be able to view all your previous transactions.
+                        </p>
+                       <p>
+                           Unconfirmed transactions will display a question mark label. After at lease one block has confirmed your transaction, a clock icon will appear instead. Double click on the transaction and you will see the amount of confirmations. Since I have chosen a target of 6 blocks, a confirmation of 4 blocks shown here will be considered unconfirmed. After the target is reached, a checkmark will appear, drawing a conclusion to this transaction.
+                       </p>
+
+                    </div>
+                    <div class=" col-md-1 text hide">
+                        <div class="button Button1" >
+                        </div>
+                    </div>
+                </div>
                 <div class="swiper-slide row col-12 swiper-no-swiping">
 
                     <iframe  class="col-md-9 show"src="https://www.youtube.com/embed/LN9oLEewGtU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <div class="list">
                         <li>Desktop Wallet Installation and Initiation</li>
+                        <li>Desktop transaction video address</li>
                         <li class="f">Mobile Wallet Installation and tutorial</li>
                         <!--<li>Wallet tutorial three</li>-->
                         <!--<li>Wallet tutorial four</li>-->
@@ -595,10 +632,28 @@
                         </div>
                         <div class="list">
                             <li class="f">Desktop Wallet Installation and Initiation</li>
+                            <li>Desktop transaction video address</li>
                             <li>Mobile Wallet Installation and tutorial</li>
-                            <!--<li>Wallet tutorial three</li>-->
-                            <!--<li>Wallet tutorial four</li>-->
-                            <!--<li>Wallet tutorial five</li>-->
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="swiper-slide row  swiper-no-swiping">
+
+                        <iframe class="col-12" src="https://www.youtube.com/embed/skT2jKvmWpQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class=" col-12">
+                          <p>This video will show you how to make a Primecoin transaction. First, you must make sure you have sufficient balance in the overview page. Then, click the send window. You can either choose a previously stored receiver from your address book, or manually enter or past the receiving address in the “Pay To” box. You can add a label under which name the address will be stored. In this case, I will be paying to a wallet of my own. Then, enter the amount of primecoins you want to send below. You can also choose the unit. mXPM represents one thousandth of a primecoin, and uXPM represents one millionth of a primecoin. If you check the “Subtract fee from amount” box, then the receiver is responsible for the transaction fee. Otherwise, you will pay for the transaction fee, and the amount deducted from your address is the total of amount sent and the transaction fee. Below, you may also choose the transaction fee you want to include. The default is 0.01 primecoins per transaction, which will most likely make sure your transaction will be included in the next generated block. Then, choose a target confirmation. The higher the target, the more secure the transaction is considered to be. Choose the amount of blocks that suits your personal security target. Remember that funds may not be available before the chosen blocks of confirmations is reached. Otherwise, you can customize the transaction fee you wish to include. During high transaction demand, it may be reasonable to set a higher transaction fee so that your transaction will be accepted by a block more quickly. Once you have finished, you can click send. A summary of the transaction will be shown. As we can see here, since I have chosen that the receiver is responsible for the transaction fee, he will actually receive less than the amount I sent. Immediately, you can see a decrease in balance. Since I am sending to myself, the balance only decreased by a hundredth of primecoins. However, 9 hundreds of Primecoin will not be available for spending before confirmations are reached. In the “Transactions” window, you will be able to view all your previous transactions.
+                              Unconfirmed transactions will display a question mark label. After at lease one block has confirmed your transaction, a clock icon will appear instead. Double click on the transaction and you will see the amount of confirmations. Since I have chosen a target of 6 blocks, a confirmation of 4 blocks shown here will be considered unconfirmed. After the target is reached, a checkmark will appear, drawing a conclusion to this transaction.
+                          </p>
+
+                        </div>
+                        <div class="list">
+                            <li>Desktop Wallet Installation and Initiation</li>
+                            <li class="f">Desktop transaction video address</li>
+                            <li>Mobile Wallet Installation and tutorial</li>
+
                         </div>
 
 
@@ -618,16 +673,12 @@
                         </div>
                         <div class="list">
                             <li>Desktop Wallet Installation and Initiation</li>
-                            <li  class="f">Mobile Wallet Installation and tutorial</li>
-                            <!--<li>Wallet tutorial three</li>-->
-                            <!--<li>Wallet tutorial four</li>-->
-                            <!--<li>Wallet tutorial five</li>-->
+                            <li>Desktop transaction video address</li>
+                            <li class="f">Mobile Wallet Installation and tutorial</li>
+
                         </div>
                     </div>
-                    <!---->
-                    <!--<div class="swiper-slide swiper-no-swiping">Slide 3</div>-->
-                    <!--<div class="swiper-slide swiper-no-swiping">Slide 4</div>-->
-                    <!--<div class="swiper-slide swiper-no-swiping">Slide 5</div>-->
+
                 </div>
 
 
@@ -1353,7 +1404,16 @@ function handleScrollAbout(){
         });
     });
 </script>
+<script type="text/javascript">
+  $(".hover").mouseover(function(){
 
+      $(".cn").css("display","block")
+  })
+  $(".hover").mouseout(function(){
+      $(this).css({"font-size":"16px","text-decoration":"underline","font-weight":"normal"})
+      $(".cn").css("display","none")
+  })
+</script>
 
 
 </html>

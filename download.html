@@ -137,7 +137,7 @@
                 <a class="nav-link td" href="index.html#connect" id="toConnect1">Connect</a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link td" href=" http://www.primecoin.today/"target="_blank" >中文<br><p style="font-size: 10px;line-height:12px">(Translated and hosted by community member)</p></a>
+                <a class="nav-link td hover" href=" http://www.primecoin.today/"target="_blank" >中文<br><p class="cn" >(Translated and hosted by community member)</p></a>
             </li>
         </ul>
     </div>
@@ -387,7 +387,16 @@
         handlePrice();
     })
 </script>
+<script type="text/javascript">
+    $(".hover").mouseover(function(){
 
+        $(".cn").css("display","block")
+    })
+    $(".hover").mouseout(function(){
+        $(this).css({"font-size":"16px","text-decoration":"underline","font-weight":"normal"})
+        $(".cn").css("display","none")
+    })
+</script>
 
 
 
