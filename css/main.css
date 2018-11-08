@@ -51,7 +51,7 @@ table { border-collapse:collapse; }
     overflow: hidden;
 }
 .mydiv .left h1{
-    font-size:45px;
+    font-size:80px;
     position: relative;
     z-index: 2;
 }
@@ -300,9 +300,8 @@ table { border-collapse:collapse; }
     }
    .mydiv .left h2{
         font-size:24px;
-        /*margin-left: 60px;*/
        margin-bottom: 0;
-        padding:20px 10%;
+        padding:20px 4%;
        box-sizing: border-box;
 
     }
