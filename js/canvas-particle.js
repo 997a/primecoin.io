@@ -109,10 +109,10 @@ var CanvasParticle = (function(){
             if(canvas.points.length != canvas.config.count){
                 // 初始化所有点
                 point = {
-                    x: Math.floor(Math.random() * canvas.element.width*1.2),
-                    y: Math.floor(Math.random() * canvas.element.height*1.2),
-                    vx: canvas.config.vx / 2 - Math.random() * canvas.config.vx,
-                    vy: canvas.config.vy / 2 - Math.random() * canvas.config.vy
+                    x: Math.floor(Math.random() * canvas.element.width*0.02),
+                    y: Math.floor(Math.random() * canvas.element.height*0.02),
+                    vx: canvas.config.vx /3 - Math.random() * canvas.config.vx,
+                    vy: canvas.config.vy /3 - Math.random() * canvas.config.vy
                 }
             }else{
                 // 处理球的速度和位置，并且做边界处理
